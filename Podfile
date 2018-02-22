@@ -8,7 +8,7 @@ platform:osx, '10.9'
 inhibit_all_warnings!
 
 target 'MappableObjectGenerator' do
-    pod 'BMCommons/BMCore', :path => '../BMCommons/BMCommons.podspec'
-    pod 'BMCommons/BMXML', :path => '../BMCommons/BMCommons.podspec'
-    pod 'BMCommons/BMRestKit',  :path => '../BMCommons/BMCommons.podspec'
+    pod 'BMCommons/BMCore', '~> 0.3'
+    pod 'BMCommons/BMXML', '~> 0.3'
+    pod 'BMCommons/BMRestKit', '~> 0.3'
 end
