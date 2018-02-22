@@ -1,0 +1,25 @@
+PODS:
+  - BMCommons/BMCore (0.3.3)
+  - BMCommons/BMRestKit (0.3.3):
+    - BMCommons/BMXML
+    - eli-yajl-objc (= 0.3.0)
+  - BMCommons/BMXML (0.3.3):
+    - BMCommons/BMCore
+  - eli-yajl-objc (0.3.0)
+
+DEPENDENCIES:
+  - BMCommons/BMCore (from `../BMCommons/BMCommons.podspec`)
+  - BMCommons/BMRestKit (from `../BMCommons/BMCommons.podspec`)
+  - BMCommons/BMXML (from `../BMCommons/BMCommons.podspec`)
+
+EXTERNAL SOURCES:
+  BMCommons:
+    :path: ../BMCommons/BMCommons.podspec
+
+SPEC CHECKSUMS:
+  BMCommons: 3db0bcf9abbfd344f035db6f23c5ce6ebc87ce95
+  eli-yajl-objc: ddc3c548cdae3ceddc7897fc08bae6ce78526b8b
+
+PODFILE CHECKSUM: 8695865ede032def7ffbcafc2620eada6ced6e05
+
+COCOAPODS: 1.3.1
