@@ -1,0 +1,40 @@
+//
+//  _{{ mapping.objectClassName }}.h
+//  AHMobileBase
+//
+//  Generated Class
+//  Copyright 2013 Ahold. All rights reserved.
+//
+
+#import "AHAbstractMappableObject.h"
+{% if mapping.parentName != nil %}#import "{{ mapping.parentName }}.h"{% /if %}
+{% for fieldMapping in mapping.fieldMappings %}
+{% if fieldMapping.fieldObjectClassIsCustom %}@class {{ fieldMapping.fieldObjectClassName }};{% /if %}{% /for %}
+
+{% if mapping.isEnumeration %}
+typedef NS_ENUM(NSUInteger, {{ mapping.objectClassName }}Value) {
+    {% for value in mapping.enumeratedValues %}{{ mapping.objectClassName }}{{ value.formattedValue }},
+    {% /for %}
+};
+{% /if %}
+
+@interface _{{ mapping.objectClassName }} : {% if mapping.parentName == nil %}AHAbstractMappableObject{% else %}{{ mapping.parentName }}{% /if %} {
+    {% for fieldMapping in mapping.fieldMappings %}
+    {{ fieldMapping.fieldClassName }}{% if fieldMapping.isArray %}<{{ fieldMapping.fieldObjectClassName }} *>{% /if %} *_{{ fieldMapping.fieldName }};{% /for %}
+}
+
+{% for fieldMapping in mapping.fieldMappings %}
+@property (nonatomic, strong) {{ fieldMapping.fieldClassName }}{% if fieldMapping.isArray %}<{{ fieldMapping.fieldObjectClassName }} *>{% /if %} *{{ fieldMapping.fieldName }};{% /for %}
+{% if mapping.isEnumeration %}
+@property (nonatomic, assign) {{ mapping.objectClassName }}Value enumValue;
++ (id)instanceWithEnumValue:({{ mapping.objectClassName }}Value)theValue;
+{% /if %}
+
+{% if mapping.isRootElement %}
++ (NSString *)rootElementName;
+{% /if %}
+
++ (NSString *)dateFormatForField:(NSString *)fieldName;
++ (NSString *)defaultDateFormat;
+
+@end

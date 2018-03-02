@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7477CA7B2049466E00298945 /* VersionSupportResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477CA7A2049466E00298945 /* VersionSupportResource.swift */; };
+		7477CA7D2049475400298945 /* ImageCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477CA7C2049475400298945 /* ImageCommand.swift */; };
+		7477CA84204957EA00298945 /* _ImageCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477CA82204957EA00298945 /* _ImageCommand.swift */; };
+		7477CA85204957EA00298945 /* _VersionSupportResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477CA83204957EA00298945 /* _VersionSupportResource.swift */; };
 		74E87C28130C08720034B19F /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E87C27130C08720034B19F /* Main.m */; };
+		74FB413A203EC38C008E1959 /* MappableObjectGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */; };
 		875072F83C315BAFB19DC1B5 /* libPods-MappableObjectGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17AE3B0F84D772740F6B4A /* libPods-MappableObjectGenerator.a */; };
 		8DD76FB00486AB0100D96B5E /* MappableObjectGenerator.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* MappableObjectGenerator.1 */; };
+		AB808D622847A94C9F11C875 /* libPods-MappableObjectGeneratorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2DD3070C0770362725DAA8 /* libPods-MappableObjectGeneratorTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +33,124 @@
 
 /* Begin PBXFileReference section */
 		2A17AE3B0F84D772740F6B4A /* libPods-MappableObjectGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGenerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2DD3070C0770362725DAA8 /* libPods-MappableObjectGeneratorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGeneratorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7477CA7720493D6200298945 /* MappableObject.m.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = MappableObject.m.mgtemplate; sourceTree = "<group>"; };
+		7477CA7820493D6200298945 /* MappableObject-Swift4.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "MappableObject-Swift4.mgtemplate"; sourceTree = "<group>"; };
+		7477CA7A2049466E00298945 /* VersionSupportResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSupportResource.swift; sourceTree = "<group>"; };
+		7477CA7C2049475400298945 /* ImageCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommand.swift; sourceTree = "<group>"; };
+		7477CA7E204953A500298945 /* CustomMappableObject-Swift4.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CustomMappableObject-Swift4.mgtemplate"; sourceTree = "<group>"; };
+		7477CA7F204954C300298945 /* CustomMappableObject.m.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = CustomMappableObject.m.mgtemplate; sourceTree = "<group>"; };
+		7477CA80204954C300298945 /* MappableObject.h.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = MappableObject.h.mgtemplate; sourceTree = "<group>"; };
+		7477CA81204954C300298945 /* CustomMappableObject.h.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = CustomMappableObject.h.mgtemplate; sourceTree = "<group>"; };
+		7477CA82204957EA00298945 /* _ImageCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ImageCommand.swift; sourceTree = "<group>"; };
+		7477CA83204957EA00298945 /* _VersionSupportResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _VersionSupportResource.swift; sourceTree = "<group>"; };
+		7477CA8720497A1800298945 /* namespace-mappings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "namespace-mappings.plist"; sourceTree = "<group>"; };
+		7477CA8920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ListItemResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ListItemResource.json; sourceTree = "<group>"; };
+		7477CA8A20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.BrandCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.BrandCommand.json; sourceTree = "<group>"; };
+		7477CA8B20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderSubFiltersCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderSubFiltersCommand.json; sourceTree = "<group>"; };
+		7477CA8C20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.resource.StoresOverviewResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.store.resource.StoresOverviewResource.json; sourceTree = "<group>"; };
+		7477CA8D20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.cms.command.CmsDocumentCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.cms.command.CmsDocumentCommand.json; sourceTree = "<group>"; };
+		7477CA8E20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorCommand.json; sourceTree = "<group>"; };
+		7477CA8F20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductCategoryResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductCategoryResource.json; sourceTree = "<group>"; };
+		7477CA9020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductDetailResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductDetailResource.json; sourceTree = "<group>"; };
+		7477CA9120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderSummaryClosingTimeCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderSummaryClosingTimeCommand.json; sourceTree = "<group>"; };
+		7477CA9220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.shoppinglist.command.ShoppingListRecipeIngredientItemCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.shoppinglist.command.ShoppingListRecipeIngredientItemCommand.json; sourceTree = "<group>"; };
+		7477CA9320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.RecipesPromotionResources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.RecipesPromotionResources.json; sourceTree = "<group>"; };
+		7477CA9420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.taxonomy.resources.TaxonomyCategoryWithFiltersResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.taxonomy.resources.TaxonomyCategoryWithFiltersResource.json; sourceTree = "<group>"; };
+		7477CA9520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.ServiceChargePolicyDisplayCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.ServiceChargePolicyDisplayCommand.json; sourceTree = "<group>"; };
+		7477CA9620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderSummaryResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderSummaryResource.json; sourceTree = "<group>"; };
+		7477CA9720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.FilterCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.FilterCommand.json; sourceTree = "<group>"; };
+		7477CA9820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.IPhoneLinkCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.IPhoneLinkCommand.json; sourceTree = "<group>"; };
+		7477CA9920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ListItemSorting.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ListItemSorting.json; sourceTree = "<group>"; };
+		7477CA9A20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.pages.resource.PagesAllerhandeBoxResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.pages.resource.PagesAllerhandeBoxResource.json; sourceTree = "<group>"; };
+		7477CA9B20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.resource.StoreListResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.store.resource.StoreListResource.json; sourceTree = "<group>"; };
+		7477CA9C20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderInfoResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderInfoResource.json; sourceTree = "<group>"; };
+		7477CA9D20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.DiscountResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.DiscountResource.json; sourceTree = "<group>"; };
+		7477CA9E20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.command.OpeningHoursCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.store.command.OpeningHoursCommand.json; sourceTree = "<group>"; };
+		7477CA9F20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.AddressCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.AddressCommand.json; sourceTree = "<group>"; };
+		7477CAA020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.command.ShoppingListUpdateCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.command.ShoppingListUpdateCommand.json; sourceTree = "<group>"; };
+		7477CAA120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.PricingCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.PricingCommand.json; sourceTree = "<group>"; };
+		7477CAA220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderSummaryDeliveryInfoCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderSummaryDeliveryInfoCommand.json; sourceTree = "<group>"; };
+		7477CAA320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.WineFinderSearchResultsResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.WineFinderSearchResultsResource.json; sourceTree = "<group>"; };
+		7477CAA420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.command.OrderStateChangeRequestCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.command.OrderStateChangeRequestCommand.json; sourceTree = "<group>"; };
+		7477CAA520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.BonusInfoCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.BonusInfoCommand.json; sourceTree = "<group>"; };
+		7477CAA620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.command.OrderChangeRequestCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.command.OrderChangeRequestCommand.json; sourceTree = "<group>"; };
+		7477CAA720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.OnlinePromotionGroupResources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.OnlinePromotionGroupResources.json; sourceTree = "<group>"; };
+		7477CAA820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.DeliveryBlockScheduleResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.DeliveryBlockScheduleResource.json; sourceTree = "<group>"; };
+		7477CAA920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.BonusGroupListItemResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.resource.BonusGroupListItemResource.json; sourceTree = "<group>"; };
+		7477CAAA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.command.ShoppingListItemUpdateCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.command.ShoppingListItemUpdateCommand.json; sourceTree = "<group>"; };
+		7477CAAB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderReminderCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderReminderCommand.json; sourceTree = "<group>"; };
+		7477CAAC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.RecipePromotionResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.RecipePromotionResource.json; sourceTree = "<group>"; };
+		7477CAAD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.DeliveryBlockResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.DeliveryBlockResource.json; sourceTree = "<group>"; };
+		7477CAAE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.PricingModelCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.PricingModelCommand.json; sourceTree = "<group>"; };
+		7477CAAF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.PickupLocationsCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.PickupLocationsCommand.json; sourceTree = "<group>"; };
+		7477CAB020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderSubFilterCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderSubFilterCommand.json; sourceTree = "<group>"; };
+		7477CAB120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.DetailedDeliveryBlockCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.DetailedDeliveryBlockCommand.json; sourceTree = "<group>"; };
+		7477CAB220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.PropertyCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.PropertyCommand.json; sourceTree = "<group>"; };
+		7477CAB320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupResources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupResources.json; sourceTree = "<group>"; };
+		7477CAB420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.PhoneNumberCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.PhoneNumberCommand.json; sourceTree = "<group>"; };
+		7477CAB520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ShoppingListResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ShoppingListResource.json; sourceTree = "<group>"; };
+		7477CAB620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderReceiptLineDataType.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderReceiptLineDataType.json; sourceTree = "<group>"; };
+		7477CAB720497A1800298945 /* com.ahold.ecommerce.api.generic.resources.VersionSupportResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.generic.resources.VersionSupportResource.json; sourceTree = "<group>"; };
+		7477CAB820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductPriceCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductPriceCommand.json; sourceTree = "<group>"; };
+		7477CAB920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderReceiptDataType.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderReceiptDataType.json; sourceTree = "<group>"; };
+		7477CABA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.resource.AutoSuggestionsResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.search.resource.AutoSuggestionsResource.json; sourceTree = "<group>"; };
+		7477CABB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.IngredientListItemResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.resource.IngredientListItemResource.json; sourceTree = "<group>"; };
+		7477CABC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderSummariesResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderSummariesResource.json; sourceTree = "<group>"; };
+		7477CABD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderDiscountLineCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderDiscountLineCommand.json; sourceTree = "<group>"; };
+		7477CABE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.resource.AutoSuggestionResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.search.resource.AutoSuggestionResource.json; sourceTree = "<group>"; };
+		7477CABF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.PasswordCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.member.command.PasswordCommand.json; sourceTree = "<group>"; };
+		7477CAC020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.NotInOrderItemDataType.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.NotInOrderItemDataType.json; sourceTree = "<group>"; };
+		7477CAC120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.SearchTermListItemResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.resource.SearchTermListItemResource.json; sourceTree = "<group>"; };
+		7477CAC220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.VideoLinkCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.VideoLinkCommand.json; sourceTree = "<group>"; };
+		7477CAC320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.custom.WebURLDefinitionsResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.custom.WebURLDefinitionsResource.json; sourceTree = "<group>"; };
+		7477CAC420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ProductDetailCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.ProductDetailCommand.json; sourceTree = "<group>"; };
+		7477CAC520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderDataType.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderDataType.json; sourceTree = "<group>"; };
+		7477CAC620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeResource.json; sourceTree = "<group>"; };
+		7477CAC720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.LoyaltyCardCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.member.command.LoyaltyCardCommand.json; sourceTree = "<group>"; };
+		7477CAC820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.homepage.resource.HomeBonusResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.homepage.resource.HomeBonusResource.json; sourceTree = "<group>"; };
+		7477CAC920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductGroupDetailsResourceType.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductGroupDetailsResourceType.json; sourceTree = "<group>"; };
+		7477CACA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.FilterElementCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.FilterElementCommand.json; sourceTree = "<group>"; };
+		7477CACB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.OnlinePromotionGroupResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.OnlinePromotionGroupResource.json; sourceTree = "<group>"; };
+		7477CACC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.DeliveryBlockDisplayCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.DeliveryBlockDisplayCommand.json; sourceTree = "<group>"; };
+		7477CACD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.resource.ProductsWithFiltersResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.search.resource.ProductsWithFiltersResource.json; sourceTree = "<group>"; };
+		7477CACE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupCategoryResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupCategoryResource.json; sourceTree = "<group>"; };
+		7477CACF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductSourceIdCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductSourceIdCommand.json; sourceTree = "<group>"; };
+		7477CAD020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.VideoSourceCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.VideoSourceCommand.json; sourceTree = "<group>"; };
+		7477CAD120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.frequent.FrequentProductSearchTermsResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.search.frequent.FrequentProductSearchTermsResource.json; sourceTree = "<group>"; };
+		7477CAD220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.UniqueSellingPointCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.UniqueSellingPointCommand.json; sourceTree = "<group>"; };
+		7477CAD320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.HeaderPromotionResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.HeaderPromotionResource.json; sourceTree = "<group>"; };
+		7477CAD420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductOverviewCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductOverviewCommand.json; sourceTree = "<group>"; };
+		7477CAD520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.command.StoreCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.store.command.StoreCommand.json; sourceTree = "<group>"; };
+		7477CAD620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorsCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorsCommand.json; sourceTree = "<group>"; };
+		7477CAD720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.NameCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.NameCommand.json; sourceTree = "<group>"; };
+		7477CAD820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.taxonomy.resources.FiltersGroupResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.taxonomy.resources.FiltersGroupResource.json; sourceTree = "<group>"; };
+		7477CAD920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorMessageCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorMessageCommand.json; sourceTree = "<group>"; };
+		7477CADA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductOverviewResources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductOverviewResources.json; sourceTree = "<group>"; };
+		7477CADB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderFilterCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderFilterCommand.json; sourceTree = "<group>"; };
+		7477CADC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ProductCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.ProductCommand.json; sourceTree = "<group>"; };
+		7477CADD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupResource.json; sourceTree = "<group>"; };
+		7477CADE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ExtendedAttributeCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.product.command.ExtendedAttributeCommand.json; sourceTree = "<group>"; };
+		7477CADF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.GeocoderLocationCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.GeocoderLocationCommand.json; sourceTree = "<group>"; };
+		7477CAE020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ProductListItemResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ProductListItemResource.json; sourceTree = "<group>"; };
+		7477CAE120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummaryResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummaryResource.json; sourceTree = "<group>"; };
+		7477CAE220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeIdsResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeIdsResource.json; sourceTree = "<group>"; };
+		7477CAE320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.DeliveryBlockCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.DeliveryBlockCommand.json; sourceTree = "<group>"; };
+		7477CAE420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ResourceReferenceCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.ResourceReferenceCommand.json; sourceTree = "<group>"; };
+		7477CAE520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.ActionCodeRequestCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.ActionCodeRequestCommand.json; sourceTree = "<group>"; };
+		7477CAE620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.MembershipCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.member.command.MembershipCommand.json; sourceTree = "<group>"; };
+		7477CAE720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ImageCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.general.command.ImageCommand.json; sourceTree = "<group>"; };
+		7477CAE820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupDetailsResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupDetailsResource.json; sourceTree = "<group>"; };
+		7477CAE920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.ProductHighlightCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.ProductHighlightCommand.json; sourceTree = "<group>"; };
+		7477CAEA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummariesResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummariesResource.json; sourceTree = "<group>"; };
+		7477CAEB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.PickupLocationCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.order.command.PickupLocationCommand.json; sourceTree = "<group>"; };
+		7477CAEC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.shoppinglist.command.ShoppingListVagueTermItemCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.shoppinglist.command.ShoppingListVagueTermItemCommand.json; sourceTree = "<group>"; };
+		7477CAED20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.pages.resource.PagesAllerhandeBoxResources.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.pages.resource.PagesAllerhandeBoxResources.json; sourceTree = "<group>"; };
+		7477CAEE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupSectionResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupSectionResource.json; sourceTree = "<group>"; };
+		7477CAEF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummariesPagedResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummariesPagedResource.json; sourceTree = "<group>"; };
+		7477CAF020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.MemberCommand.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.rest.member.command.MemberCommand.json; sourceTree = "<group>"; };
+		7477CAF120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeLandingResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeLandingResource.json; sourceTree = "<group>"; };
+		7477CAF220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.ProductPromotionResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.ProductPromotionResource.json; sourceTree = "<group>"; };
 		74BA77DD130C09700024BFB5 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		74BA77E1130C099C0024BFB5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		74BA77E7130C09AC0024BFB5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -41,13 +165,26 @@
 		74E87C27130C08720034B19F /* Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Main.m; sourceTree = "<group>"; };
 		74F1D45E14615CFA007FEF5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FB4130203EB868008E1959 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		74FB4137203EC38C008E1959 /* MappableObjectGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MappableObjectGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableObjectGeneratorTests.swift; sourceTree = "<group>"; };
+		74FB413B203EC38C008E1959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD76FB20486AB0100D96B5E /* MappableObjectGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MappableObjectGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		937DD5D8EB934DEC297907C5 /* Pods-MappableObjectGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGeneratorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB9B7E4087A26B8690C6B568 /* Pods-MappableObjectGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGeneratorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6A0FF2C0290799A04C91782 /* MappableObjectGenerator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MappableObjectGenerator.1; sourceTree = "<group>"; };
 		EEA02DC87BE849939D65D4CF /* Pods-MappableObjectGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGenerator/Pods-MappableObjectGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		FDEC846FE1D6C60BA4B2FCFA /* Pods-MappableObjectGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGenerator/Pods-MappableObjectGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		74FB4134203EC38C008E1959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB808D622847A94C9F11C875 /* libPods-MappableObjectGeneratorTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,7 +199,10 @@
 		08FB7794FE84155DC02AAC07 /* MappableObjectGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				7477CA8620497A1800298945 /* Schemas */,
+				7477CA7620493D6200298945 /* Templates */,
 				74F1D45D14615CD4007FEF5E /* Resources */,
+				74FB4138203EC38C008E1959 /* MappableObjectGeneratorTests */,
 				74E874D4130BF1570034B19F /* Frameworks */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6A0FF2B0290797F04C91782 /* Documentation */,
@@ -85,8 +225,155 @@
 			isa = PBXGroup;
 			children = (
 				8DD76FB20486AB0100D96B5E /* MappableObjectGenerator */,
+				74FB4137203EC38C008E1959 /* MappableObjectGeneratorTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7477CA7620493D6200298945 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				7477CA7E204953A500298945 /* CustomMappableObject-Swift4.mgtemplate */,
+				7477CA81204954C300298945 /* CustomMappableObject.h.mgtemplate */,
+				7477CA7F204954C300298945 /* CustomMappableObject.m.mgtemplate */,
+				7477CA7820493D6200298945 /* MappableObject-Swift4.mgtemplate */,
+				7477CA80204954C300298945 /* MappableObject.h.mgtemplate */,
+				7477CA7720493D6200298945 /* MappableObject.m.mgtemplate */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		7477CA792049466E00298945 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				7477CA82204957EA00298945 /* _ImageCommand.swift */,
+				7477CA83204957EA00298945 /* _VersionSupportResource.swift */,
+				7477CA7A2049466E00298945 /* VersionSupportResource.swift */,
+				7477CA7C2049475400298945 /* ImageCommand.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		7477CA8620497A1800298945 /* Schemas */ = {
+			isa = PBXGroup;
+			children = (
+				7477CA8720497A1800298945 /* namespace-mappings.plist */,
+				7477CA8820497A1800298945 /* JSON */,
+			);
+			path = Schemas;
+			sourceTree = "<group>";
+		};
+		7477CA8820497A1800298945 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				7477CA8920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ListItemResource.json */,
+				7477CA8A20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.BrandCommand.json */,
+				7477CA8B20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderSubFiltersCommand.json */,
+				7477CA8C20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.resource.StoresOverviewResource.json */,
+				7477CA8D20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.cms.command.CmsDocumentCommand.json */,
+				7477CA8E20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorCommand.json */,
+				7477CA8F20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductCategoryResource.json */,
+				7477CA9020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductDetailResource.json */,
+				7477CA9120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderSummaryClosingTimeCommand.json */,
+				7477CA9220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.shoppinglist.command.ShoppingListRecipeIngredientItemCommand.json */,
+				7477CA9320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.RecipesPromotionResources.json */,
+				7477CA9420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.taxonomy.resources.TaxonomyCategoryWithFiltersResource.json */,
+				7477CA9520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.ServiceChargePolicyDisplayCommand.json */,
+				7477CA9620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderSummaryResource.json */,
+				7477CA9720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.FilterCommand.json */,
+				7477CA9820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.IPhoneLinkCommand.json */,
+				7477CA9920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ListItemSorting.json */,
+				7477CA9A20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.pages.resource.PagesAllerhandeBoxResource.json */,
+				7477CA9B20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.resource.StoreListResource.json */,
+				7477CA9C20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderInfoResource.json */,
+				7477CA9D20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.DiscountResource.json */,
+				7477CA9E20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.command.OpeningHoursCommand.json */,
+				7477CA9F20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.AddressCommand.json */,
+				7477CAA020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.command.ShoppingListUpdateCommand.json */,
+				7477CAA120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.PricingCommand.json */,
+				7477CAA220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderSummaryDeliveryInfoCommand.json */,
+				7477CAA320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.WineFinderSearchResultsResource.json */,
+				7477CAA420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.command.OrderStateChangeRequestCommand.json */,
+				7477CAA520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.BonusInfoCommand.json */,
+				7477CAA620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.command.OrderChangeRequestCommand.json */,
+				7477CAA720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.OnlinePromotionGroupResources.json */,
+				7477CAA820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.DeliveryBlockScheduleResource.json */,
+				7477CAA920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.BonusGroupListItemResource.json */,
+				7477CAAA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.command.ShoppingListItemUpdateCommand.json */,
+				7477CAAB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderReminderCommand.json */,
+				7477CAAC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.RecipePromotionResource.json */,
+				7477CAAD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.DeliveryBlockResource.json */,
+				7477CAAE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.PricingModelCommand.json */,
+				7477CAAF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.PickupLocationsCommand.json */,
+				7477CAB020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderSubFilterCommand.json */,
+				7477CAB120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.DetailedDeliveryBlockCommand.json */,
+				7477CAB220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.PropertyCommand.json */,
+				7477CAB320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupResources.json */,
+				7477CAB420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.PhoneNumberCommand.json */,
+				7477CAB520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ShoppingListResource.json */,
+				7477CAB620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderReceiptLineDataType.json */,
+				7477CAB720497A1800298945 /* com.ahold.ecommerce.api.generic.resources.VersionSupportResource.json */,
+				7477CAB820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductPriceCommand.json */,
+				7477CAB920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderReceiptDataType.json */,
+				7477CABA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.resource.AutoSuggestionsResource.json */,
+				7477CABB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.IngredientListItemResource.json */,
+				7477CABC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderSummariesResource.json */,
+				7477CABD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.OrderDiscountLineCommand.json */,
+				7477CABE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.resource.AutoSuggestionResource.json */,
+				7477CABF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.PasswordCommand.json */,
+				7477CAC020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.NotInOrderItemDataType.json */,
+				7477CAC120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.SearchTermListItemResource.json */,
+				7477CAC220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.VideoLinkCommand.json */,
+				7477CAC320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.custom.WebURLDefinitionsResource.json */,
+				7477CAC420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ProductDetailCommand.json */,
+				7477CAC520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.order.resource.OrderDataType.json */,
+				7477CAC620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeResource.json */,
+				7477CAC720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.LoyaltyCardCommand.json */,
+				7477CAC820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.homepage.resource.HomeBonusResource.json */,
+				7477CAC920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductGroupDetailsResourceType.json */,
+				7477CACA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.FilterElementCommand.json */,
+				7477CACB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.OnlinePromotionGroupResource.json */,
+				7477CACC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.DeliveryBlockDisplayCommand.json */,
+				7477CACD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.resource.ProductsWithFiltersResource.json */,
+				7477CACE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupCategoryResource.json */,
+				7477CACF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductSourceIdCommand.json */,
+				7477CAD020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.VideoSourceCommand.json */,
+				7477CAD120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.search.frequent.FrequentProductSearchTermsResource.json */,
+				7477CAD220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.UniqueSellingPointCommand.json */,
+				7477CAD320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.HeaderPromotionResource.json */,
+				7477CAD420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ProductOverviewCommand.json */,
+				7477CAD520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.store.command.StoreCommand.json */,
+				7477CAD620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorsCommand.json */,
+				7477CAD720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.NameCommand.json */,
+				7477CAD820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.taxonomy.resources.FiltersGroupResource.json */,
+				7477CAD920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.core.error.command.ErrorMessageCommand.json */,
+				7477CADA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.ProductOverviewResources.json */,
+				7477CADB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.WineFinderFilterCommand.json */,
+				7477CADC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ProductCommand.json */,
+				7477CADD20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupResource.json */,
+				7477CADE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.product.command.ExtendedAttributeCommand.json */,
+				7477CADF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.GeocoderLocationCommand.json */,
+				7477CAE020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.list.resource.ProductListItemResource.json */,
+				7477CAE120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummaryResource.json */,
+				7477CAE220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeIdsResource.json */,
+				7477CAE320497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.DeliveryBlockCommand.json */,
+				7477CAE420497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ResourceReferenceCommand.json */,
+				7477CAE520497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.ActionCodeRequestCommand.json */,
+				7477CAE620497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.MembershipCommand.json */,
+				7477CAE720497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.general.command.ImageCommand.json */,
+				7477CAE820497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupDetailsResource.json */,
+				7477CAE920497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.winefinder.command.ProductHighlightCommand.json */,
+				7477CAEA20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummariesResource.json */,
+				7477CAEB20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.order.command.PickupLocationCommand.json */,
+				7477CAEC20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.shoppinglist.command.ShoppingListVagueTermItemCommand.json */,
+				7477CAED20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.pages.resource.PagesAllerhandeBoxResources.json */,
+				7477CAEE20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.product.resource.BonusGroupSectionResource.json */,
+				7477CAEF20497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeSummariesPagedResource.json */,
+				7477CAF020497A1800298945 /* com.ahold.ecommerce.api.mobileservices.rest.member.command.MemberCommand.json */,
+				7477CAF120497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.facades.recipe.resource.RecipeLandingResource.json */,
+				7477CAF220497A1800298945 /* com.ahold.ecommerce.api.mobileservices.controllers.promotions.resource.ProductPromotionResource.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		74E874D4130BF1570034B19F /* Frameworks */ = {
@@ -103,6 +390,7 @@
 				74BA77E1130C099C0024BFB5 /* AppKit.framework */,
 				74BA77E7130C09AC0024BFB5 /* CoreData.framework */,
 				2A17AE3B0F84D772740F6B4A /* libPods-MappableObjectGenerator.a */,
+				2E2DD3070C0770362725DAA8 /* libPods-MappableObjectGeneratorTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +412,16 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		74FB4138203EC38C008E1959 /* MappableObjectGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				7477CA792049466E00298945 /* Generated */,
+				74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */,
+				74FB413B203EC38C008E1959 /* Info.plist */,
+			);
+			path = MappableObjectGeneratorTests;
+			sourceTree = "<group>";
+		};
 		C6A0FF2B0290797F04C91782 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +435,8 @@
 			children = (
 				FDEC846FE1D6C60BA4B2FCFA /* Pods-MappableObjectGenerator.debug.xcconfig */,
 				EEA02DC87BE849939D65D4CF /* Pods-MappableObjectGenerator.release.xcconfig */,
+				937DD5D8EB934DEC297907C5 /* Pods-MappableObjectGeneratorTests.debug.xcconfig */,
+				BB9B7E4087A26B8690C6B568 /* Pods-MappableObjectGeneratorTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -144,6 +444,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		74FB4136203EC38C008E1959 /* MappableObjectGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74FB413E203EC38C008E1959 /* Build configuration list for PBXNativeTarget "MappableObjectGeneratorTests" */;
+			buildPhases = (
+				F79E499D8F1486930FB72275 /* [CP] Check Pods Manifest.lock */,
+				74FB4133203EC38C008E1959 /* Sources */,
+				74FB4134203EC38C008E1959 /* Frameworks */,
+				74FB4135203EC38C008E1959 /* Resources */,
+				BF3A02EE77D9104199F88A1C /* [CP] Embed Pods Frameworks */,
+				7CDA6E4504D43550CFB4F8CB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MappableObjectGeneratorTests;
+			productName = MappableObjectGeneratorTests;
+			productReference = 74FB4137203EC38C008E1959 /* MappableObjectGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8DD76FA90486AB0100D96B5E /* MappableObjectGenerator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "MappableObjectGenerator" */;
@@ -170,7 +490,14 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					74FB4136203EC38C008E1959 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "MappableObjectGenerator" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -188,11 +515,52 @@
 			projectRoot = "";
 			targets = (
 				8DD76FA90486AB0100D96B5E /* MappableObjectGenerator */,
+				74FB4136203EC38C008E1959 /* MappableObjectGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		74FB4135203EC38C008E1959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
+		7CDA6E4504D43550CFB4F8CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF3A02EE77D9104199F88A1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DC116663C44F1897185A65A9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +574,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MappableObjectGenerator/Pods-MappableObjectGenerator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F79E499D8F1486930FB72275 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MappableObjectGeneratorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF537C67F755BDD9B5FFEE5F /* [CP] Check Pods Manifest.lock */ = {
@@ -229,6 +615,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		74FB4133203EC38C008E1959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7477CA7B2049466E00298945 /* VersionSupportResource.swift in Sources */,
+				74FB413A203EC38C008E1959 /* MappableObjectGeneratorTests.swift in Sources */,
+				7477CA85204957EA00298945 /* _VersionSupportResource.swift in Sources */,
+				7477CA7D2049475400298945 /* ImageCommand.swift in Sources */,
+				7477CA84204957EA00298945 /* _ImageCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DD76FAB0486AB0100D96B5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +751,79 @@
 			};
 			name = Release;
 		};
+		74FB413C203EC38C008E1959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 937DD5D8EB934DEC297907C5 /* Pods-MappableObjectGeneratorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MappableObjectGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.behindmedia.MappableObjectGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		74FB413D203EC38C008E1959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB9B7E4087A26B8690C6B568 /* Pods-MappableObjectGeneratorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MappableObjectGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.behindmedia.MappableObjectGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -370,6 +841,15 @@
 			buildConfigurations = (
 				1DEB928A08733DD80010E9CD /* Debug */,
 				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74FB413E203EC38C008E1959 /* Build configuration list for PBXNativeTarget "MappableObjectGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74FB413C203EC38C008E1959 /* Debug */,
+				74FB413D203EC38C008E1959 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

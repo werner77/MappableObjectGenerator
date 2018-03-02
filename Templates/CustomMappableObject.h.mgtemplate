@@ -1,0 +1,15 @@
+//
+//  {{ mapping.objectClassName }}.h
+//  AHMobileBase
+//
+//  Generated Class
+//  Copyright 2013 Ahold. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "_{{ mapping.objectClassName }}.h"
+
+@interface {{ mapping.objectClassName }} : _{{ mapping.objectClassName }} {
+}
+
+@end

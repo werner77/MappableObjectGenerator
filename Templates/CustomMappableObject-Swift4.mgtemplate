@@ -1,0 +1,5 @@
+import Foundation
+
+class {{ mapping.className }}: _{{ mapping.className }} {
+    //Implement custom code here
+}

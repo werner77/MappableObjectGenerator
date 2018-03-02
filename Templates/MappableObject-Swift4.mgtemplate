@@ -1,0 +1,10 @@
+import Foundation
+
+class _{{ mapping.unqualifiedObjectClassName }}: {% if mapping.parentName != nil %}{{ mapping.parentName }}, {% /if %}Codable {
+    enum CodingKeys: String, CodingKey {
+        {% for fieldMapping in mapping.fieldMappings %}
+        case {{ fieldMapping.fieldName }} = "{{ fieldMapping.mappingPath }}"{% /for %}
+    }
+    {% for fieldMapping in mapping.fieldMappings %}
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}?{% /for %}
+}

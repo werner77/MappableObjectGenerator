@@ -1,0 +1,116 @@
+//
+//  _{{ mapping.objectClassName }}.m
+//  AHMobileBase
+//
+//  Generated Class
+//  Copyright 2013 Ahold. All rights reserved.
+//
+
+#import <BMCommons/NSObject+BMCommons.h>
+#import "_{{ mapping.objectClassName }}.h"
+{% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.fieldObjectClassIsCustom %}#import "{{ fieldMapping.fieldObjectClassName }}.h"
+{% /if %}{% /for %}
+
+@implementation _{{ mapping.objectClassName }}
+
+{% for fieldMapping in mapping.fieldMappings %}
+@synthesize {{ fieldMapping.fieldName }} = _{{ fieldMapping.fieldName }};{% /for %}
+
+{% if mapping.isEnumeration %}
+static BMTwoWayDictionary *valueMapping = nil;
+
++ (void)initialize {
+    if (!valueMapping) {
+        valueMapping = [[BMTwoWayDictionary alloc] initWithObjectsAndKeys:
+        {% for value in mapping.enumeratedValues %}{{ value.valueDeclaration }}, [NSNumber numberWithInt:{{ mapping.objectClassName }}{{ value.formattedValue }}],
+        {% /for %}
+        nil];
+    }
+}
+{% /if %}
+
++ (NSArray *)fieldMappingFormatArray {
+    NSMutableArray *mappings = [NSMutableArray array];
+    {% if mapping.parentName != nil %}[mappings addObjectsFromArray:[super fieldMappingFormatArray]];
+    {% /if %}
+    {% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.isDate %}[mappings bmSafeAddObject:[NSString stringWithFormat:@"{{ fieldMapping.fieldMappingFormatString }}:%@", [self dateFormatForField:@"{{ fieldMapping.fieldName }}"]]];{% else %}[mappings bmSafeAddObject:@"{{ fieldMapping.fieldMappingFormatString }}"];{% /if %}
+    {% /for %}
+    return mappings;
+}
+
+{% if mapping.isRootElement %}
++ (NSString *)rootElementName {
+    return @"{{ mapping.elementName }}";
+}
+{% /if %}
+
++ (NSDictionary *)fieldMappingNamespaces {
+    NSMutableDictionary *namespaces = [NSMutableDictionary dictionary];
+    {% if mapping.parentName != nil %}[namespaces addEntriesFromDictionary:[super fieldMappingNamespaces]];
+    {% /if %}
+    {% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.namespaceURI != nil %}[namespaces bmSafeSetObject:@"{{ fieldMapping.namespaceURI }}" forKey:@"{{ fieldMapping.mappingPath }}"];
+    {% /if %}{% /for %}
+    return namespaces;
+}
+
++ (NSString *)namespaceURI {
+    return {% if mapping.namespaceURI == nil %}nil{% else %}@"{{ mapping.namespaceURI }}"{% /if %};
+}
+
++ (NSString *)dateFormatForField:(NSString *)fieldName {
+    return [self defaultDateFormat];
+}
+
++ (NSString *)defaultDateFormat {
+    return [BMFieldMapping defaultDateFormat];
+}
+
+- (id)init {
+    if ((self = [super init])) {
+    {% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.isArray %}    _{{ fieldMapping.fieldName }} = [NSMutableArray new];
+    {% /if %}{% /for %}
+    }
+    return self;
+}
+
+- (NSString *)description {
+    NSMutableString *s = [NSMutableString string];
+    {% if mapping.parentName != nil %}[s appendString:[super description]];
+    {% else %}[s appendString:NSStringFromClass([self class])];
+    {% /if %}
+    [s appendString:@"{"];
+    {% for fieldMapping in mapping.fieldMappings %}[s appendFormat:@"{% if currentLoop.currentIndex != 0 %}, {% /if %}{{ fieldMapping.fieldName }}=%@", [self.{{ fieldMapping.fieldName }} bmPrettyDescription]];
+    {% /for %}
+    [s appendString:@"}"];
+    return s;
+}
+
+{% if mapping.isEnumeration %}
+- ({{ mapping.objectClassName }}Value) enumValue {
+    NSNumber *n = [valueMapping keyForObject:self.value];
+    return [n intValue];
+}
+
+- (void)setEnumValue:({{ mapping.objectClassName }}Value)theValue {
+    self.value = [valueMapping objectForKey:[NSNumber numberWithInt:theValue]];
+}
+
+- (BOOL)isEqual:(id)other {
+    if (![other isKindOfClass:[self class]]) {
+        return NO;
+    }
+    _{{ mapping.objectClassName }} *otherValue = (_{{ mapping.objectClassName }} *)other;
+    
+    return (self.value == otherValue.value || [self.value isEqual:otherValue.value]);
+}
+
++ (id)instanceWithEnumValue:({{ mapping.objectClassName }}Value)theValue {
+    _{{ mapping.objectClassName }} * instance = [[self alloc] init];
+    [instance setEnumValue:theValue];
+    return instance;
+}
+
+{% /if %}
+
+
+@end
