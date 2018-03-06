@@ -9,6 +9,11 @@ import XCTest
 
 class MappableObjectGeneratorTests: XCTestCase {
     
+    enum JSONSchemaReadError: Error {
+        case fileNotFound
+        case invalidData
+    }
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,9 +24,28 @@ class MappableObjectGeneratorTests: XCTestCase {
         super.tearDown()
     }
     
+    func readJSONData(_ resourceName: String) throws -> Data {
+        let bundle = Bundle(for: MappableObjectGeneratorTests.self)
+        guard let url = bundle.url(forResource: resourceName, withExtension: "json") else {
+            throw JSONSchemaReadError.fileNotFound
+        }
+        
+        let data = try Data(contentsOf: url)
+        return data
+    }
+    
+    func readJSONSchema(_ resourceName: String) throws -> [String: Any] {
+        let data = try readJSONData(resourceName)
+        guard let schemaDict = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+            throw JSONSchemaReadError.invalidData
+        }
+        
+        return schemaDict
+    }
+    
     func testEncoding() throws {
-        let versionSupportResource = VersionSupportResource()
-        let imageCommand = ImageCommand()
+        var versionSupportResource: VersionSupportResource = VersionSupportResourceDTO()
+        var imageCommand: ImageCommand = ImageCommandDTO()
         
         imageCommand.height = 500
         imageCommand.width = 600
@@ -36,11 +60,13 @@ class MappableObjectGeneratorTests: XCTestCase {
         versionSupportResource.title = "some-title"
         versionSupportResource.url = "https://somehost/somepath"
         
-        
         let encoder = JSONEncoder()
-        let data = try encoder.encode(versionSupportResource)
+        let jsonData = try encoder.encode(versionSupportResource as! VersionSupportResourceDTO)
+        let resourceName = "com.ahold.ecommerce.api.generic.resources.VersionSupportResource"
+        let validator = KiteJSONValidator()
+        let schemaData = try readJSONData(resourceName)
+        let valid = validator.validateJSONData(jsonData, withSchemaData: schemaData)
         
-        print(String(data: data, encoding: .utf8)!)
+        XCTAssertTrue(valid, "Expected encoded jsonData to be valid according to schema")
     }
-    
 }

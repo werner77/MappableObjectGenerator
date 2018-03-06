@@ -13,10 +13,15 @@ def common_pods
     pod 'BMCommons/BMRestKit', :path => '../BMCommons'
 end
 
+def test_pods
+    pod 'KiteJSONValidator'
+end
+
 target 'MappableObjectGenerator' do
     common_pods
 end
 
 target 'MappableObjectGeneratorTests' do
     common_pods
+    test_pods
 end
