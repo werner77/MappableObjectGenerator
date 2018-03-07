@@ -3,7 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 project 'MappableObjectGenerator.xcodeproj'
 workspace 'MappableObjectGenerator.xcworkspace'
-platform:osx, '10.9'
+platform :osx, '10.9'
 
 inhibit_all_warnings!
 
@@ -14,7 +14,7 @@ def common_pods
 end
 
 def test_pods
-    pod 'KiteJSONValidator'
+    pod 'KiteJSONValidator', :path => '../KiteJSONValidator'
 end
 
 target 'MappableObjectGenerator' do

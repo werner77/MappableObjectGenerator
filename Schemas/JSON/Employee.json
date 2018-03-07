@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "urn:jsonschema:com:behindmedia:Employee",
+  "allOf": [
+    {
+      "$ref": "urn:jsonschema:com:behindmedia:Person"
+    },
+    {
+      "properties": {
+        "employeeNumber": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10
+        }
+      }
+    }
+  ],
+  "title": "com.behindmedia.Employee:com.behindmedia.Person",
+  "type": "object"
+}

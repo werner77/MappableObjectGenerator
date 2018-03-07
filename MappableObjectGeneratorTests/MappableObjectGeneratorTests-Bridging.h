@@ -9,5 +9,6 @@
 #define MappableObjectGeneratorTests_Bridging_h
 
 #import <KiteJSONValidator/KiteJSONValidator.h>
+#import <BMCommons/BMDateHelper.h>
 
 #endif /* MappableObjectGeneratorTests_Bridging_h */

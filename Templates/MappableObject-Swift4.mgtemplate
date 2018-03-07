@@ -1,6 +1,6 @@
 import Foundation
 
-protocol {{ mapping.unqualifiedObjectClassName }}: {% if mapping.parentName != nil %}{{ mapping.parentName }}{% else %}Codable{% /if %} {
+protocol {{ mapping.unqualifiedObjectClassName }}: {% if mapping.unqualifiedParentObjectClassName != nil %}{{ mapping.unqualifiedParentObjectClassName }}{% else %}Codable{% /if %} {
     {% for fieldMapping in mapping.fieldMappings %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}? { get set }
     {% /for %}
@@ -34,7 +34,7 @@ struct {{ mapping.unqualifiedObjectClassName }}DTO: {{ mapping.unqualifiedObject
     {% for fieldMapping in mapping.fieldMappings %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}?{% if fieldMapping.fieldObjectClassIsCustom %} {
         willSet(newValue) {
-precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}DTO, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }}DTO but was: \(String(describing: newValue))")
+            precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}DTO, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }}DTO but was: \(String(describing: newValue))")
         }
     }{% /if %}
     {% /for %}

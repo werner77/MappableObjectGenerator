@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "urn:jsonschema:com:behindmedia:Image",
+    "properties": {
+        "url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "width": {
+            "type": "integer"
+        },
+        "height": {
+            "type": "integer"
+        }
+    },
+    "title": "com.behindmedia.Image",
+    "type": "object"
+}

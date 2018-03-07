@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "positiveInteger": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        }
+    },
+    "id": "urn:jsonschema:com:behindmedia:Person",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "age": {
+            "type": "integer",
+            "maximum": 100,
+            "minimum": 0,
+            "exclusiveMaximum": true
+        },
+        "gender": {
+            "type": "string",
+            "enum": ["MALE", "FEMALE"]
+        },
+        "userName": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9]{6,}$",
+            "maxLength": 10
+        },
+        "petName": {
+            "type": "string",
+            "pattern": "ing",
+            "minLength": 6
+        },
+        "birthDate": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "emailAddress": {
+            "type": "string",
+            "format": "email"
+        },
+        "homePage": {
+            "type": "string",
+            "format": "uri"
+        },
+        "hostName": {
+            "type": "string",
+            "format": "hostname"
+        },
+        "ipv4Address": {
+            "type": "string",
+            "format": "ipv4"
+        },
+        "ipv6Address": {
+            "type": "string",
+            "format": "ipv6"
+        },
+        "profileImage": {
+            "type": "object",
+            "$ref": "urn:jsonschema:com:behindmedia:Image"
+        },
+        "married": {
+            "type": "boolean"
+        },
+        "backgroundImages": {
+            "items": {
+                "$ref": "urn:jsonschema:com:behindmedia:Image",
+                "type": "object"
+            },
+            "title": "[com.behindmedia.Image]",
+            "type": "array"
+        },
+        "nickNames": {
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true,
+            "maxItems": 5,
+            "minItems": 1,
+            "type": "array"
+        },
+        "luckyEvenNumber": {
+            "type": "integer",
+            "multipleOf": 2
+        },
+        "somePositiveInteger": {
+            "$ref": "#/definitions/positiveInteger"
+        },
+        "personalBest100Meters": {
+            "type": "number",
+            "minimum": 5.0
+        }
+    },
+    "required": ["name", "userName", "gender", "married", "age"],
+    "title": "com.behindmedia.Person",
+    "type": "object"
+}
