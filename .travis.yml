@@ -11,5 +11,5 @@ before_install:
 - pod repo add BMPodSpecs https://github.com/werner77/BMPodSpecs.git
 - pod install
 script:
-- set -o pipefail && xcodebuild clean build -workspace MappableObjectGenerator.xcworkspace -scheme MappableObjectGenerator ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild clean test -workspace MappableObjectGenerator.xcworkspace -scheme MappableObjectGenerator ONLY_ACTIVE_ARCH=NO | xcpretty
 

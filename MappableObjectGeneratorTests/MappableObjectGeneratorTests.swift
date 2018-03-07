@@ -64,7 +64,7 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
         person.age = 40
         person.birthDate = dateFormatter.date(from: "1977-09-04T12:00:00Z")
         person.emailAddress = "werner.altewischer@gmail.com"
-        person.gender = "MALE"
+        person.gender = PersonGenderType.PersonGenderTypeMALE
         person.homePage = URL(string: "https://www.behindmedia.com")
         person.hostName = "www.behindmedia.com"
         person.ipv4Address = "81.169.145.95"

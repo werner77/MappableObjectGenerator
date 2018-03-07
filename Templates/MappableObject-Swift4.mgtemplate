@@ -13,6 +13,13 @@ struct {{ mapping.unqualifiedObjectClassName }}DTO: {{ mapping.unqualifiedObject
         {% /for %}
     }
 
+    {% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.isStringEnumeration %}
+    enum {{ fieldMapping.enumerationTypeName }}: {{ fieldMapping.swiftFieldClassName }} {
+        {% for value in fieldMapping.enumeratedValues %}case {{ fieldMapping.enumerationTypeName }}{{ value }} = "{{ value }}"
+        {% /for %}
+    }
+    {% /if %}{% /for %}
+
     init() {
 
     }
@@ -20,22 +27,34 @@ struct {{ mapping.unqualifiedObjectClassName }}DTO: {{ mapping.unqualifiedObject
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         {% for fieldMapping in mapping.fieldMappings %}
+        {% if fieldMapping.isStringEnumeration %}
+        {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ fieldMapping.enumerationTypeName }}.self, forKey: .{{ fieldMapping.fieldName }})
+        {% else %}
         {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ fieldMapping.swiftFieldClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}DTO{% /if %}.self, forKey: .{{ fieldMapping.fieldName }})
+        {% /if %}
         {% /for %}
     }
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         {% for fieldMapping in mapping.fieldMappings %}
+        {% if fieldMapping.isStringEnumeration %}
+        try container.encodeIfPresent({{ fieldMapping.fieldName }}, forKey: .{{ fieldMapping.fieldName }})
+        {% else %}
         try container.encodeIfPresent({{ fieldMapping.fieldName }}{% if fieldMapping.fieldObjectClassIsCustom %} as? {{ fieldMapping.swiftFieldClassName }}DTO{% /if %}, forKey: .{{ fieldMapping.fieldName }})
+        {% /if %}
         {% /for %}
     }
 
     {% for fieldMapping in mapping.fieldMappings %}
+    {% if fieldMapping.isStringEnumeration %}
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.enumerationTypeName }}?
+    {% else %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}?{% if fieldMapping.fieldObjectClassIsCustom %} {
         willSet(newValue) {
             precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}DTO, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }}DTO but was: \(String(describing: newValue))")
         }
     }{% /if %}
+    {% /if %}
     {% /for %}
 }
