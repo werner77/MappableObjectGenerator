@@ -45,9 +45,9 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
     
     func testEncoding() throws {
 
-        var person: Person = PersonDTO()
-        var profileImage: Image = ImageDTO()
-        var backgroundImage: Image = ImageDTO()
+        var person: PersonType = Person()
+        var profileImage: ImageType = Image()
+        var backgroundImage: ImageType = Image()
 
         profileImage.url = URL(string: "https://www.behindmedia.com/profile.jpg")!
         profileImage.width = 400
@@ -64,7 +64,7 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
         person.age = 40
         person.birthDate = dateFormatter.date(from: "1977-09-04T12:00:00Z")
         person.emailAddress = "werner.altewischer@gmail.com"
-        person.gender = PersonGenderType.PersonGenderTypeMALE
+        person.gender = PersonGenderType.MALE
         person.homePage = URL(string: "https://www.behindmedia.com")
         person.hostName = "www.behindmedia.com"
         person.ipv4Address = "81.169.145.95"
@@ -81,7 +81,7 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
 
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
-        let jsonData = try encoder.encode(person as! PersonDTO)
+        let jsonData = try encoder.encode(person as! Person)
 
         let jsonString: String = String(data: jsonData, encoding: .utf8)!
 

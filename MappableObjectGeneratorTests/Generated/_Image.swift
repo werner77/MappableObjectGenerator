@@ -1,16 +1,30 @@
 import Foundation
 
-protocol Image: Codable {
+protocol ImageType: Codable {
+    
+    
     
     var url: URL? { get set }
     
+    
+    
+    
+    
     var width: Int? { get set }
+    
+    
+    
+    
     
     var height: Int? { get set }
     
+    
+    
 }
 
-struct ImageDTO: Image {
+
+
+struct Image: ImageType {
     enum CodingKeys: String, CodingKey {
         
         case url = "url"
@@ -21,8 +35,6 @@ struct ImageDTO: Image {
         
     }
 
-    
-
     init() {
 
     }
@@ -31,7 +43,10 @@ struct ImageDTO: Image {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         
+        
         url = try container.decodeIfPresent(URL.self, forKey: .url)
+        
+        
         
         
         
@@ -39,7 +54,10 @@ struct ImageDTO: Image {
         
         
         
+        
+        
         height = try container.decodeIfPresent(Int.self, forKey: .height)
+        
         
         
     }
@@ -48,7 +66,10 @@ struct ImageDTO: Image {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
         
+        
         try container.encodeIfPresent(url, forKey: .url)
+        
+        
         
         
         
@@ -56,14 +77,20 @@ struct ImageDTO: Image {
         
         
         
+        
+        
         try container.encodeIfPresent(height, forKey: .height)
+        
         
         
     }
 
     
     
+    
     var url: URL?
+    
+    
     
     
     
@@ -71,7 +98,10 @@ struct ImageDTO: Image {
     
     
     
+    
+    
     var height: Int?
+    
     
     
 }

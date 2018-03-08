@@ -1,50 +1,118 @@
 import Foundation
 
-enum PersonGenderType: String, Codable {
-    case MALE
-    case FEMALE
-
-}
-
-protocol Person: Codable {
-
+protocol PersonType: Codable {
+    
+    
+    
     var ipv6Address: String? { get set }
+    
+    
+    
+    
     
     var emailAddress: String? { get set }
     
-    var backgroundImages: [Image]? { get set }
+    
+    
+    
+    
+    var backgroundImages: Array<ImageType>? { get set }
+    
+    
+    
+    
     
     var personalBest100Meters: Double? { get set }
     
+    
+    
+    
+    
     var age: Int? { get set }
+    
+    
+    
+    
     
     var birthDate: Date? { get set }
     
+    
+    
+    
+    
     var hostName: String? { get set }
+    
+    
+    
+    
     
     var homePage: URL? { get set }
     
+    
+    
+    
+    
     var ipv4Address: String? { get set }
+    
+    
+    
+    
     
     var userName: String? { get set }
     
+    
+    
+    
+    
     var married: Bool? { get set }
     
-    var nickNames: [String]? { get set }
     
-    var profileImage: Image? { get set }
+    
+    
+    
+    var nickNames: Array<String>? { get set }
+    
+    
+    
+    
+    
+    var profileImage: ImageType? { get set }
+    
+    
+    
+    
     
     var petName: String? { get set }
     
+    
+    
+    
+    
     var luckyEvenNumber: Int? { get set }
+    
+    
+    
+    
     
     var name: String? { get set }
     
+    
+    
+    
     var gender: PersonGenderType? { get set }
+    
     
 }
 
-struct PersonDTO: Person {
+
+enum PersonGenderType: String, Codable {
+    case MALE
+    case FEMALE
+    
+}
+
+
+struct Person: PersonType {
     enum CodingKeys: String, CodingKey {
         
         case ipv6Address = "ipv6Address"
@@ -83,7 +151,6 @@ struct PersonDTO: Person {
         
     }
 
-    
     init() {
 
     }
@@ -92,7 +159,10 @@ struct PersonDTO: Person {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         
+        
         ipv6Address = try container.decodeIfPresent(String.self, forKey: .ipv6Address)
+        
+        
         
         
         
@@ -100,7 +170,11 @@ struct PersonDTO: Person {
         
         
         
-        backgroundImages = try container.decodeIfPresent([ImageDTO].self, forKey: .backgroundImages)
+        
+        
+        backgroundImages = try container.decodeIfPresent(Array<Image>.self, forKey: .backgroundImages)
+        
+        
         
         
         
@@ -108,7 +182,11 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         age = try container.decodeIfPresent(Int.self, forKey: .age)
+        
+        
         
         
         
@@ -116,7 +194,11 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         hostName = try container.decodeIfPresent(String.self, forKey: .hostName)
+        
+        
         
         
         
@@ -124,7 +206,11 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         ipv4Address = try container.decodeIfPresent(String.self, forKey: .ipv4Address)
+        
+        
         
         
         
@@ -132,15 +218,23 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         married = try container.decodeIfPresent(Bool.self, forKey: .married)
         
         
         
-        nickNames = try container.decodeIfPresent([String].self, forKey: .nickNames)
+        
+        
+        nickNames = try container.decodeIfPresent(Array<String>.self, forKey: .nickNames)
         
         
         
-        profileImage = try container.decodeIfPresent(ImageDTO.self, forKey: .profileImage)
+        
+        
+        profileImage = try container.decodeIfPresent(Image.self, forKey: .profileImage)
+        
+        
         
         
         
@@ -148,11 +242,16 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         luckyEvenNumber = try container.decodeIfPresent(Int.self, forKey: .luckyEvenNumber)
         
         
         
+        
+        
         name = try container.decodeIfPresent(String.self, forKey: .name)
+        
         
         
         
@@ -165,7 +264,10 @@ struct PersonDTO: Person {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
         
+        
         try container.encodeIfPresent(ipv6Address, forKey: .ipv6Address)
+        
+        
         
         
         
@@ -173,7 +275,11 @@ struct PersonDTO: Person {
         
         
         
-        try container.encodeIfPresent(backgroundImages as? [ImageDTO], forKey: .backgroundImages)
+        
+        
+        try container.encodeIfPresent(backgroundImages as? Array<Image>, forKey: .backgroundImages)
+        
+        
         
         
         
@@ -181,7 +287,11 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         try container.encodeIfPresent(age, forKey: .age)
+        
+        
         
         
         
@@ -189,7 +299,11 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         try container.encodeIfPresent(hostName, forKey: .hostName)
+        
+        
         
         
         
@@ -197,7 +311,11 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         try container.encodeIfPresent(ipv4Address, forKey: .ipv4Address)
+        
+        
         
         
         
@@ -205,7 +323,11 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         try container.encodeIfPresent(married, forKey: .married)
+        
+        
         
         
         
@@ -213,7 +335,11 @@ struct PersonDTO: Person {
         
         
         
-        try container.encodeIfPresent(profileImage as? ImageDTO, forKey: .profileImage)
+        
+        
+        try container.encodeIfPresent(profileImage as? Image, forKey: .profileImage)
+        
+        
         
         
         
@@ -221,11 +347,16 @@ struct PersonDTO: Person {
         
         
         
+        
+        
         try container.encodeIfPresent(luckyEvenNumber, forKey: .luckyEvenNumber)
         
         
         
+        
+        
         try container.encodeIfPresent(name, forKey: .name)
+        
         
         
         
@@ -236,7 +367,10 @@ struct PersonDTO: Person {
 
     
     
+    
     var ipv6Address: String?
+    
+    
     
     
     
@@ -244,11 +378,15 @@ struct PersonDTO: Person {
     
     
     
-    var backgroundImages: [Image]? {
+    
+    
+    var backgroundImages: Array<ImageType>? {
         willSet(newValue) {
-            precondition(newValue == nil || newValue is [ImageDTO], "New value should be an instance of [ImageDTO] but was: \(String(describing: newValue))")
+            precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
         }
     }
+    
+    
     
     
     
@@ -256,7 +394,11 @@ struct PersonDTO: Person {
     
     
     
+    
+    
     var age: Int?
+    
+    
     
     
     
@@ -264,7 +406,11 @@ struct PersonDTO: Person {
     
     
     
+    
+    
     var hostName: String?
+    
+    
     
     
     
@@ -272,7 +418,11 @@ struct PersonDTO: Person {
     
     
     
+    
+    
     var ipv4Address: String?
+    
+    
     
     
     
@@ -280,19 +430,27 @@ struct PersonDTO: Person {
     
     
     
+    
+    
     var married: Bool?
     
     
     
-    var nickNames: [String]?
+    
+    
+    var nickNames: Array<String>?
     
     
     
-    var profileImage: Image? {
+    
+    
+    var profileImage: ImageType? {
         willSet(newValue) {
-            precondition(newValue == nil || newValue is ImageDTO, "New value should be an instance of ImageDTO but was: \(String(describing: newValue))")
+            precondition(newValue == nil || newValue is Image, "New value should be an instance of Image but was: \(String(describing: newValue))")
         }
     }
+    
+    
     
     
     
@@ -300,11 +458,16 @@ struct PersonDTO: Person {
     
     
     
+    
+    
     var luckyEvenNumber: Int?
     
     
     
+    
+    
     var name: String?
+    
     
     
     
