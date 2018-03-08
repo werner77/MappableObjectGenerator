@@ -3,6 +3,8 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 osx_image: xcode9.2
+git:
+  submodules: true
 language: objective-c
 cache: cocoapods
 podfile: Podfile
