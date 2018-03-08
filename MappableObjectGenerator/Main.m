@@ -8,6 +8,7 @@
 
 #import "Main.h"
 #include <getopt.h>
+#import <BMCommons/BMCore.h>
 #import <BMCommons/BMMappableObjectGenerator.h>
 #import <BMCommons/NSNumber+BMCommons.h>
 #import <BMCommons/BMFileHelper.h>

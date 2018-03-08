@@ -8,13 +8,13 @@ platform :osx, '10.9'
 inhibit_all_warnings!
 
 def common_pods
-    pod 'BMCommons/BMCore', :path => '../BMCommons'
-    pod 'BMCommons/BMXML', :path => '../BMCommons'
-    pod 'BMCommons/BMRestKit', :path => '../BMCommons'
+    pod 'BMCommons/BMCore', :path => 'Modules/BMCommons'
+    pod 'BMCommons/BMXML', :path => 'Modules/BMCommons'
+    pod 'BMCommons/BMRestKit', :path => 'Modules/BMCommons'
 end
 
 def test_pods
-    pod 'KiteJSONValidator', :path => '../KiteJSONValidator'
+    pod 'KiteJSONValidator', :path => 'Modules/KiteJSONValidator'
 end
 
 target 'MappableObjectGenerator' do

@@ -1,0 +1,6 @@
+[submodule "Modules/BMCommons"]
+	path = Modules/BMCommons
+	url = https://github.com/werner77/BMCommons.git
+[submodule "Modules/KiteJSONValidator"]
+	path = Modules/KiteJSONValidator
+	url = https://github.com/werner77/KiteJSONValidator.git

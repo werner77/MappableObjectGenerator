@@ -35,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		4CD75BE62139F5A999050D49 /* libPods-MappableObjectGeneratorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGeneratorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742F0E6820512AE3006A1AEB /* MappableObjectGenerator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MappableObjectGenerator.1; sourceTree = "<group>"; };
 		7477CA7720493D6200298945 /* MappableObject.m.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = MappableObject.m.mgtemplate; sourceTree = "<group>"; };
 		7477CA7820493D6200298945 /* MappableObject-Swift4.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "MappableObject-Swift4.mgtemplate"; sourceTree = "<group>"; };
 		7477CA7E204953A500298945 /* CustomMappableObject-Swift4.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CustomMappableObject-Swift4.mgtemplate"; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		74E87ABB130C05150034B19F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		74E87ABD130C05150034B19F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		74E87ABF130C05150034B19F /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
-		74E87C14130C06420034B19F /* MappableObjectGenerator_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappableObjectGenerator_Prefix.pch; sourceTree = "<group>"; };
 		74E87C26130C08720034B19F /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
 		74E87C27130C08720034B19F /* Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Main.m; sourceTree = "<group>"; };
 		74F1D45E14615CFA007FEF5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,10 +99,9 @@
 			children = (
 				74B5143C204C51ED002129A6 /* Schemas */,
 				7477CA7620493D6200298945 /* Templates */,
-				74F1D45D14615CD4007FEF5E /* Resources */,
 				74FB4138203EC38C008E1959 /* MappableObjectGeneratorTests */,
 				74E874D4130BF1570034B19F /* Frameworks */,
-				08FB7795FE84155DC02AAC07 /* Source */,
+				08FB7795FE84155DC02AAC07 /* MappableObjectGenerator */,
 				C6A0FF2B0290797F04C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 				F3B170DDFA850DA7DD78B98F /* Pods */,
@@ -110,13 +109,14 @@
 			name = MappableObjectGenerator;
 			sourceTree = "<group>";
 		};
-		08FB7795FE84155DC02AAC07 /* Source */ = {
+		08FB7795FE84155DC02AAC07 /* MappableObjectGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				74E87C14130C06420034B19F /* MappableObjectGenerator_Prefix.pch */,
+				742F0E6820512AE3006A1AEB /* MappableObjectGenerator.1 */,
+				74F1D45E14615CFA007FEF5E /* Info.plist */,
 				74E874DE130BF1EC0034B19F /* Classes */,
 			);
-			name = Source;
+			path = MappableObjectGenerator;
 			sourceTree = "<group>";
 		};
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
@@ -195,14 +195,6 @@
 				74E87C27130C08720034B19F /* Main.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		74F1D45D14615CD4007FEF5E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				74F1D45E14615CFA007FEF5E /* Info.plist */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		74FB4138203EC38C008E1959 /* MappableObjectGeneratorTests */ = {
@@ -442,7 +434,9 @@
 			baseConfigurationReference = FDEC846FE1D6C60BA4B2FCFA /* Pods-MappableObjectGenerator.debug.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = MappableObjectGenerator/Info.plist;
 				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.behindmedia.mappableobjectgenerator;
 				PRODUCT_NAME = MappableObjectGenerator;
 			};
 			name = Debug;
@@ -451,7 +445,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EEA02DC87BE849939D65D4CF /* Pods-MappableObjectGenerator.release.xcconfig */;
 			buildSettings = {
+				INFOPLIST_FILE = MappableObjectGenerator/Info.plist;
 				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.behindmedia.mappableobjectgenerator;
 				PRODUCT_NAME = MappableObjectGenerator;
 			};
 			name = Release;
@@ -481,8 +477,6 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = MappableObjectGenerator_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"MAPPING_SERVICE_ENABLED=1",
 					"MG_TEMPLATE_ENABLED=1",
@@ -528,8 +522,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = MappableObjectGenerator_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"MG_TEMPLATE_ENABLED=1",
 					"MAPPING_SERVICE_ENABLED=1",
@@ -547,6 +539,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
