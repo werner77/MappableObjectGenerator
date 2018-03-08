@@ -1,34 +1,14 @@
 import Foundation
 
-protocol PersonType: Codable {
-    var ipv6Address: String? { get set }
-    var emailAddress: String? { get set }
-    var backgroundImages: Array<ImageType>? { get set }
-    var personalBest100Meters: Double? { get set }
-    var ipv4Address: String? { get set }
-    var age: Int? { get set }
-    var birthDate: Date? { get set }
-    var homePage: URL? { get set }
-    var hostName: String? { get set }
-    var userName: String? { get set }
-    var married: Bool? { get set }
-    var nickNames: Array<String>? { get set }
-    var profileImage: ImageType? { get set }
-    var petName: String? { get set }
-    var luckyEvenNumber: Int? { get set }
-    var name: String? { get set }
-    var gender: PersonGenderType? { get set }
+protocol EmployeeType: PersonType {
+    var employeeNumber: String? { get set }
 }
 
-enum PersonGenderType: String, Codable {
-    case MALE
-    case FEMALE
-}
-
-struct Person: PersonType {
+struct Employee: EmployeeType {
 
     // MARK: Coding keys
     enum CodingKeys: String, CodingKey {
+        case employeeNumber = "employeeNumber"
         case ipv6Address = "ipv6Address"
         case emailAddress = "emailAddress"
         case backgroundImages = "backgroundImages"
@@ -56,6 +36,7 @@ struct Person: PersonType {
     // MARK: Decodable implementation
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        employeeNumber = try container.decodeIfPresent(String.self, forKey: .employeeNumber)
         ipv6Address = try container.decodeIfPresent(String.self, forKey: .ipv6Address)
         emailAddress = try container.decodeIfPresent(String.self, forKey: .emailAddress)
         backgroundImages = try container.decodeIfPresent(Array<Image>.self, forKey: .backgroundImages)
@@ -78,6 +59,7 @@ struct Person: PersonType {
     // MARK: Encodable implementation
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(employeeNumber, forKey: .employeeNumber)
         try container.encodeIfPresent(ipv6Address, forKey: .ipv6Address)
         try container.encodeIfPresent(emailAddress, forKey: .emailAddress)
         try container.encodeIfPresent(backgroundImages as? Array<Image>, forKey: .backgroundImages)
@@ -98,6 +80,7 @@ struct Person: PersonType {
     }
 
     // MARK: properties
+    var employeeNumber: String?
     var ipv6Address: String?
     var emailAddress: String?
     var backgroundImages: Array<ImageType>? {

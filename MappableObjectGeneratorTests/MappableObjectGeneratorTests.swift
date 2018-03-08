@@ -43,7 +43,7 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
         return schemaDict
     }
     
-    func testEncoding() throws {
+    func testPersonEncoding() throws {
 
         var person: PersonType = Person()
         var profileImage: ImageType = Image()
@@ -92,6 +92,63 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
 
         let personSchemaData = try readJSONData("Person")
 
+        do {
+            try validator.validateJSONData(jsonData, withSchemaData: personSchemaData)
+        } catch(let error as NSError) {
+            print("Validation error: \(error.fullStacktrace)\n")
+            XCTFail("Expected encoded jsonData to be valid according to schema")
+        }
+    }
+    
+    func testEmployeeEncoding() throws {
+        
+        var employee: EmployeeType = Employee()
+        var profileImage: ImageType = Image()
+        var backgroundImage: ImageType = Image()
+        
+        profileImage.url = URL(string: "https://www.behindmedia.com/profile.jpg")!
+        profileImage.width = 400
+        profileImage.height = 600
+        
+        backgroundImage.url = URL(string: "https://www.behindmedia.com/background.jpg")!
+        backgroundImage.width = 1024
+        backgroundImage.height = 768
+        
+        // Format: "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        let dateFormatter: DateFormatter = BMDateHelper.rfc3339TimestampFormatter()
+        
+        employee.name = "Werner"
+        employee.age = 40
+        employee.birthDate = dateFormatter.date(from: "1977-09-04T12:00:00Z")
+        employee.emailAddress = "werner.altewischer@gmail.com"
+        employee.gender = PersonGenderType.MALE
+        employee.homePage = URL(string: "https://www.behindmedia.com")
+        employee.hostName = "www.behindmedia.com"
+        employee.ipv4Address = "81.169.145.95"
+        employee.ipv6Address = "0:0:0:0:0:FFFF:51A9:915F"
+        employee.married = false
+        employee.userName = "bikkel77"
+        employee.nickNames = ["SportBilly"]
+        employee.personalBest100Meters = 12.64
+        employee.petName = "Mingootje"
+        employee.luckyEvenNumber = 6
+        employee.profileImage = profileImage
+        employee.backgroundImages = [backgroundImage]
+        employee.employeeNumber = "0123456789"
+        
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        let jsonData = try encoder.encode(employee as! Employee)
+        
+        let jsonString: String = String(data: jsonData, encoding: .utf8)!
+        
+        print("JSON:\n\(jsonString)")
+        
+        let validator = KiteJSONValidator()
+        validator.delegate = self
+        
+        let personSchemaData = try readJSONData("Employee")
+        
         do {
             try validator.validateJSONData(jsonData, withSchemaData: personSchemaData)
         } catch(let error as NSError) {

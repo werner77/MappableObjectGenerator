@@ -1,9 +1,9 @@
 import Foundation
 
-protocol {{ mapping.unqualifiedObjectClassName }}Type: {% if mapping.unqualifiedParentObjectClassName != nil %}{{ mapping.unqualifiedParentObjectClassName }}Type{% else %}Codable{% /if %} {
+protocol {{ mapping.unqualifiedObjectClassName }}Type:{% if mapping.unqualifiedParentObjectClassName != nil %} {{ mapping.unqualifiedParentObjectClassName }}Type{% else %} Codable{% /if %} {
     {% for fieldMapping in mapping.fieldMappings %}
     {% if fieldMapping.isStringEnumeration %}
-    var {{ fieldMapping.fieldName }}: {{ mapping.unqualifiedObjectClassName }}{{ fieldMapping.enumerationTypeName }}? { get set }
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.enumerationTypeName }}? { get set }
     {% else %}
     {% if fieldMapping.isCollection %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}>? { get set }
@@ -13,30 +13,37 @@ protocol {{ mapping.unqualifiedObjectClassName }}Type: {% if mapping.unqualified
     {% /if %}
     {% /for %}
 }
+{% for fieldMapping in mapping.fieldMappings %}
+{% if fieldMapping.isStringEnumeration %}
 
-{% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.isStringEnumeration %}
-enum {{ mapping.unqualifiedObjectClassName }}{{ fieldMapping.enumerationTypeName }}: String, Codable {
-    {% for value in fieldMapping.enumeratedValues %}case {{ value }}
+enum {{ fieldMapping.enumerationTypeName }}: String, Codable {
+    {% for value in fieldMapping.enumeratedValues %}
+    case {{ value }}
     {% /for %}
 }
-{% /if %}{% /for %}
+{% /if %}
+{% /for %}
 
 struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectClassName }}Type {
+
+    // MARK: Coding keys
     enum CodingKeys: String, CodingKey {
-        {% for fieldMapping in mapping.fieldMappings %}
+        {% for fieldMapping in mapping.allFieldMappings %}
         case {{ fieldMapping.fieldName }} = "{{ fieldMapping.mappingPath }}"
         {% /for %}
     }
 
+    // MARK: No argument initializer
     init() {
 
     }
 
+    // MARK: Decodable implementation
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        {% for fieldMapping in mapping.fieldMappings %}
+        {% for fieldMapping in mapping.allFieldMappings %}
         {% if fieldMapping.isStringEnumeration %}
-        {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ mapping.unqualifiedObjectClassName }}{{ fieldMapping.enumerationTypeName }}.self, forKey: .{{ fieldMapping.fieldName }})
+        {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ fieldMapping.enumerationTypeName }}.self, forKey: .{{ fieldMapping.fieldName }})
         {% else %}
         {% if fieldMapping.isCollection %}
         {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}>.self, forKey: .{{ fieldMapping.fieldName }})
@@ -47,9 +54,10 @@ struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectCla
         {% /for %}
     }
 
+    // MARK: Encodable implementation
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        {% for fieldMapping in mapping.fieldMappings %}
+        {% for fieldMapping in mapping.allFieldMappings %}
         {% if fieldMapping.isStringEnumeration %}
         try container.encodeIfPresent({{ fieldMapping.fieldName }}, forKey: .{{ fieldMapping.fieldName }})
         {% else %}
@@ -62,22 +70,25 @@ struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectCla
         {% /for %}
     }
 
-    {% for fieldMapping in mapping.fieldMappings %}
+    // MARK: properties
+    {% for fieldMapping in mapping.allFieldMappings %}
     {% if fieldMapping.isStringEnumeration %}
-    var {{ fieldMapping.fieldName }}: {{ mapping.unqualifiedObjectClassName }}{{ fieldMapping.enumerationTypeName }}?
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.enumerationTypeName }}?
     {% else %}
     {% if fieldMapping.isCollection %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}>?{% if fieldMapping.fieldObjectClassIsCustom %} {
         willSet(newValue) {
             precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}>, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}> but was: \(String(describing: newValue))")
         }
-    }{% /if %}
+    }
+    {% /if %}
     {% else %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}?{% if fieldMapping.fieldObjectClassIsCustom %} {
         willSet(newValue) {
             precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }} but was: \(String(describing: newValue))")
         }
-    }{% /if %}
+    }
+    {% /if %}
     {% /if %}
     {% /if %}
     {% /for %}

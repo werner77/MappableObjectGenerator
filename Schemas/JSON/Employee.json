@@ -12,7 +12,8 @@
           "minLength": 10,
           "maxLength": 10
         }
-      }
+      },
+      "required": ["employeeNumber"]
     }
   ],
   "title": "com.behindmedia.Employee:com.behindmedia.Person",
