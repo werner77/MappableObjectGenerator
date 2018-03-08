@@ -11,7 +11,6 @@
 		743A929520517D1B00668D76 /* _Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929420517D1B00668D76 /* _Employee.swift */; };
 		743A929720518BB500668D76 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929620518BB500668D76 /* Validators.swift */; };
 		743A92992051919700668D76 /* CodableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A92982051919700668D76 /* CodableType.swift */; };
-		743A929B205191FC00668D76 /* CodableType+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929A205191FC00668D76 /* CodableType+Validation.swift */; };
 		743A929D2051944600668D76 /* JSONSchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929C2051944600668D76 /* JSONSchemaReader.swift */; };
 		74B51513204C51EE002129A6 /* namespace-mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74B514A8204C51ED002129A6 /* namespace-mappings.plist */; };
 		74CE799A204FF0CF005C5080 /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = 74CE7999204FF0CF005C5080 /* Person.json */; };
@@ -20,7 +19,9 @@
 		74E87C28130C08720034B19F /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E87C27130C08720034B19F /* Main.m */; };
 		74FB413A203EC38C008E1959 /* MappableObjectGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */; };
 		8DD76FB00486AB0100D96B5E /* MappableObjectGenerator.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* MappableObjectGenerator.1 */; };
+		A83DF4F30A9247179C4A3B6C /* invalid-employee1.json in Resources */ = {isa = PBXBuildFile; fileRef = A83DFAFC94FC7D9C6D1DDAB8 /* invalid-employee1.json */; };
 		A83DF70C20262AEE06145FB9 /* _Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83DF8BD5B27EF6C69CB42BD /* _Person.swift */; };
+		A83DFA513E188AA963E17E24 /* valid-employee.json in Resources */ = {isa = PBXBuildFile; fileRef = A83DFC44ACEABEF8D180DCC6 /* valid-employee.json */; };
 		A83DFAD756C8667F51537956 /* _Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83DF8368B2DAEA34B26AC2E /* _Image.swift */; };
 		E377FEE853DCB92F4DDFF8EA /* libPods-MappableObjectGeneratorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD75BE62139F5A999050D49 /* libPods-MappableObjectGeneratorTests.a */; };
 /* End PBXBuildFile section */
@@ -44,7 +45,6 @@
 		743A929420517D1B00668D76 /* _Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Employee.swift; sourceTree = "<group>"; };
 		743A929620518BB500668D76 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		743A92982051919700668D76 /* CodableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableType.swift; sourceTree = "<group>"; };
-		743A929A205191FC00668D76 /* CodableType+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodableType+Validation.swift"; sourceTree = "<group>"; };
 		743A929C2051944600668D76 /* JSONSchemaReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSchemaReader.swift; sourceTree = "<group>"; };
 		7477CA7720493D6200298945 /* MappableObject.m.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = MappableObject.m.mgtemplate; sourceTree = "<group>"; };
 		7477CA7820493D6200298945 /* MappableObject-Swift4.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "MappableObject-Swift4.mgtemplate"; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		937DD5D8EB934DEC297907C5 /* Pods-MappableObjectGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGeneratorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A83DF8368B2DAEA34B26AC2E /* _Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Image.swift; sourceTree = "<group>"; };
 		A83DF8BD5B27EF6C69CB42BD /* _Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Person.swift; sourceTree = "<group>"; };
+		A83DFAFC94FC7D9C6D1DDAB8 /* invalid-employee1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "invalid-employee1.json"; sourceTree = "<group>"; };
+		A83DFC44ACEABEF8D180DCC6 /* valid-employee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "valid-employee.json"; sourceTree = "<group>"; };
 		BB9B7E4087A26B8690C6B568 /* Pods-MappableObjectGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGeneratorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6A0FF2C0290799A04C91782 /* MappableObjectGenerator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MappableObjectGenerator.1; sourceTree = "<group>"; };
 		DF6D6A294D2597E1EFFE7874 /* libPods-MappableObjectGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGenerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,10 +219,19 @@
 				74B51514204D2CB9002129A6 /* MappableObjectGeneratorTests-Bridging.h */,
 				743A929620518BB500668D76 /* Validators.swift */,
 				743A92982051919700668D76 /* CodableType.swift */,
-				743A929A205191FC00668D76 /* CodableType+Validation.swift */,
 				743A929C2051944600668D76 /* JSONSchemaReader.swift */,
+				A83DFCE3CA4F01A47C5F645D /* Resources */,
 			);
 			path = MappableObjectGeneratorTests;
+			sourceTree = "<group>";
+		};
+		A83DFCE3CA4F01A47C5F645D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A83DFC44ACEABEF8D180DCC6 /* valid-employee.json */,
+				A83DFAFC94FC7D9C6D1DDAB8 /* invalid-employee1.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C6A0FF2B0290797F04C91782 /* Documentation */ = {
@@ -330,6 +341,8 @@
 				74B51513204C51EE002129A6 /* namespace-mappings.plist in Resources */,
 				74CE799A204FF0CF005C5080 /* Person.json in Resources */,
 				74CE799E204FF5EF005C5080 /* Employee.json in Resources */,
+				A83DFA513E188AA963E17E24 /* valid-employee.json in Resources */,
+				A83DF4F30A9247179C4A3B6C /* invalid-employee1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +444,6 @@
 				743A929520517D1B00668D76 /* _Employee.swift in Sources */,
 				A83DFAD756C8667F51537956 /* _Image.swift in Sources */,
 				743A929720518BB500668D76 /* Validators.swift in Sources */,
-				743A929B205191FC00668D76 /* CodableType+Validation.swift in Sources */,
 				743A92992051919700668D76 /* CodableType.swift in Sources */,
 				A83DF70C20262AEE06145FB9 /* _Person.swift in Sources */,
 				743A929D2051944600668D76 /* JSONSchemaReader.swift in Sources */,

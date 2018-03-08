@@ -1,0 +1,32 @@
+{
+  "ipv6Address": "0:0:0:0:0:FFFF:51A9:915F",
+  "emailAddress": "werner.altewischer@gmail.com",
+  "backgroundImages": [
+    {
+      "url": "https:\/\/www.behindmedia.com\/background.jpg",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "employeeNumber": "0123456789",
+  "ipv4Address": "81.169.145.95",
+  "age": 40,
+  "birthDate": "1977-09-04T12:00:00Z",
+  "homePage": "https:\/\/www.behindmedia.com",
+  "personalBest100Meters": 12.64,
+  "hostName": "www.behindmedia.com",
+  "userName": "bikkel77",
+  "married": false,
+  "nickNames": [
+    "SportBilly"
+  ],
+  "profileImage": {
+    "url": "https:\/\/www.behindmedia.com\/profile.jpg",
+    "width": 400,
+    "height": 600
+  },
+  "petName": "Mingootje",
+  "luckyEvenNumber": 6,
+  "name": "Werner",
+  "gender": "MALE"
+}

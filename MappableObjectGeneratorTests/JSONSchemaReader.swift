@@ -7,18 +7,18 @@
 
 import Foundation
 
-enum JSONSchemaReadError: Error {
+enum JSONReadError: Error {
     case fileNotFound
     case invalidData
     case invalidSchemaURL
 }
 
-final class JSONSchemaReader: NSObject, KiteJSONSchemaRefDelegate {
+final class JSONReader: NSObject, KiteJSONSchemaRefDelegate {
     
     func readJSONData(_ resourceName: String) throws -> Data {
-        let bundle = Bundle(for: JSONSchemaReader.self)
+        let bundle = Bundle(for: JSONReader.self)
         guard let url = bundle.url(forResource: resourceName, withExtension: "json") else {
-            throw JSONSchemaReadError.fileNotFound
+            throw JSONReadError.fileNotFound
         }
         
         let data = try Data(contentsOf: url)
@@ -28,7 +28,7 @@ final class JSONSchemaReader: NSObject, KiteJSONSchemaRefDelegate {
     func readJSONSchema(_ resourceName: String) throws -> [String: Any] {
         let data = try readJSONData(resourceName)
         guard let schemaDict = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-            throw JSONSchemaReadError.invalidData
+            throw JSONReadError.invalidData
         }
         
         return schemaDict
@@ -36,8 +36,17 @@ final class JSONSchemaReader: NSObject, KiteJSONSchemaRefDelegate {
     
     func readJSONSchemaData(_ refURL: URL) throws -> Data {
         guard let resourceName = refURL.absoluteString.components(separatedBy: ":").last else {
-            throw JSONSchemaReadError.invalidSchemaURL
+            throw JSONReadError.invalidSchemaURL
         }
-        return try JSONSchemaReader.readJSONData(resourceName)
+        return try readJSONData(resourceName)
+    }
+
+    func schemaValidator(_ validator: KiteJSONValidator, requiresSchemaDataForRefURL refURL: URL) -> Data? {
+        do {
+            return try readJSONSchemaData(refURL)
+        } catch (let error) {
+            print("Could not read schema data for URL '\(refURL): \(error)")
+            return nil
+        }
     }
 }
