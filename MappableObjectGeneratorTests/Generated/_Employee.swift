@@ -6,6 +6,8 @@ protocol EmployeeType: PersonType {
 
 struct Employee: EmployeeType {
 
+    static let schemaID = "urn:jsonschema:com:behindmedia:Employee"
+
     // MARK: Coding keys
     enum CodingKeys: String, CodingKey {
         case employeeNumber = "employeeNumber"

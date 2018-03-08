@@ -1,12 +1,14 @@
 import Foundation
 
-protocol ImageType: Codable {
+protocol ImageType: CodableType {
     var url: URL? { get set }
     var width: Int? { get set }
     var height: Int? { get set }
 }
 
 struct Image: ImageType {
+
+    static let schemaID = "urn:jsonschema:com:behindmedia:Image"
 
     // MARK: Coding keys
     enum CodingKeys: String, CodingKey {

@@ -9,11 +9,6 @@ import XCTest
 
 class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
     
-    enum JSONSchemaReadError: Error {
-        case fileNotFound
-        case invalidData
-    }
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,25 +17,6 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-    }
-    
-    func readJSONData(_ resourceName: String) throws -> Data {
-        let bundle = Bundle(for: MappableObjectGeneratorTests.self)
-        guard let url = bundle.url(forResource: resourceName, withExtension: "json") else {
-            throw JSONSchemaReadError.fileNotFound
-        }
-        
-        let data = try Data(contentsOf: url)
-        return data
-    }
-    
-    func readJSONSchema(_ resourceName: String) throws -> [String: Any] {
-        let data = try readJSONData(resourceName)
-        guard let schemaDict = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-            throw JSONSchemaReadError.invalidData
-        }
-        
-        return schemaDict
     }
     
     func testPersonEncoding() throws {
@@ -90,7 +66,7 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
         let validator = KiteJSONValidator()
         validator.delegate = self
 
-        let personSchemaData = try readJSONData("Person")
+        let personSchemaData = try reader.readJSONData("Person")
 
         do {
             try validator.validateJSONData(jsonData, withSchemaData: personSchemaData)
@@ -147,7 +123,7 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
         let validator = KiteJSONValidator()
         validator.delegate = self
         
-        let personSchemaData = try readJSONData("Employee")
+        let personSchemaData = try JSONSchemaReader.readJSONData("Employee")
         
         do {
             try validator.validateJSONData(jsonData, withSchemaData: personSchemaData)
@@ -165,7 +141,7 @@ class MappableObjectGeneratorTests: XCTestCase, KiteJSONSchemaRefDelegate {
         }
 
         do {
-            return try readJSONData(resourceName)
+            return try JSONSchemaReader.readJSONData(resourceName)
         } catch (let error) {
             print("Could not read schema data: \(error)")
         }

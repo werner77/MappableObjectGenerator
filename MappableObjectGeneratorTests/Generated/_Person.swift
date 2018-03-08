@@ -1,6 +1,6 @@
 import Foundation
 
-protocol PersonType: Codable {
+protocol PersonType: CodableType {
     var ipv6Address: String? { get set }
     var emailAddress: String? { get set }
     var backgroundImages: Array<ImageType>? { get set }
@@ -26,6 +26,8 @@ enum PersonGenderType: String, Codable {
 }
 
 struct Person: PersonType {
+
+    static let schemaID = "urn:jsonschema:com:behindmedia:Person"
 
     // MARK: Coding keys
     enum CodingKeys: String, CodingKey {
