@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		6AC2775DD2B083493B42C9E0 /* libPods-MappableObjectGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6D6A294D2597E1EFFE7874 /* libPods-MappableObjectGenerator.a */; };
 		743A929520517D1B00668D76 /* _Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929420517D1B00668D76 /* _Employee.swift */; };
-		743A929720518BB500668D76 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929620518BB500668D76 /* Validators.swift */; };
 		743A92992051919700668D76 /* CodableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A92982051919700668D76 /* CodableType.swift */; };
 		743A929D2051944600668D76 /* JSONSchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929C2051944600668D76 /* JSONSchemaReader.swift */; };
+		743A929F2052776E00668D76 /* ObjectValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929E2052776E00668D76 /* ObjectValidator.swift */; };
 		74B51513204C51EE002129A6 /* namespace-mappings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74B514A8204C51ED002129A6 /* namespace-mappings.plist */; };
 		74CE799A204FF0CF005C5080 /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = 74CE7999204FF0CF005C5080 /* Person.json */; };
 		74CE799C204FF593005C5080 /* Image.json in Resources */ = {isa = PBXBuildFile; fileRef = 74CE799B204FF593005C5080 /* Image.json */; };
@@ -43,9 +43,9 @@
 		4CD75BE62139F5A999050D49 /* libPods-MappableObjectGeneratorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGeneratorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		742F0E6820512AE3006A1AEB /* MappableObjectGenerator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MappableObjectGenerator.1; sourceTree = "<group>"; };
 		743A929420517D1B00668D76 /* _Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Employee.swift; sourceTree = "<group>"; };
-		743A929620518BB500668D76 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		743A92982051919700668D76 /* CodableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableType.swift; sourceTree = "<group>"; };
 		743A929C2051944600668D76 /* JSONSchemaReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSchemaReader.swift; sourceTree = "<group>"; };
+		743A929E2052776E00668D76 /* ObjectValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectValidator.swift; sourceTree = "<group>"; };
 		7477CA7720493D6200298945 /* MappableObject.m.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = MappableObject.m.mgtemplate; sourceTree = "<group>"; };
 		7477CA7820493D6200298945 /* MappableObject-Swift4.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "MappableObject-Swift4.mgtemplate"; sourceTree = "<group>"; };
 		7477CA7E204953A500298945 /* CustomMappableObject-Swift4.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CustomMappableObject-Swift4.mgtemplate"; sourceTree = "<group>"; };
@@ -217,9 +217,9 @@
 				74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */,
 				74FB413B203EC38C008E1959 /* Info.plist */,
 				74B51514204D2CB9002129A6 /* MappableObjectGeneratorTests-Bridging.h */,
-				743A929620518BB500668D76 /* Validators.swift */,
 				743A92982051919700668D76 /* CodableType.swift */,
 				743A929C2051944600668D76 /* JSONSchemaReader.swift */,
+				743A929E2052776E00668D76 /* ObjectValidator.swift */,
 				A83DFCE3CA4F01A47C5F645D /* Resources */,
 			);
 			path = MappableObjectGeneratorTests;
@@ -443,9 +443,9 @@
 				74FB413A203EC38C008E1959 /* MappableObjectGeneratorTests.swift in Sources */,
 				743A929520517D1B00668D76 /* _Employee.swift in Sources */,
 				A83DFAD756C8667F51537956 /* _Image.swift in Sources */,
-				743A929720518BB500668D76 /* Validators.swift in Sources */,
 				743A92992051919700668D76 /* CodableType.swift in Sources */,
 				A83DF70C20262AEE06145FB9 /* _Person.swift in Sources */,
+				743A929F2052776E00668D76 /* ObjectValidator.swift in Sources */,
 				743A929D2051944600668D76 /* JSONSchemaReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

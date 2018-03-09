@@ -125,4 +125,11 @@ struct Person: PersonType {
     var luckyEvenNumber: Int?
     var name: String?
     var gender: PersonGenderType?
+    
+    func validate() -> ValidationResult {
+        let validator = ObjectValidator(object: self)
+        validator.withKeyPath(\Person.petName).validateMinLength(6).validatePattern("ing")
+        validator.withKeyPath(\Person.emailAddress).validateEmailAddress()
+        return validator.evaluate()
+    }
 }
