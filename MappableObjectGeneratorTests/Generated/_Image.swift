@@ -16,6 +16,11 @@ struct Image: ImageType {
         case width = "width"
         case height = "height"
     }
+    
+    // MARK: properties
+    var url: URL?
+    var width: Int?
+    var height: Int?
 
     // MARK: No argument initializer
     init() {
@@ -38,8 +43,9 @@ struct Image: ImageType {
         try container.encodeIfPresent(height, forKey: .height)
     }
 
-    // MARK: properties
-    var url: URL?
-    var width: Int?
-    var height: Int?
+    // MARK: Validation
+    func validate() -> ValidationResult {
+        let validator = ObjectValidator(object: self)
+        return validator.evaluate()
+    }
 }

@@ -29,6 +29,34 @@ struct Employee: EmployeeType {
         case name = "name"
         case gender = "gender"
     }
+    
+    // MARK: properties
+    var employeeNumber: String?
+    var ipv6Address: String?
+    var emailAddress: String?
+    var backgroundImages: Array<ImageType>? {
+        willSet(newValue) {
+            precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
+        }
+    }
+    var personalBest100Meters: Double?
+    var ipv4Address: String?
+    var age: Int?
+    var birthDate: Date?
+    var homePage: URL?
+    var hostName: String?
+    var userName: String?
+    var married: Bool?
+    var nickNames: Array<String>?
+    var profileImage: ImageType? {
+        willSet(newValue) {
+            precondition(newValue == nil || newValue is Image, "New value should be an instance of Image but was: \(String(describing: newValue))")
+        }
+    }
+    var petName: String?
+    var luckyEvenNumber: Int?
+    var name: String?
+    var gender: PersonGenderType?
 
     // MARK: No argument initializer
     init() {
@@ -81,31 +109,21 @@ struct Employee: EmployeeType {
         try container.encodeIfPresent(gender, forKey: .gender)
     }
 
-    // MARK: properties
-    var employeeNumber: String?
-    var ipv6Address: String?
-    var emailAddress: String?
-    var backgroundImages: Array<ImageType>? {
-        willSet(newValue) {
-            precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
-        }
+    // MARK: Validation
+    func validate() -> ValidationResult {
+        let validator = ObjectValidator(object: self)
+        validator.withKeyPath(\Employee.employeeNumber, required: true)?.validateMinLength(10).validateMaxLength(10)
+        validator.withKeyPath(\Employee.ipv6Address)?.validateIPV6Address()
+        validator.withKeyPath(\Employee.emailAddress)?.validateEmailAddress()
+        validator.withKeyPath(\Employee.ipv4Address)?.validateIPV4Address()
+        validator.withKeyPath(\Employee.age, required: true)
+        validator.withKeyPath(\Employee.hostName)?.validateHostName()
+        validator.withKeyPath(\Employee.userName, required: true)?.validateMaxLength(10).validatePattern("^[a-zA-Z0-9]{6,}$")
+        validator.withKeyPath(\Employee.married, required: true)
+        validator.withKeyPath(\Employee.nickNames)?.validateMinItems(1).validateMaxItems(5).validateUniqueItems()
+        validator.withKeyPath(\Employee.petName)?.validateMinLength(6).validatePattern("ing")
+        validator.withKeyPath(\Employee.name, required: true)
+        validator.withKeyPath(\Employee.gender, required: true)
+        return validator.evaluate()
     }
-    var personalBest100Meters: Double?
-    var ipv4Address: String?
-    var age: Int?
-    var birthDate: Date?
-    var homePage: URL?
-    var hostName: String?
-    var userName: String?
-    var married: Bool?
-    var nickNames: Array<String>?
-    var profileImage: ImageType? {
-        willSet(newValue) {
-            precondition(newValue == nil || newValue is Image, "New value should be an instance of Image but was: \(String(describing: newValue))")
-        }
-    }
-    var petName: String?
-    var luckyEvenNumber: Int?
-    var name: String?
-    var gender: PersonGenderType?
 }

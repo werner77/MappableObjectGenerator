@@ -9,4 +9,6 @@ import Foundation
 
 protocol CodableType: Codable {
     static var schemaID: String { get }
+    
+    func validate() -> ValidationResult
 }

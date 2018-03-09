@@ -44,6 +44,12 @@ class MappableObjectGeneratorTests: XCTestCase {
 
         do {
             try validate(jsonData, against: Person.schemaID)
+            switch person.validate() {
+            case .valid:
+                break
+            case .invalid(let validationErrors):
+                XCTFail("Expected no validation errors but got: \(validationErrors)")
+            }
         } catch(let error as NSError) {
             print("Validation error: \(error.fullStacktrace)\n")
             XCTFail("Expected encoded jsonData to be valid according to schema")
@@ -63,6 +69,12 @@ class MappableObjectGeneratorTests: XCTestCase {
 
         do {
             try validate(jsonData, against: Employee.schemaID)
+            switch employee.validate() {
+            case .valid:
+                break
+            case .invalid(let validationErrors):
+                XCTFail("Expected no validation errors but got: \(validationErrors)")
+            }
         } catch(let error as NSError) {
             print("Validation error: \(error.fullStacktrace)\n")
             XCTFail("Expected encoded jsonData to be valid according to schema")
@@ -79,6 +91,14 @@ class MappableObjectGeneratorTests: XCTestCase {
             print("Validation error: \(error.fullStacktrace)\n")
         }
 
+        let employee: EmployeeType = try decoder.decode(Employee.self, from: jsonData)
+        
+        switch employee.validate() {
+        case .valid:
+            XCTFail("Expected validation to report invalid state")
+        case .invalid(let validationErrors):
+            print("Validation errors: \(validationErrors)")
+        }
     }
 
     func validate(_ jsonData: Data, against schemaID: String) throws {

@@ -34,6 +34,29 @@ struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectCla
         case {{ fieldMapping.fieldName }} = "{{ fieldMapping.mappingPath }}"
         {% /for %}
     }
+    
+    // MARK: properties
+    {% for fieldMapping in mapping.allFieldMappings %}
+    {% if fieldMapping.isStringEnumeration %}
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.enumerationTypeName }}?
+    {% else %}
+    {% if fieldMapping.isCollection %}
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}>?{% if fieldMapping.fieldObjectClassIsCustom %} {
+        willSet(newValue) {
+            precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}>, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}> but was: \(String(describing: newValue))")
+        }
+    }
+    {% /if %}
+    {% else %}
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}?{% if fieldMapping.fieldObjectClassIsCustom %} {
+        willSet(newValue) {
+            precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }} but was: \(String(describing: newValue))")
+        }
+    }
+    {% /if %}
+    {% /if %}
+    {% /if %}
+    {% /for %}
 
     // MARK: No argument initializer
     init() {
@@ -72,26 +95,18 @@ struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectCla
         {% /for %}
     }
 
-    // MARK: properties
-    {% for fieldMapping in mapping.allFieldMappings %}
-    {% if fieldMapping.isStringEnumeration %}
-    var {{ fieldMapping.fieldName }}: {{ fieldMapping.enumerationTypeName }}?
-    {% else %}
-    {% if fieldMapping.isCollection %}
-    var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}>?{% if fieldMapping.fieldObjectClassIsCustom %} {
-        willSet(newValue) {
-            precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}>, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}> but was: \(String(describing: newValue))")
-        }
+    // MARK: Validation
+    func validate() -> ValidationResult {
+        let validator = ObjectValidator(object: self)
+        {% for fieldMapping in mapping.allFieldMappings %}
+        {% if fieldMapping.hasConstraints %}
+        validator.withKeyPath(\{{ mapping.unqualifiedObjectClassName }}.{{ fieldMapping.fieldName }}{% if fieldMapping.isRequired %}, required: true{% /if %})?{% if fieldMapping.minItems > 0 %}.validateMinItems({{ fieldMapping.minItems }}){% /if %}{% if fieldMapping.maxItems >= 0 %}.validateMaxItems({{ fieldMapping.maxItems }}){% /if %}{% if fieldMapping.uniqueItems %}.validateUniqueItems(){% /if %}{% if fieldMapping.minLength > 0 %}.validateMinLength({{ fieldMapping.minLength }}){% /if %}{% if fieldMapping.maxLength >= 0 %}.validateMaxLength({{ fieldMapping.maxLength }}){% /if %}{% if fieldMapping.schemaFieldFormatType == 3 %}.validateEmailAddress(){% /if %}{% if fieldMapping.schemaFieldFormatType == 4 %}.validateHostName(){% /if %}{% if fieldMapping.schemaFieldFormatType == 5 %}.validateIPV4Address(){% /if %}{% if fieldMapping.schemaFieldFormatType == 6 %}.validateIPV6Address(){% /if %}{% if fieldMapping.pattern != nil %}.validatePattern("{{ fieldMapping.escapedPattern }}"){% /if %}
+        {% else %}
+        {% if fieldMapping.isRequired %}
+        validator.withKeyPath(\{{ mapping.unqualifiedObjectClassName }}.{{ fieldMapping.fieldName }}, required: true)
+        {% /if %}
+        {% /if %}
+        {% /for %}
+        return validator.evaluate()
     }
-    {% /if %}
-    {% else %}
-    var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}?{% if fieldMapping.fieldObjectClassIsCustom %} {
-        willSet(newValue) {
-            precondition(newValue == nil || newValue is {{ fieldMapping.swiftFieldClassName }}, "New value should be an instance of {{ fieldMapping.swiftFieldClassName }} but was: \(String(describing: newValue))")
-        }
-    }
-    {% /if %}
-    {% /if %}
-    {% /if %}
-    {% /for %}
 }

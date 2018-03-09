@@ -49,6 +49,33 @@ struct Person: PersonType {
         case name = "name"
         case gender = "gender"
     }
+    
+    // MARK: properties
+    var ipv6Address: String?
+    var emailAddress: String?
+    var backgroundImages: Array<ImageType>? {
+        willSet(newValue) {
+            precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
+        }
+    }
+    var personalBest100Meters: Double?
+    var ipv4Address: String?
+    var age: Int?
+    var birthDate: Date?
+    var homePage: URL?
+    var hostName: String?
+    var userName: String?
+    var married: Bool?
+    var nickNames: Array<String>?
+    var profileImage: ImageType? {
+        willSet(newValue) {
+            precondition(newValue == nil || newValue is Image, "New value should be an instance of Image but was: \(String(describing: newValue))")
+        }
+    }
+    var petName: String?
+    var luckyEvenNumber: Int?
+    var name: String?
+    var gender: PersonGenderType?
 
     // MARK: No argument initializer
     init() {
@@ -99,37 +126,20 @@ struct Person: PersonType {
         try container.encodeIfPresent(gender, forKey: .gender)
     }
 
-    // MARK: properties
-    var ipv6Address: String?
-    var emailAddress: String?
-    var backgroundImages: Array<ImageType>? {
-        willSet(newValue) {
-            precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
-        }
-    }
-    var personalBest100Meters: Double?
-    var ipv4Address: String?
-    var age: Int?
-    var birthDate: Date?
-    var homePage: URL?
-    var hostName: String?
-    var userName: String?
-    var married: Bool?
-    var nickNames: Array<String>?
-    var profileImage: ImageType? {
-        willSet(newValue) {
-            precondition(newValue == nil || newValue is Image, "New value should be an instance of Image but was: \(String(describing: newValue))")
-        }
-    }
-    var petName: String?
-    var luckyEvenNumber: Int?
-    var name: String?
-    var gender: PersonGenderType?
-    
+    // MARK: Validation
     func validate() -> ValidationResult {
         let validator = ObjectValidator(object: self)
-        validator.withKeyPath(\Person.petName).validateMinLength(6).validatePattern("ing")
-        validator.withKeyPath(\Person.emailAddress).validateEmailAddress()
+        validator.withKeyPath(\Person.ipv6Address)?.validateIPV6Address()
+        validator.withKeyPath(\Person.emailAddress)?.validateEmailAddress()
+        validator.withKeyPath(\Person.ipv4Address)?.validateIPV4Address()
+        validator.withKeyPath(\Person.age, required: true)
+        validator.withKeyPath(\Person.hostName)?.validateHostName()
+        validator.withKeyPath(\Person.userName, required: true)?.validateMaxLength(10).validatePattern("^[a-zA-Z0-9]{6,}$")
+        validator.withKeyPath(\Person.married, required: true)
+        validator.withKeyPath(\Person.nickNames)?.validateMinItems(1).validateMaxItems(5).validateUniqueItems()
+        validator.withKeyPath(\Person.petName)?.validateMinLength(6).validatePattern("ing")
+        validator.withKeyPath(\Person.name, required: true)
+        validator.withKeyPath(\Person.gender, required: true)
         return validator.evaluate()
     }
 }
