@@ -179,6 +179,54 @@ extension ObjectFieldValidator where F == String {
     }
 }
 
+extension ObjectFieldValidator where F: Numeric & Comparable {
+    
+    @discardableResult
+    func validateMinimum(_ minimum: F, exclusive: Bool = false) -> ObjectFieldValidator<T, F> {
+        if exclusive && value <= minimum {
+            addError(message: "Value should be > \(minimum)")
+        } else if !exclusive && value < minimum {
+            addError(message: "Value should be >= \(minimum)")
+        }
+        return self;
+    }
+    
+    @discardableResult
+    func validateMaximum(_ maximum: F, exclusive: Bool = false) -> ObjectFieldValidator<T, F> {
+        if exclusive && value >= maximum {
+            addError(message: "Value should be < \(maximum)")
+        } else if !exclusive && value > maximum {
+            addError(message: "Value should be <= \(maximum)")
+        }
+        return self;
+    }
+}
+
+extension ObjectFieldValidator where F: BinaryInteger {
+    
+    @discardableResult
+    func validateMultipleOf(_ divisor: F) -> ObjectFieldValidator<T, F> {
+        if divisor != 0 && value % divisor != 0 {
+            addError(message: "Value should be a multiple of \(divisor)")
+        }
+        return self;
+    }
+}
+
+extension ObjectFieldValidator where F: BinaryFloatingPoint {
+    
+    @discardableResult
+    func validateMultipleOf(_ divisor: F) -> ObjectFieldValidator<T, F> {
+        if divisor != 0.0 {
+            let result = value / divisor
+            if result != floor(result) {
+                addError(message: "Value should be a multiple of \(divisor)")
+            }
+        }
+        return self;
+    }
+}
+
 extension ObjectFieldValidator where F: Collection {
     
     @discardableResult
