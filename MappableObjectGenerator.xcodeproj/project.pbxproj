@@ -21,6 +21,7 @@
 		8DD76FB00486AB0100D96B5E /* MappableObjectGenerator.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* MappableObjectGenerator.1 */; };
 		A83DF4F30A9247179C4A3B6C /* invalid-employee1.json in Resources */ = {isa = PBXBuildFile; fileRef = A83DFAFC94FC7D9C6D1DDAB8 /* invalid-employee1.json */; };
 		A83DF70C20262AEE06145FB9 /* _Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83DF8BD5B27EF6C69CB42BD /* _Person.swift */; };
+		A83DF86DFD0E0A26FFF02487 /* Definitions.json in Resources */ = {isa = PBXBuildFile; fileRef = A83DFE2465164DA6E8B99388 /* Definitions.json */; };
 		A83DFA513E188AA963E17E24 /* valid-employee.json in Resources */ = {isa = PBXBuildFile; fileRef = A83DFC44ACEABEF8D180DCC6 /* valid-employee.json */; };
 		A83DFAD756C8667F51537956 /* _Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83DF8368B2DAEA34B26AC2E /* _Image.swift */; };
 		E377FEE853DCB92F4DDFF8EA /* libPods-MappableObjectGeneratorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD75BE62139F5A999050D49 /* libPods-MappableObjectGeneratorTests.a */; };
@@ -79,6 +80,7 @@
 		A83DF8BD5B27EF6C69CB42BD /* _Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Person.swift; sourceTree = "<group>"; };
 		A83DFAFC94FC7D9C6D1DDAB8 /* invalid-employee1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "invalid-employee1.json"; sourceTree = "<group>"; };
 		A83DFC44ACEABEF8D180DCC6 /* valid-employee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "valid-employee.json"; sourceTree = "<group>"; };
+		A83DFE2465164DA6E8B99388 /* Definitions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Definitions.json; sourceTree = "<group>"; };
 		BB9B7E4087A26B8690C6B568 /* Pods-MappableObjectGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGeneratorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6A0FF2C0290799A04C91782 /* MappableObjectGenerator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MappableObjectGenerator.1; sourceTree = "<group>"; };
 		DF6D6A294D2597E1EFFE7874 /* libPods-MappableObjectGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGenerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				74CE7999204FF0CF005C5080 /* Person.json */,
 				74CE799B204FF593005C5080 /* Image.json */,
 				74CE799D204FF5EF005C5080 /* Employee.json */,
+				A83DFE2465164DA6E8B99388 /* Definitions.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				74CE799E204FF5EF005C5080 /* Employee.json in Resources */,
 				A83DFA513E188AA963E17E24 /* valid-employee.json in Resources */,
 				A83DF4F30A9247179C4A3B6C /* invalid-employee1.json in Resources */,
+				A83DF86DFD0E0A26FFF02487 /* Definitions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

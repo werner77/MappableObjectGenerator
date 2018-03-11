@@ -4,7 +4,7 @@ protocol PersonType: CodableType {
     var ipv6Address: String? { get set }
     var emailAddress: String? { get set }
     var backgroundImages: Array<ImageType>? { get set }
-    var personalBest100Meters: Double? { get set }
+    var gender: PersonGenderType? { get set }
     var ipv4Address: String? { get set }
     var age: Int? { get set }
     var birthDate: Date? { get set }
@@ -16,8 +16,8 @@ protocol PersonType: CodableType {
     var profileImage: ImageType? { get set }
     var petName: String? { get set }
     var luckyEvenNumber: Int? { get set }
+    var personalBest500Meters: Double? { get set }
     var name: String? { get set }
-    var gender: PersonGenderType? { get set }
 }
 
 enum PersonGenderType: String, Codable {
@@ -27,14 +27,14 @@ enum PersonGenderType: String, Codable {
 
 struct Person: PersonType {
 
-    static let schemaID = "urn:jsonschema:com:behindmedia:Person"
+    static let schemaID = "http://www.behindmedia.com/schemas/Person.json"
 
     // MARK: Coding keys
     enum CodingKeys: String, CodingKey {
         case ipv6Address = "ipv6Address"
         case emailAddress = "emailAddress"
         case backgroundImages = "backgroundImages"
-        case personalBest100Meters = "personalBest100Meters"
+        case gender = "gender"
         case ipv4Address = "ipv4Address"
         case age = "age"
         case birthDate = "birthDate"
@@ -46,8 +46,8 @@ struct Person: PersonType {
         case profileImage = "profileImage"
         case petName = "petName"
         case luckyEvenNumber = "luckyEvenNumber"
+        case personalBest500Meters = "personalBest500Meters"
         case name = "name"
-        case gender = "gender"
     }
     
     // MARK: properties
@@ -58,7 +58,7 @@ struct Person: PersonType {
             precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
         }
     }
-    var personalBest100Meters: Double?
+    var gender: PersonGenderType?
     var ipv4Address: String?
     var age: Int?
     var birthDate: Date?
@@ -74,8 +74,8 @@ struct Person: PersonType {
     }
     var petName: String?
     var luckyEvenNumber: Int?
+    var personalBest500Meters: Double?
     var name: String?
-    var gender: PersonGenderType?
 
     // MARK: No argument initializer
     init() {
@@ -88,7 +88,7 @@ struct Person: PersonType {
         ipv6Address = try container.decodeIfPresent(String.self, forKey: .ipv6Address)
         emailAddress = try container.decodeIfPresent(String.self, forKey: .emailAddress)
         backgroundImages = try container.decodeIfPresent(Array<Image>.self, forKey: .backgroundImages)
-        personalBest100Meters = try container.decodeIfPresent(Double.self, forKey: .personalBest100Meters)
+        gender = try container.decodeIfPresent(PersonGenderType.self, forKey: .gender)
         ipv4Address = try container.decodeIfPresent(String.self, forKey: .ipv4Address)
         age = try container.decodeIfPresent(Int.self, forKey: .age)
         birthDate = try container.decodeIfPresent(Date.self, forKey: .birthDate)
@@ -100,8 +100,8 @@ struct Person: PersonType {
         profileImage = try container.decodeIfPresent(Image.self, forKey: .profileImage)
         petName = try container.decodeIfPresent(String.self, forKey: .petName)
         luckyEvenNumber = try container.decodeIfPresent(Int.self, forKey: .luckyEvenNumber)
+        personalBest500Meters = try container.decodeIfPresent(Double.self, forKey: .personalBest500Meters)
         name = try container.decodeIfPresent(String.self, forKey: .name)
-        gender = try container.decodeIfPresent(PersonGenderType.self, forKey: .gender)
     }
 
     // MARK: Encodable implementation
@@ -110,7 +110,7 @@ struct Person: PersonType {
         try container.encodeIfPresent(ipv6Address, forKey: .ipv6Address)
         try container.encodeIfPresent(emailAddress, forKey: .emailAddress)
         try container.encodeIfPresent(backgroundImages as? Array<Image>, forKey: .backgroundImages)
-        try container.encodeIfPresent(personalBest100Meters, forKey: .personalBest100Meters)
+        try container.encodeIfPresent(gender, forKey: .gender)
         try container.encodeIfPresent(ipv4Address, forKey: .ipv4Address)
         try container.encodeIfPresent(age, forKey: .age)
         try container.encodeIfPresent(birthDate, forKey: .birthDate)
@@ -122,8 +122,8 @@ struct Person: PersonType {
         try container.encodeIfPresent(profileImage as? Image, forKey: .profileImage)
         try container.encodeIfPresent(petName, forKey: .petName)
         try container.encodeIfPresent(luckyEvenNumber, forKey: .luckyEvenNumber)
+        try container.encodeIfPresent(personalBest500Meters, forKey: .personalBest500Meters)
         try container.encodeIfPresent(name, forKey: .name)
-        try container.encodeIfPresent(gender, forKey: .gender)
     }
 
     // MARK: Validation
@@ -131,7 +131,7 @@ struct Person: PersonType {
         let validator = ObjectValidator(object: self)
         validator.withKeyPath(\Person.ipv6Address)?.validateIPV6Address()
         validator.withKeyPath(\Person.emailAddress)?.validateEmailAddress()
-        validator.withKeyPath(\Person.personalBest100Meters)?.validateMinimum(5)
+        validator.withKeyPath(\Person.gender, required: true)
         validator.withKeyPath(\Person.ipv4Address)?.validateIPV4Address()
         validator.withKeyPath(\Person.age, required: true)?.validateMinimum(0).validateMaximum(100, exclusive: true)
         validator.withKeyPath(\Person.hostName)?.validateHostName()
@@ -140,8 +140,8 @@ struct Person: PersonType {
         validator.withKeyPath(\Person.nickNames)?.validateMinItems(1).validateMaxItems(5).validateUniqueItems()
         validator.withKeyPath(\Person.petName)?.validateMinLength(6).validatePattern("ing")
         validator.withKeyPath(\Person.luckyEvenNumber)?.validateMultipleOf(2)
+        validator.withKeyPath(\Person.personalBest500Meters)?.validateMinimum(5).validateMultipleOf(0.1)
         validator.withKeyPath(\Person.name, required: true)
-        validator.withKeyPath(\Person.gender, required: true)
         return validator.evaluate()
     }
 }

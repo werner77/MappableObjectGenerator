@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "urn:jsonschema:com:behindmedia:Image",
+    "id": "http://www.behindmedia.com/schemas/Image.json",
     "properties": {
         "url": {
             "type": "string",

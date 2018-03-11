@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "urn:jsonschema:com:behindmedia:Employee",
+  "id": "http://www.behindmedia.com/schemas/Employee.json",
   "allOf": [
     {
-      "$ref": "urn:jsonschema:com:behindmedia:Person"
+      "$ref": "http://www.behindmedia.com/schemas/Person.json"
     },
     {
       "properties": {

@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "negativeInteger": {
+      "type": "integer",
+      "maximum": 0,
+      "exclusiveMaximum": true
+    }
+  },
+  "id": "http://www.behindmedia.com/schemas/Definitions.json"
+}

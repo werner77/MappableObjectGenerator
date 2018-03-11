@@ -8,7 +8,7 @@ protocol ImageType: CodableType {
 
 struct Image: ImageType {
 
-    static let schemaID = "urn:jsonschema:com:behindmedia:Image"
+    static let schemaID = "http://www.behindmedia.com/schemas/Image.json"
 
     // MARK: Coding keys
     enum CodingKeys: String, CodingKey {

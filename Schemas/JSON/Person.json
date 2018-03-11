@@ -7,7 +7,7 @@
             "exclusiveMinimum": true
         }
     },
-    "id": "urn:jsonschema:com:behindmedia:Person",
+    "id": "http://www.behindmedia.com/schemas/Person.json",
     "properties": {
         "name": {
             "type": "string"
@@ -58,14 +58,14 @@
         },
         "profileImage": {
             "type": "object",
-            "$ref": "urn:jsonschema:com:behindmedia:Image"
+            "$ref": "http://www.behindmedia.com/schemas/Image.json"
         },
         "married": {
             "type": "boolean"
         },
         "backgroundImages": {
             "items": {
-                "$ref": "urn:jsonschema:com:behindmedia:Image",
+                "$ref": "http://www.behindmedia.com/schemas/Image.json",
                 "type": "object"
             },
             "title": "[com.behindmedia.Image]",
@@ -87,9 +87,13 @@
         "somePositiveInteger": {
             "$ref": "#/definitions/positiveInteger"
         },
-        "personalBest100Meters": {
+        "someNegativeInteger": {
+            "$ref": "Definitions.json#/definitions/negativeInteger"
+        },
+        "personalBest500Meters": {
             "type": "number",
-            "minimum": 5.0
+            "minimum": 5.0,
+            "multipleOf": 0.1
         }
     },
     "required": ["name", "userName", "gender", "married", "age"],

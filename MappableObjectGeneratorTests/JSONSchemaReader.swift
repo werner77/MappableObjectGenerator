@@ -35,7 +35,10 @@ final class JSONReader: NSObject, KiteJSONSchemaRefDelegate {
     }
     
     func readJSONSchemaData(_ refURL: URL) throws -> Data {
-        guard let resourceName = refURL.absoluteString.components(separatedBy: ":").last else {
+        guard let lastPathComponent = refURL.pathComponents.last else {
+            throw JSONReadError.invalidSchemaURL
+        }
+        guard let resourceName = lastPathComponent.components(separatedBy: ".").first else {
             throw JSONReadError.invalidSchemaURL
         }
         return try readJSONData(resourceName)

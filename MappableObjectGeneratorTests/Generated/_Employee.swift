@@ -6,7 +6,7 @@ protocol EmployeeType: PersonType {
 
 struct Employee: EmployeeType {
 
-    static let schemaID = "urn:jsonschema:com:behindmedia:Employee"
+    static let schemaID = "http://www.behindmedia.com/schemas/Employee.json"
 
     // MARK: Coding keys
     enum CodingKeys: String, CodingKey {
@@ -14,7 +14,7 @@ struct Employee: EmployeeType {
         case ipv6Address = "ipv6Address"
         case emailAddress = "emailAddress"
         case backgroundImages = "backgroundImages"
-        case personalBest100Meters = "personalBest100Meters"
+        case gender = "gender"
         case ipv4Address = "ipv4Address"
         case age = "age"
         case birthDate = "birthDate"
@@ -26,8 +26,8 @@ struct Employee: EmployeeType {
         case profileImage = "profileImage"
         case petName = "petName"
         case luckyEvenNumber = "luckyEvenNumber"
+        case personalBest500Meters = "personalBest500Meters"
         case name = "name"
-        case gender = "gender"
     }
     
     // MARK: properties
@@ -39,7 +39,7 @@ struct Employee: EmployeeType {
             precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
         }
     }
-    var personalBest100Meters: Double?
+    var gender: PersonGenderType?
     var ipv4Address: String?
     var age: Int?
     var birthDate: Date?
@@ -55,8 +55,8 @@ struct Employee: EmployeeType {
     }
     var petName: String?
     var luckyEvenNumber: Int?
+    var personalBest500Meters: Double?
     var name: String?
-    var gender: PersonGenderType?
 
     // MARK: No argument initializer
     init() {
@@ -70,7 +70,7 @@ struct Employee: EmployeeType {
         ipv6Address = try container.decodeIfPresent(String.self, forKey: .ipv6Address)
         emailAddress = try container.decodeIfPresent(String.self, forKey: .emailAddress)
         backgroundImages = try container.decodeIfPresent(Array<Image>.self, forKey: .backgroundImages)
-        personalBest100Meters = try container.decodeIfPresent(Double.self, forKey: .personalBest100Meters)
+        gender = try container.decodeIfPresent(PersonGenderType.self, forKey: .gender)
         ipv4Address = try container.decodeIfPresent(String.self, forKey: .ipv4Address)
         age = try container.decodeIfPresent(Int.self, forKey: .age)
         birthDate = try container.decodeIfPresent(Date.self, forKey: .birthDate)
@@ -82,8 +82,8 @@ struct Employee: EmployeeType {
         profileImage = try container.decodeIfPresent(Image.self, forKey: .profileImage)
         petName = try container.decodeIfPresent(String.self, forKey: .petName)
         luckyEvenNumber = try container.decodeIfPresent(Int.self, forKey: .luckyEvenNumber)
+        personalBest500Meters = try container.decodeIfPresent(Double.self, forKey: .personalBest500Meters)
         name = try container.decodeIfPresent(String.self, forKey: .name)
-        gender = try container.decodeIfPresent(PersonGenderType.self, forKey: .gender)
     }
 
     // MARK: Encodable implementation
@@ -93,7 +93,7 @@ struct Employee: EmployeeType {
         try container.encodeIfPresent(ipv6Address, forKey: .ipv6Address)
         try container.encodeIfPresent(emailAddress, forKey: .emailAddress)
         try container.encodeIfPresent(backgroundImages as? Array<Image>, forKey: .backgroundImages)
-        try container.encodeIfPresent(personalBest100Meters, forKey: .personalBest100Meters)
+        try container.encodeIfPresent(gender, forKey: .gender)
         try container.encodeIfPresent(ipv4Address, forKey: .ipv4Address)
         try container.encodeIfPresent(age, forKey: .age)
         try container.encodeIfPresent(birthDate, forKey: .birthDate)
@@ -105,8 +105,8 @@ struct Employee: EmployeeType {
         try container.encodeIfPresent(profileImage as? Image, forKey: .profileImage)
         try container.encodeIfPresent(petName, forKey: .petName)
         try container.encodeIfPresent(luckyEvenNumber, forKey: .luckyEvenNumber)
+        try container.encodeIfPresent(personalBest500Meters, forKey: .personalBest500Meters)
         try container.encodeIfPresent(name, forKey: .name)
-        try container.encodeIfPresent(gender, forKey: .gender)
     }
 
     // MARK: Validation
@@ -115,7 +115,7 @@ struct Employee: EmployeeType {
         validator.withKeyPath(\Employee.employeeNumber, required: true)?.validateMinLength(10).validateMaxLength(10)
         validator.withKeyPath(\Employee.ipv6Address)?.validateIPV6Address()
         validator.withKeyPath(\Employee.emailAddress)?.validateEmailAddress()
-        validator.withKeyPath(\Employee.personalBest100Meters)?.validateMinimum(5)
+        validator.withKeyPath(\Employee.gender, required: true)
         validator.withKeyPath(\Employee.ipv4Address)?.validateIPV4Address()
         validator.withKeyPath(\Employee.age, required: true)?.validateMinimum(0).validateMaximum(100, exclusive: true)
         validator.withKeyPath(\Employee.hostName)?.validateHostName()
@@ -124,8 +124,8 @@ struct Employee: EmployeeType {
         validator.withKeyPath(\Employee.nickNames)?.validateMinItems(1).validateMaxItems(5).validateUniqueItems()
         validator.withKeyPath(\Employee.petName)?.validateMinLength(6).validatePattern("ing")
         validator.withKeyPath(\Employee.luckyEvenNumber)?.validateMultipleOf(2)
+        validator.withKeyPath(\Employee.personalBest500Meters)?.validateMinimum(5).validateMultipleOf(0.1)
         validator.withKeyPath(\Employee.name, required: true)
-        validator.withKeyPath(\Employee.gender, required: true)
         return validator.evaluate()
     }
 }
