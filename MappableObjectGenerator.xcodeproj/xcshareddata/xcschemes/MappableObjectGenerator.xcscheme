@@ -59,7 +59,7 @@
       language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/werneraltewischer/Projects/BehindMedia/iOS/MappableObjectGenerator"
+      customWorkingDirectory = "/Users/werneraltewischer/Projects/BehindMedia/MappableObjectGenerator"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"

@@ -3,7 +3,7 @@ import Foundation
 protocol {{ mapping.unqualifiedObjectClassName }}Type:{% if mapping.unqualifiedParentObjectClassName != nil %} {{ mapping.unqualifiedParentObjectClassName }}Type{% else %} CodableType{% /if %} {
     {% for fieldMapping in mapping.fieldMappings %}
     {% if fieldMapping.isStringEnumeration %}
-    var {{ fieldMapping.fieldName }}: {{ fieldMapping.enumerationTypeName }}? { get set }
+    var {{ fieldMapping.fieldName }}: {{ mapping.unqualifiedObjectClassName }}.{{ fieldMapping.enumerationTypeName }}? { get set }
     {% else %}
     {% if fieldMapping.isCollection %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}>? { get set }
@@ -13,16 +13,6 @@ protocol {{ mapping.unqualifiedObjectClassName }}Type:{% if mapping.unqualifiedP
     {% /if %}
     {% /for %}
 }
-{% for fieldMapping in mapping.fieldMappings %}
-{% if fieldMapping.isStringEnumeration %}
-
-enum {{ fieldMapping.enumerationTypeName }}: String, Codable {
-    {% for value in fieldMapping.enumeratedValues %}
-    case {{ value }}
-    {% /for %}
-}
-{% /if %}
-{% /for %}
 
 struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectClassName }}Type {
 
@@ -34,6 +24,16 @@ struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectCla
         case {{ fieldMapping.fieldName }} = "{{ fieldMapping.mappingPath }}"
         {% /for %}
     }
+    {% for fieldMapping in mapping.fieldMappings %}
+    {% if fieldMapping.isStringEnumeration %}
+
+    enum {{ fieldMapping.enumerationTypeName }}: String, Codable {
+    {% for value in fieldMapping.enumeratedValues %}
+    case {{ value }}
+    {% /for %}
+    }
+    {% /if %}
+    {% /for %}
     
     // MARK: properties
     {% for fieldMapping in mapping.allFieldMappings %}

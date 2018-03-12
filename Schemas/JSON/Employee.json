@@ -10,7 +10,8 @@
         "employeeNumber": {
           "type": "string",
           "minLength": 10,
-          "maxLength": 10
+          "maxLength": 10,
+          "readOnly": true
         }
       },
       "required": ["employeeNumber"]
