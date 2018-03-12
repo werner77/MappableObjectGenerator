@@ -199,10 +199,10 @@ extension ObjectFieldValidator where F == String {
         do {
             let expression = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
             if !matchesRegex(string: value, regex: expression) {
-                addError(message: "Does not match pattern: \(pattern)")
+                addError(message: "Does not match pattern: \"\(pattern)\"")
             }
         } catch let error {
-            addError(message: "Pattern is not a valid regular expression: \(pattern): \(error)")
+            addError(message: "Pattern is not a valid regular expression: \"\(pattern)\": \(error)")
         }
         return self
     }

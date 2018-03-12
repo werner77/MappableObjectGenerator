@@ -34,9 +34,9 @@ class MappableObjectGeneratorTests: XCTestCase {
     func testPersonEncoding() throws {
 
         let validData = try reader.readJSONData("valid-employee")
-        let person: PersonType = try decoder.decode(Person.self, from: validData)
+        let person = try decoder.decode(Person.self, from: validData)
 
-        let jsonData = try encoder.encode(person as! Person)
+        let jsonData = try encoder.encode(person)
 
         let jsonString: String = String(data: jsonData, encoding: .utf8)!
 
@@ -59,9 +59,9 @@ class MappableObjectGeneratorTests: XCTestCase {
     func testEmployeeEncoding() throws {
 
         let validData = try reader.readJSONData("valid-employee")
-        let employee: EmployeeType = try decoder.decode(Employee.self, from: validData)
+        let employee = try decoder.decode(Employee.self, from: validData)
 
-        let jsonData = try encoder.encode(employee as! Employee)
+        let jsonData = try encoder.encode(employee)
 
         let jsonString: String = String(data: jsonData, encoding: .utf8)!
 
@@ -81,7 +81,7 @@ class MappableObjectGeneratorTests: XCTestCase {
         }
     }
 
-    func testInvalidEmployee1() throws {
+    func testInvalidEmployee() throws {
         let jsonData = try reader.readJSONData("invalid-employee1")
 
         do {
