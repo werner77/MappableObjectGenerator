@@ -1,15 +1,15 @@
 //
-//  {{ mapping.objectClassName }}.m
-//  AHMobileBase
+//  {{ mapping.unqualifiedObjectClassName }}.m
+//  BMCommons
 //
 //  Generated Class
-//  Copyright 2013 Ahold. All rights reserved.
+//  Copyright 2017 BehindMedia. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "{{ mapping.objectClassName }}.h"
+#import "{{ mapping.unqualifiedObjectClassName }}.h"
 
-@implementation {{ mapping.objectClassName }} 
+@implementation {{ mapping.unqualifiedObjectClassName }}
 
 //Put custom code here
 
