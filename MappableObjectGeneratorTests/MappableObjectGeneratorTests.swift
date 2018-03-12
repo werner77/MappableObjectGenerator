@@ -97,7 +97,7 @@ class MappableObjectGeneratorTests: XCTestCase {
         case .valid:
             XCTFail("Expected validation to report invalid state")
         case .invalid(let validationErrors):
-            print("Validation errors: \(validationErrors)")
+            print("Validation errors:\n\(validationErrors)\n")
         }
     }
 
