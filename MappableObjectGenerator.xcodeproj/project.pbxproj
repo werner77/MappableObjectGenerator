@@ -61,6 +61,8 @@
 		74CE7999204FF0CF005C5080 /* Person.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Person.json; sourceTree = "<group>"; };
 		74CE799B204FF593005C5080 /* Image.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Image.json; sourceTree = "<group>"; };
 		74CE799D204FF5EF005C5080 /* Employee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Employee.json; sourceTree = "<group>"; };
+		74E12EA52056AFD700C256D4 /* CustomMappableObject.swift.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = CustomMappableObject.swift.mgtemplate; sourceTree = "<group>"; };
+		74E12EA62056AFD700C256D4 /* MappableObject.swift.mgtemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = MappableObject.swift.mgtemplate; sourceTree = "<group>"; };
 		74E87AB5130C05150034B19F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		74E87AB7130C05150034B19F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74E87AB9130C05150034B19F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -145,6 +147,8 @@
 		7477CA7620493D6200298945 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				74E12EA52056AFD700C256D4 /* CustomMappableObject.swift.mgtemplate */,
+				74E12EA62056AFD700C256D4 /* MappableObject.swift.mgtemplate */,
 				7477CA7E204953A500298945 /* CustomMappableObject-Swift4.mgtemplate */,
 				7477CA81204954C300298945 /* CustomMappableObject.h.mgtemplate */,
 				7477CA7F204954C300298945 /* CustomMappableObject.m.mgtemplate */,
