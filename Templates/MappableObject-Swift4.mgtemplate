@@ -3,7 +3,7 @@ import Foundation
 protocol {{ mapping.unqualifiedObjectClassName }}Type:{% if mapping.unqualifiedParentObjectClassName != nil %} {{ mapping.unqualifiedParentObjectClassName }}Type{% else %} CodableType{% /if %} {
     {% for fieldMapping in mapping.fieldMappings %}
     {% if fieldMapping.isStringEnumeration %}
-    var {{ fieldMapping.fieldName }}: {{ mapping.unqualifiedObjectClassName }}.{{ fieldMapping.enumerationTypeName }}? { get set }
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.parentObjectMapping.unqualifiedObjectClassName }}.{{ fieldMapping.enumerationTypeName }}? { get set }
     {% else %}
     {% if fieldMapping.isCollection %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}>? { get set }
@@ -38,7 +38,7 @@ struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectCla
     // MARK: properties
     {% for fieldMapping in mapping.allFieldMappings %}
     {% if fieldMapping.isStringEnumeration %}
-    var {{ fieldMapping.fieldName }}: {{ fieldMapping.enumerationTypeName }}?
+    var {{ fieldMapping.fieldName }}: {{ fieldMapping.parentObjectMapping.unqualifiedObjectClassName }}.{{ fieldMapping.enumerationTypeName }}?
     {% else %}
     {% if fieldMapping.isCollection %}
     var {{ fieldMapping.fieldName }}: {{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}{% if fieldMapping.fieldObjectClassIsCustom %}Type{% /if %}>?{% if fieldMapping.fieldObjectClassIsCustom %} {
@@ -68,7 +68,7 @@ struct {{ mapping.unqualifiedObjectClassName }}: {{ mapping.unqualifiedObjectCla
         let container = try decoder.container(keyedBy: CodingKeys.self)
         {% for fieldMapping in mapping.allFieldMappings %}
         {% if fieldMapping.isStringEnumeration %}
-        {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ fieldMapping.enumerationTypeName }}.self, forKey: .{{ fieldMapping.fieldName }})
+        {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ fieldMapping.parentObjectMapping.unqualifiedObjectClassName }}.{{ fieldMapping.enumerationTypeName }}.self, forKey: .{{ fieldMapping.fieldName }})
         {% else %}
         {% if fieldMapping.isCollection %}
         {{ fieldMapping.fieldName }} = try container.decodeIfPresent({{ fieldMapping.swiftFieldClassName }}<{{ fieldMapping.swiftFieldObjectClassName }}>.self, forKey: .{{ fieldMapping.fieldName }})

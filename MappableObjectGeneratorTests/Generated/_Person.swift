@@ -62,7 +62,7 @@ struct Person: PersonType {
             precondition(newValue == nil || newValue is Array<Image>, "New value should be an instance of Array<Image> but was: \(String(describing: newValue))")
         }
     }
-    var gender: GenderType?
+    var gender: Person.GenderType?
     var ipv4Address: String?
     var age: Int?
     var birthDate: Date?
@@ -94,7 +94,7 @@ struct Person: PersonType {
         ipv6Address = try container.decodeIfPresent(String.self, forKey: .ipv6Address)
         emailAddress = try container.decodeIfPresent(String.self, forKey: .emailAddress)
         backgroundImages = try container.decodeIfPresent(Array<Image>.self, forKey: .backgroundImages)
-        gender = try container.decodeIfPresent(GenderType.self, forKey: .gender)
+        gender = try container.decodeIfPresent(Person.GenderType.self, forKey: .gender)
         ipv4Address = try container.decodeIfPresent(String.self, forKey: .ipv4Address)
         age = try container.decodeIfPresent(Int.self, forKey: .age)
         birthDate = try container.decodeIfPresent(Date.self, forKey: .birthDate)
