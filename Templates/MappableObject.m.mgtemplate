@@ -11,11 +11,12 @@
 #import <BMCommons/BMTwoWayDictionary.h>
 #import <BMCommons/NSNumber+BMCommons.h>
 #import <BMCommons/NSDateFormatter+BMCommons.h>
-#import <BMRestKit/BMFieldMapping.h>
+#import <BMCommons/BMFieldMapping.h>
 #import <BMCommons/BMLogging.h>
 
 #import "_{{ mapping.unqualifiedObjectClassName }}.h"
-{% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.fieldObjectClassIsCustom %}#import "{{ fieldMapping.fieldObjectClassName }}.h"{% /if %}
+{% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.fieldObjectClassIsCustom %}
+#import "{{ fieldMapping.fieldObjectClassName }}.h"{% /if %}
 {% /for %}
 
 
@@ -91,7 +92,8 @@ static BMTwoWayDictionary *valueMapping = nil;
 	
 	[s appendString:@"{\n"];
 	
-	{% for fieldMapping in mapping.fieldMappings %}[s appendFormat:@"{{ fieldMapping.fieldName }}=%@\n", [self.{{ fieldMapping.fieldName }} description]];
+	{% for fieldMapping in mapping.fieldMappings %}
+    [s appendFormat:@"{{ fieldMapping.fieldName }}=%@\n", [self.{{ fieldMapping.fieldName }} description]];
 	{% /for %}
 	
 	[s appendString:@"}\n"];

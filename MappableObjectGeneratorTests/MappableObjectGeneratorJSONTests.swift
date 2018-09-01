@@ -7,7 +7,7 @@
 
 import XCTest
 
-class MappableObjectGeneratorTests: XCTestCase {
+class MappableObjectGeneratorJSONTests: XCTestCase {
 
     private var encoder: JSONEncoder!
     private var decoder: JSONDecoder!

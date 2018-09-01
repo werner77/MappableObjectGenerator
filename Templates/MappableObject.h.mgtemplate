@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <BMCommons/BMAbstractMappableObject.h>
-{% if mapping.unqualifiedParentObjectClassName != nil %}#import "{{ mapping.unqualifiedParentObjectClassName }}.h"{% /if %}
+{% if mapping.unqualifiedParentObjectClassName != nil %}
+#import "{{ mapping.unqualifiedParentObjectClassName }}.h"
+{% /if %}
+
 {% for fieldMapping in mapping.fieldMappings %}
-{% if fieldMapping.fieldObjectClassIsCustom %}@class {{ fieldMapping.unqualifiedFieldObjectClassName }};{% /if %}{% /for %}
+{% if fieldMapping.fieldObjectClassIsCustom %}
+@class {{ fieldMapping.unqualifiedFieldObjectClassName }};
+{% /if %}
+{% /for %}
 
 {% if mapping.isEnumeration %}
 typedef NS_ENUM(NSUInteger, {{ mapping.unqualifiedObjectClassName }}Value) {
@@ -26,8 +32,10 @@ typedef NS_ENUM(NSUInteger, {{ mapping.unqualifiedObjectClassName }}Value) {
 
 {% for fieldMapping in mapping.fieldMappings %}
 @property (nonatomic, strong) {{ fieldMapping.fieldClassName }}{% if fieldMapping.isCollection %}<{{ fieldMapping.unqualifiedFieldObjectClassName }} *>{% /if %} *{{ fieldMapping.fieldName }};{% /for %}
+
 {% if mapping.isEnumeration %}
 @property (nonatomic, assign) {{ mapping.unqualifiedObjectClassName }}Value enumValue;
+
 + (id)instanceWithEnumValue:({{ mapping.unqualifiedObjectClassName }}Value)enumValue;
 {% /if %}
 

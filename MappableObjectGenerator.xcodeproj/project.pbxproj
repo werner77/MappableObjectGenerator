@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6AC2775DD2B083493B42C9E0 /* libPods-MappableObjectGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6D6A294D2597E1EFFE7874 /* libPods-MappableObjectGenerator.a */; };
+		74325255213AC2D800607F37 /* TrainingCenterDatabasev2.xsd in Resources */ = {isa = PBXBuildFile; fileRef = 74325254213AC2D800607F37 /* TrainingCenterDatabasev2.xsd */; };
 		743A929520517D1B00668D76 /* _Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929420517D1B00668D76 /* _Employee.swift */; };
 		743A92992051919700668D76 /* CodableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A92982051919700668D76 /* CodableType.swift */; };
 		743A929D2051944600668D76 /* JSONSchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929C2051944600668D76 /* JSONSchemaReader.swift */; };
@@ -17,7 +18,7 @@
 		74CE799C204FF593005C5080 /* Image.json in Resources */ = {isa = PBXBuildFile; fileRef = 74CE799B204FF593005C5080 /* Image.json */; };
 		74CE799E204FF5EF005C5080 /* Employee.json in Resources */ = {isa = PBXBuildFile; fileRef = 74CE799D204FF5EF005C5080 /* Employee.json */; };
 		74E87C28130C08720034B19F /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E87C27130C08720034B19F /* Main.m */; };
-		74FB413A203EC38C008E1959 /* MappableObjectGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */; };
+		74FB413A203EC38C008E1959 /* MappableObjectGeneratorJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB4139203EC38C008E1959 /* MappableObjectGeneratorJSONTests.swift */; };
 		8DD76FB00486AB0100D96B5E /* MappableObjectGenerator.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* MappableObjectGenerator.1 */; };
 		A83DF4F30A9247179C4A3B6C /* invalid-employee1.json in Resources */ = {isa = PBXBuildFile; fileRef = A83DFAFC94FC7D9C6D1DDAB8 /* invalid-employee1.json */; };
 		A83DF70C20262AEE06145FB9 /* _Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83DF8BD5B27EF6C69CB42BD /* _Person.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		4CD75BE62139F5A999050D49 /* libPods-MappableObjectGeneratorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGeneratorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		742F0E6820512AE3006A1AEB /* MappableObjectGenerator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MappableObjectGenerator.1; sourceTree = "<group>"; };
+		74325254213AC2D800607F37 /* TrainingCenterDatabasev2.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TrainingCenterDatabasev2.xsd; sourceTree = "<group>"; };
 		743A929420517D1B00668D76 /* _Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Employee.swift; sourceTree = "<group>"; };
 		743A92982051919700668D76 /* CodableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableType.swift; sourceTree = "<group>"; };
 		743A929C2051944600668D76 /* JSONSchemaReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSchemaReader.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		74F1D45E14615CFA007FEF5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FB4130203EB868008E1959 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		74FB4137203EC38C008E1959 /* MappableObjectGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MappableObjectGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableObjectGeneratorTests.swift; sourceTree = "<group>"; };
+		74FB4139203EC38C008E1959 /* MappableObjectGeneratorJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableObjectGeneratorJSONTests.swift; sourceTree = "<group>"; };
 		74FB413B203EC38C008E1959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD76FB20486AB0100D96B5E /* MappableObjectGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MappableObjectGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		937DD5D8EB934DEC297907C5 /* Pods-MappableObjectGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappableObjectGeneratorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MappableObjectGeneratorTests/Pods-MappableObjectGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		74325252213AC2A100607F37 /* TCX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TCX;
+			sourceTree = "<group>";
+		};
+		74325253213AC2B000607F37 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				74325254213AC2D800607F37 /* TrainingCenterDatabasev2.xsd */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
 		7477CA7620493D6200298945 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +189,7 @@
 		74B5143C204C51ED002129A6 /* Schemas */ = {
 			isa = PBXGroup;
 			children = (
+				74325253213AC2B000607F37 /* XML */,
 				74B5143D204C51ED002129A6 /* JSON */,
 				74B514A8204C51ED002129A6 /* namespace-mappings.plist */,
 			);
@@ -220,8 +238,9 @@
 		74FB4138203EC38C008E1959 /* MappableObjectGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
+				74325252213AC2A100607F37 /* TCX */,
 				7477CA792049466E00298945 /* Generated */,
-				74FB4139203EC38C008E1959 /* MappableObjectGeneratorTests.swift */,
+				74FB4139203EC38C008E1959 /* MappableObjectGeneratorJSONTests.swift */,
 				74FB413B203EC38C008E1959 /* Info.plist */,
 				74B51514204D2CB9002129A6 /* MappableObjectGeneratorTests-Bridging.h */,
 				743A92982051919700668D76 /* CodableType.swift */,
@@ -310,7 +329,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				TargetAttributes = {
 					74FB4136203EC38C008E1959 = {
 						CreatedOnToolsVersion = 9.2;
@@ -347,6 +366,7 @@
 				74CE799C204FF593005C5080 /* Image.json in Resources */,
 				74B51513204C51EE002129A6 /* namespace-mappings.plist in Resources */,
 				74CE799A204FF0CF005C5080 /* Person.json in Resources */,
+				74325255213AC2D800607F37 /* TrainingCenterDatabasev2.xsd in Resources */,
 				74CE799E204FF5EF005C5080 /* Employee.json in Resources */,
 				A83DFA513E188AA963E17E24 /* valid-employee.json in Resources */,
 				A83DF4F30A9247179C4A3B6C /* invalid-employee1.json in Resources */,
@@ -448,7 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74FB413A203EC38C008E1959 /* MappableObjectGeneratorTests.swift in Sources */,
+				74FB413A203EC38C008E1959 /* MappableObjectGeneratorJSONTests.swift in Sources */,
 				743A929520517D1B00668D76 /* _Employee.swift in Sources */,
 				A83DFAD756C8667F51537956 /* _Image.swift in Sources */,
 				743A92992051919700668D76 /* CodableType.swift in Sources */,
@@ -501,11 +521,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -548,11 +570,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
