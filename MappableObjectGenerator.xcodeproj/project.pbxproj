@@ -9,6 +9,188 @@
 /* Begin PBXBuildFile section */
 		6AC2775DD2B083493B42C9E0 /* libPods-MappableObjectGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF6D6A294D2597E1EFFE7874 /* libPods-MappableObjectGenerator.a */; };
 		74325255213AC2D800607F37 /* TrainingCenterDatabasev2.xsd in Resources */ = {isa = PBXBuildFile; fileRef = 74325254213AC2D800607F37 /* TrainingCenterDatabasev2.xsd */; };
+		74325A36213D4F5300607F37 /* TCXActivityTrackpointExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258CE213D4F3400607F37 /* TCXActivityTrackpointExtensions.m */; };
+		74325A37213D4F5300607F37 /* _TCXGender.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258D0213D4F3500607F37 /* _TCXGender.m */; };
+		74325A38213D4F5300607F37 /* _TCXCadenceValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258D2213D4F3500607F37 /* _TCXCadenceValue.m */; };
+		74325A39213D4F5300607F37 /* _TCXCoursePointType.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258D4213D4F3500607F37 /* _TCXCoursePointType.m */; };
+		74325A3A213D4F5300607F37 /* TCXZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258D9213D4F3500607F37 /* TCXZone.m */; };
+		74325A3B213D4F5300607F37 /* TCXCustomSpeedZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258DA213D4F3500607F37 /* TCXCustomSpeedZone.m */; };
+		74325A3C213D4F5300607F37 /* TCXNextSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258DC213D4F3500607F37 /* TCXNextSport.m */; };
+		74325A3D213D4F5300607F37 /* _TCXTrainingCenterDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258DE213D4F3500607F37 /* _TCXTrainingCenterDatabase.m */; };
+		74325A3E213D4F5300607F37 /* _TCXSpeedZoneNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258DF213D4F3500607F37 /* _TCXSpeedZoneNumbers.m */; };
+		74325A3F213D4F5300607F37 /* TCXSpeedInMetersPerSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258E0213D4F3600607F37 /* TCXSpeedInMetersPerSecond.m */; };
+		74325A40213D4F5300607F37 /* _TCXActivityTrackpointExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258E3213D4F3600607F37 /* _TCXActivityTrackpointExtensions.m */; };
+		74325A41213D4F5300607F37 /* TCXCoursePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258E8213D4F3600607F37 /* TCXCoursePoint.m */; };
+		74325A42213D4F5300607F37 /* TCXIntensity.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258E9213D4F3600607F37 /* TCXIntensity.m */; };
+		74325A43213D4F5300607F37 /* _TCXHeartRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258EA213D4F3600607F37 /* _TCXHeartRate.m */; };
+		74325A44213D4F5300607F37 /* _TCXDegreesLongitude.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258ED213D4F3600607F37 /* _TCXDegreesLongitude.m */; };
+		74325A45213D4F5300607F37 /* _TCXCourseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258F0213D4F3700607F37 /* _TCXCourseList.m */; };
+		74325A46213D4F5300607F37 /* _TCXHeartRateInBeatsPerMinute.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258F2213D4F3700607F37 /* _TCXHeartRateInBeatsPerMinute.m */; };
+		74325A47213D4F5300607F37 /* _TCXVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258F3213D4F3700607F37 /* _TCXVersion.m */; };
+		74325A48213D4F5300607F37 /* _TCXDegreesLatitude.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258F5213D4F3700607F37 /* _TCXDegreesLatitude.m */; };
+		74325A49213D4F5300607F37 /* _TCXWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258F7213D4F3700607F37 /* _TCXWorkout.m */; };
+		74325A4A213D4F5300607F37 /* _TCXWorkoutFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258F8213D4F3700607F37 /* _TCXWorkoutFolder.m */; };
+		74325A4B213D4F5300607F37 /* TCXActivityReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 743258FB213D4F3800607F37 /* TCXActivityReference.m */; };
+		74325A4C213D4F5300607F37 /* _TCXNextSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325901213D4F3800607F37 /* _TCXNextSport.m */; };
+		74325A4D213D4F5300607F37 /* _TCXCoursePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325903213D4F3800607F37 /* _TCXCoursePoint.m */; };
+		74325A4E213D4F5300607F37 /* TCXHeartRateAbove.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325905213D4F3800607F37 /* TCXHeartRateAbove.m */; };
+		74325A4F213D4F5300607F37 /* AXCadenceValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325906213D4F3800607F37 /* AXCadenceValue.m */; };
+		74325A50213D4F5300607F37 /* _AXToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432590A213D4F3900607F37 /* _AXToken.m */; };
+		74325A51213D4F5300607F37 /* _TCXTriggerMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432590B213D4F3900607F37 /* _TCXTriggerMethod.m */; };
+		74325A52213D4F5300607F37 /* AXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432590C213D4F3900607F37 /* AXExtensions.m */; };
+		74325A53213D4F5300607F37 /* TCXAbstractSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432590E213D4F3900607F37 /* TCXAbstractSource.m */; };
+		74325A54213D4F5300607F37 /* TCXHistoryFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432590F213D4F3900607F37 /* TCXHistoryFolder.m */; };
+		74325A55213D4F5300607F37 /* _TCXSpeedInMetersPerSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325910213D4F3900607F37 /* _TCXSpeedInMetersPerSecond.m */; };
+		74325A56213D4F5300607F37 /* _AXCadenceValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325911213D4F3900607F37 /* _AXCadenceValue.m */; };
+		74325A57213D4F5300607F37 /* TCXSpeedZoneNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325912213D4F3900607F37 /* TCXSpeedZoneNumbers.m */; };
+		74325A58213D4F5300607F37 /* _AXActivityTrackpointExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325914213D4F3A00607F37 /* _AXActivityTrackpointExtension.m */; };
+		74325A59213D4F5300607F37 /* TCXTriggerMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325915213D4F3A00607F37 /* TCXTriggerMethod.m */; };
+		74325A5A213D4F5300607F37 /* _TCXAbstractSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325918213D4F3A00607F37 /* _TCXAbstractSource.m */; };
+		74325A5B213D4F5300607F37 /* _TCXNameKeyReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432591E213D4F3A00607F37 /* _TCXNameKeyReference.m */; };
+		74325A5C213D4F5300607F37 /* _TCXDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432591F213D4F3A00607F37 /* _TCXDistance.m */; };
+		74325A5D213D4F5300607F37 /* _TCXHeartRateBelow.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325920213D4F3A00607F37 /* _TCXHeartRateBelow.m */; };
+		74325A5E213D4F5300607F37 /* _TCXWorkouts.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325921213D4F3B00607F37 /* _TCXWorkouts.m */; };
+		74325A5F213D4F5300607F37 /* _TCXHistoryFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325923213D4F3B00607F37 /* _TCXHistoryFolder.m */; };
+		74325A60213D4F5300607F37 /* TCXDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325924213D4F3B00607F37 /* TCXDistance.m */; };
+		74325A61213D4F5300607F37 /* TCXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325926213D4F3B00607F37 /* TCXExtensions.m */; };
+		74325A62213D4F5300607F37 /* TCXHeartRateBelow.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325927213D4F3B00607F37 /* TCXHeartRateBelow.m */; };
+		74325A63213D4F5300607F37 /* _TCXSpeedType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432592A213D4F3B00607F37 /* _TCXSpeedType.m */; };
+		74325A64213D4F5300607F37 /* _TCXHeartRateZoneNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432592C213D4F3B00607F37 /* _TCXHeartRateZoneNumbers.m */; };
+		74325A65213D4F5300607F37 /* _TCXToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432592D213D4F3C00607F37 /* _TCXToken.m */; };
+		74325A66213D4F5300607F37 /* TCXAbstractStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432592E213D4F3C00607F37 /* TCXAbstractStep.m */; };
+		74325A67213D4F5300607F37 /* TCXPositiveByte.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432592F213D4F3C00607F37 /* TCXPositiveByte.m */; };
+		74325A68213D4F5300607F37 /* TCXBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325932213D4F3C00607F37 /* TCXBuild.m */; };
+		74325A69213D4F5300607F37 /* TCXCourseFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325936213D4F3C00607F37 /* TCXCourseFolder.m */; };
+		74325A6A213D4F5300607F37 /* TCXBuildType.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325937213D4F3C00607F37 /* TCXBuildType.m */; };
+		74325A6B213D4F5300607F37 /* TCXWorkoutList.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325939213D4F3C00607F37 /* TCXWorkoutList.m */; };
+		74325A6C213D4F5300607F37 /* TCXStepId.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432593B213D4F3D00607F37 /* TCXStepId.m */; };
+		74325A6D213D4F5300607F37 /* TCXHeartRateInBeatsPerMinute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432593C213D4F3D00607F37 /* TCXHeartRateInBeatsPerMinute.m */; };
+		74325A6E213D4F5300607F37 /* TCXSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432593D213D4F3D00607F37 /* TCXSpeed.m */; };
+		74325A6F213D4F5300607F37 /* TCXCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432593E213D4F3D00607F37 /* TCXCourse.m */; };
+		74325A70213D4F5300607F37 /* _TCXCustomHeartRateZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432593F213D4F3D00607F37 /* _TCXCustomHeartRateZone.m */; };
+		74325A71213D4F5300607F37 /* TCXStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325940213D4F3D00607F37 /* TCXStep.m */; };
+		74325A72213D4F5300607F37 /* _TCXTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325943213D4F3D00607F37 /* _TCXTime.m */; };
+		74325A73213D4F5300607F37 /* _TCXTraining.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325944213D4F3D00607F37 /* _TCXTraining.m */; };
+		74325A74213D4F5300607F37 /* _TCXTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325947213D4F3E00607F37 /* _TCXTarget.m */; };
+		74325A75213D4F5300607F37 /* TCXWorkouts.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325948213D4F3E00607F37 /* TCXWorkouts.m */; };
+		74325A76213D4F5300607F37 /* _TCXPredefinedSpeedZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325949213D4F3E00607F37 /* _TCXPredefinedSpeedZone.m */; };
+		74325A77213D4F5300607F37 /* _TCXSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432594A213D4F3E00607F37 /* _TCXSpeed.m */; };
+		74325A78213D4F5300607F37 /* TCXPartNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432594B213D4F3E00607F37 /* TCXPartNumber.m */; };
+		74325A79213D4F5300607F37 /* TCXTrainingCenterDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325951213D4F3E00607F37 /* TCXTrainingCenterDatabase.m */; };
+		74325A7A213D4F5300607F37 /* AXActivityTrackpointExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325952213D4F3E00607F37 /* AXActivityTrackpointExtension.m */; };
+		74325A7B213D4F5300607F37 /* _TCXActivityReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325953213D4F3E00607F37 /* _TCXActivityReference.m */; };
+		74325A7C213D4F5300607F37 /* TCXActivityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325955213D4F3F00607F37 /* TCXActivityList.m */; };
+		74325A7D213D4F5300607F37 /* TCXHeartRateZoneNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325956213D4F3F00607F37 /* TCXHeartRateZoneNumbers.m */; };
+		74325A7E213D4F5300607F37 /* TCXTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325959213D4F3F00607F37 /* TCXTrack.m */; };
+		74325A7F213D4F5300607F37 /* TCXCaloriesBurned.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432595A213D4F3F00607F37 /* TCXCaloriesBurned.m */; };
+		74325A80213D4F5300607F37 /* _TCXQuickWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432595C213D4F3F00607F37 /* _TCXQuickWorkout.m */; };
+		74325A81213D4F5300607F37 /* TCXVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325961213D4F4000607F37 /* TCXVersion.m */; };
+		74325A82213D4F5300607F37 /* _TCXCadence.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325965213D4F4000607F37 /* _TCXCadence.m */; };
+		74325A83213D4F5300607F37 /* TCXPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325966213D4F4000607F37 /* TCXPosition.m */; };
+		74325A84213D4F5300607F37 /* _TCXDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325968213D4F4200607F37 /* _TCXDuration.m */; };
+		74325A85213D4F5300607F37 /* TCXCoursePointName.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432596A213D4F4200607F37 /* TCXCoursePointName.m */; };
+		74325A86213D4F5300607F37 /* TCXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325970213D4F4300607F37 /* TCXDevice.m */; };
+		74325A87213D4F5300607F37 /* _TCXCourses.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325971213D4F4300607F37 /* _TCXCourses.m */; };
+		74325A88213D4F5300607F37 /* _TCXActivityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325972213D4F4300607F37 /* _TCXActivityList.m */; };
+		74325A89213D4F5300607F37 /* TCXToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325975213D4F4300607F37 /* TCXToken.m */; };
+		74325A8A213D4F5300607F37 /* TCXHeartRateValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325976213D4F4300607F37 /* TCXHeartRateValue.m */; };
+		74325A8B213D4F5300607F37 /* TCXLangID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325979213D4F4400607F37 /* TCXLangID.m */; };
+		74325A8C213D4F5300607F37 /* TCXActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432597A213D4F4400607F37 /* TCXActivity.m */; };
+		74325A8D213D4F5300607F37 /* _TCXActivityLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432597D213D4F4400607F37 /* _TCXActivityLap.m */; };
+		74325A8E213D4F5300607F37 /* TCXApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432597E213D4F4400607F37 /* TCXApplication.m */; };
+		74325A8F213D4F5300607F37 /* TCXFirstSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432597F213D4F4400607F37 /* TCXFirstSport.m */; };
+		74325A90213D4F5300607F37 /* TCXPredefinedHeartRateZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325983213D4F4400607F37 /* TCXPredefinedHeartRateZone.m */; };
+		74325A91213D4F5300607F37 /* TCXWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325984213D4F4400607F37 /* TCXWorkout.m */; };
+		74325A92213D4F5300607F37 /* _TCXPercentOfMax.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325986213D4F4500607F37 /* _TCXPercentOfMax.m */; };
+		74325A93213D4F5300607F37 /* _TCXWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325987213D4F4500607F37 /* _TCXWeek.m */; };
+		74325A94213D4F5300607F37 /* _TCXZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325988213D4F4500607F37 /* _TCXZone.m */; };
+		74325A95213D4F5300607F37 /* TCXHeartRateAsPercentOfMax.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325989213D4F4500607F37 /* TCXHeartRateAsPercentOfMax.m */; };
+		74325A96213D4F5300607F37 /* _TCXRepetitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432598B213D4F4500607F37 /* _TCXRepetitions.m */; };
+		74325A97213D4F5300607F37 /* _AXCadenceSensorType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432598E213D4F4500607F37 /* _AXCadenceSensorType.m */; };
+		74325A98213D4F5300607F37 /* _TCXHeartRateAbove.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432598F213D4F4500607F37 /* _TCXHeartRateAbove.m */; };
+		74325A99213D4F5300607F37 /* TCXMultiSportFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325990213D4F4500607F37 /* TCXMultiSportFolder.m */; };
+		74325A9A213D4F5300607F37 /* TCXCadence.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325993213D4F4600607F37 /* TCXCadence.m */; };
+		74325A9B213D4F5300607F37 /* _TCXWorkoutList.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325994213D4F4600607F37 /* _TCXWorkoutList.m */; };
+		74325A9C213D4F5300607F37 /* _TCXTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325996213D4F4600607F37 /* _TCXTrack.m */; };
+		74325A9D213D4F5300607F37 /* TCXRepetitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325998213D4F4600607F37 /* TCXRepetitions.m */; };
+		74325A9E213D4F5300607F37 /* _TCXIntensity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325999213D4F4600607F37 /* _TCXIntensity.m */; };
+		74325A9F213D4F5300607F37 /* TCXUserInitiated.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432599D213D4F4600607F37 /* TCXUserInitiated.m */; };
+		74325AA0213D4F5300607F37 /* _TCXApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432599E213D4F4600607F37 /* _TCXApplication.m */; };
+		74325AA1213D4F5300607F37 /* _TCXNone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7432599F213D4F4700607F37 /* _TCXNone.m */; };
+		74325AA2213D4F5300607F37 /* _TCXCoursePointName.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259A0213D4F4700607F37 /* _TCXCoursePointName.m */; };
+		74325AA3213D4F5300607F37 /* TCXHeartRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259A4213D4F4700607F37 /* TCXHeartRate.m */; };
+		74325AA4213D4F5300607F37 /* TCXRepeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259A5213D4F4700607F37 /* TCXRepeat.m */; };
+		74325AA5213D4F5300607F37 /* TCXSpeedType.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259A6213D4F4700607F37 /* TCXSpeedType.m */; };
+		74325AA6213D4F5300607F37 /* TCXTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259A9213D4F4700607F37 /* TCXTime.m */; };
+		74325AA7213D4F5300607F37 /* TCXDegreesLongitude.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259AC213D4F4800607F37 /* TCXDegreesLongitude.m */; };
+		74325AA8213D4F5300607F37 /* _TCXCourseLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259B2213D4F4800607F37 /* _TCXCourseLap.m */; };
+		74325AA9213D4F5300607F37 /* _TCXPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259B3213D4F4800607F37 /* _TCXPlan.m */; };
+		74325AAA213D4F5300607F37 /* _TCXSensorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259B4213D4F4800607F37 /* _TCXSensorState.m */; };
+		74325AAB213D4F5300607F37 /* TCXCourseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259B5213D4F4800607F37 /* TCXCourseList.m */; };
+		74325AAC213D4F5300607F37 /* _TCXBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259B7213D4F4900607F37 /* _TCXBuild.m */; };
+		74325AAD213D4F5300607F37 /* _TCXCustomSpeedZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259B8213D4F4900607F37 /* _TCXCustomSpeedZone.m */; };
+		74325AAE213D4F5300607F37 /* _TCXCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259BB213D4F4900607F37 /* _TCXCourse.m */; };
+		74325AAF213D4F5300607F37 /* _TCXStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259BC213D4F4900607F37 /* _TCXStep.m */; };
+		74325AB0213D4F5300607F37 /* TCXPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259BD213D4F4900607F37 /* TCXPlan.m */; };
+		74325AB1213D4F5300607F37 /* TCXSensorState.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259BE213D4F4900607F37 /* TCXSensorState.m */; };
+		74325AB2213D4F5300607F37 /* TCXCourses.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259C1213D4F4900607F37 /* TCXCourses.m */; };
+		74325AB3213D4F5300607F37 /* _TCXCourseFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259C2213D4F4900607F37 /* _TCXCourseFolder.m */; };
+		74325AB4213D4F5300607F37 /* TCXNone.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259C3213D4F4900607F37 /* TCXNone.m */; };
+		74325AB5213D4F5300607F37 /* TCXSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259C4213D4F4A00607F37 /* TCXSport.m */; };
+		74325AB6213D4F5300607F37 /* _TCXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259C5213D4F4A00607F37 /* _TCXExtensions.m */; };
+		74325AB7213D4F5300607F37 /* TCXMultiSportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259C8213D4F4A00607F37 /* TCXMultiSportSession.m */; };
+		74325AB8213D4F5300607F37 /* _TCXActivityLapExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259C9213D4F4A00607F37 /* _TCXActivityLapExtensions.m */; };
+		74325AB9213D4F5300607F37 /* _TCXPredefinedHeartRateZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259CB213D4F4A00607F37 /* _TCXPredefinedHeartRateZone.m */; };
+		74325ABA213D4F5300607F37 /* _TCXRepeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259CC213D4F4A00607F37 /* _TCXRepeat.m */; };
+		74325ABB213D4F5300607F37 /* TCXDegreesLatitude.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259D0213D4F4A00607F37 /* TCXDegreesLatitude.m */; };
+		74325ABC213D4F5300607F37 /* TCXQuickWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259D1213D4F4B00607F37 /* TCXQuickWorkout.m */; };
+		74325ABD213D4F5300607F37 /* TCXFolders.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259D3213D4F4B00607F37 /* TCXFolders.m */; };
+		74325ABE213D4F5300607F37 /* TCXHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259D5213D4F4B00607F37 /* TCXHistory.m */; };
+		74325ABF213D4F5300607F37 /* _AXExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259D6213D4F4B00607F37 /* _AXExtensions.m */; };
+		74325AC0213D4F5300607F37 /* TCXGender.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259D9213D4F4B00607F37 /* TCXGender.m */; };
+		74325AC1213D4F5300607F37 /* AXCadenceSensorType.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259DB213D4F4B00607F37 /* AXCadenceSensorType.m */; };
+		74325AC2213D4F5300607F37 /* TCXTraining.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259DE213D4F4C00607F37 /* TCXTraining.m */; };
+		74325AC3213D4F5300607F37 /* _TCXHeartRateAsPercentOfMax.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259DF213D4F4C00607F37 /* _TCXHeartRateAsPercentOfMax.m */; };
+		74325AC4213D4F5300607F37 /* TCXPercentOfMax.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259E0213D4F4C00607F37 /* TCXPercentOfMax.m */; };
+		74325AC5213D4F5300607F37 /* _TCXMultiSportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259E3213D4F4C00607F37 /* _TCXMultiSportSession.m */; };
+		74325AC6213D4F5300607F37 /* _TCXFirstSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259E4213D4F4C00607F37 /* _TCXFirstSport.m */; };
+		74325AC7213D4F5300607F37 /* _TCXPartNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259E8213D4F4C00607F37 /* _TCXPartNumber.m */; };
+		74325AC8213D4F5300607F37 /* _TCXRestrictedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259EB213D4F4D00607F37 /* _TCXRestrictedToken.m */; };
+		74325AC9213D4F5300607F37 /* _TCXStepId.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259EC213D4F4D00607F37 /* _TCXStepId.m */; };
+		74325ACA213D4F5300607F37 /* TCXTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259ED213D4F4D00607F37 /* TCXTarget.m */; };
+		74325ACB213D4F5300607F37 /* _TCXFolders.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259EF213D4F4D00607F37 /* _TCXFolders.m */; };
+		74325ACC213D4F5300607F37 /* _TCXMultiSportFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259F1213D4F4D00607F37 /* _TCXMultiSportFolder.m */; };
+		74325ACD213D4F5300607F37 /* TCXWorkoutFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259F3213D4F4D00607F37 /* TCXWorkoutFolder.m */; };
+		74325ACE213D4F5300607F37 /* TCXTrainingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259F7213D4F4E00607F37 /* TCXTrainingType.m */; };
+		74325ACF213D4F5300607F37 /* TCXTrackpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259FB213D4F4E00607F37 /* TCXTrackpoint.m */; };
+		74325AD0213D4F5300607F37 /* _AXActivityLapExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 743259FC213D4F4E00607F37 /* _AXActivityLapExtension.m */; };
+		74325AD1213D4F5300607F37 /* _TCXTrainingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A03213D4F4E00607F37 /* _TCXTrainingType.m */; };
+		74325AD2213D4F5300607F37 /* _TCXCaloriesBurned.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A05213D4F4F00607F37 /* _TCXCaloriesBurned.m */; };
+		74325AD3213D4F5300607F37 /* _TCXHeartRateValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A08213D4F4F00607F37 /* _TCXHeartRateValue.m */; };
+		74325AD4213D4F5300607F37 /* _TCXBuildType.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A09213D4F4F00607F37 /* _TCXBuildType.m */; };
+		74325AD5213D4F5300607F37 /* _TCXSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A0C213D4F4F00607F37 /* _TCXSport.m */; };
+		74325AD6213D4F5300607F37 /* TCXActivityLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A0D213D4F4F00607F37 /* TCXActivityLap.m */; };
+		74325AD7213D4F5300607F37 /* TCXCustomHeartRateZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A10213D4F5000607F37 /* TCXCustomHeartRateZone.m */; };
+		74325AD8213D4F5300607F37 /* _TCXTrackpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A13213D4F5000607F37 /* _TCXTrackpoint.m */; };
+		74325AD9213D4F5300607F37 /* _TCXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A14213D4F5000607F37 /* _TCXDevice.m */; };
+		74325ADA213D4F5300607F37 /* _TCXActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A15213D4F5000607F37 /* _TCXActivity.m */; };
+		74325ADB213D4F5300607F37 /* _TCXPositiveByte.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A16213D4F5000607F37 /* _TCXPositiveByte.m */; };
+		74325ADC213D4F5300607F37 /* _TCXPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A1B213D4F5000607F37 /* _TCXPosition.m */; };
+		74325ADD213D4F5300607F37 /* _TCXAbstractStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A1E213D4F5100607F37 /* _TCXAbstractStep.m */; };
+		74325ADE213D4F5300607F37 /* TCXCourseLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A20213D4F5100607F37 /* TCXCourseLap.m */; };
+		74325ADF213D4F5300607F37 /* TCXCoursePointType.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A22213D4F5100607F37 /* TCXCoursePointType.m */; };
+		74325AE0213D4F5300607F37 /* AXToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A23213D4F5100607F37 /* AXToken.m */; };
+		74325AE1213D4F5300607F37 /* TCXCadenceValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A24213D4F5100607F37 /* TCXCadenceValue.m */; };
+		74325AE2213D4F5300607F37 /* _TCXUserInitiated.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A26213D4F5100607F37 /* _TCXUserInitiated.m */; };
+		74325AE3213D4F5300607F37 /* TCXRestrictedToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A27213D4F5100607F37 /* TCXRestrictedToken.m */; };
+		74325AE4213D4F5300607F37 /* AXActivityLapExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A28213D4F5100607F37 /* AXActivityLapExtension.m */; };
+		74325AE5213D4F5300607F37 /* TCXActivityLapExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A2A213D4F5200607F37 /* TCXActivityLapExtensions.m */; };
+		74325AE6213D4F5300607F37 /* TCXDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A2B213D4F5200607F37 /* TCXDuration.m */; };
+		74325AE7213D4F5300607F37 /* TCXPredefinedSpeedZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A2C213D4F5200607F37 /* TCXPredefinedSpeedZone.m */; };
+		74325AE8213D4F5300607F37 /* TCXWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A2D213D4F5200607F37 /* TCXWeek.m */; };
+		74325AE9213D4F5300607F37 /* _TCXLangID.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A2E213D4F5200607F37 /* _TCXLangID.m */; };
+		74325AEA213D4F5300607F37 /* _TCXHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A30213D4F5200607F37 /* _TCXHistory.m */; };
+		74325AEB213D4F5300607F37 /* TCXNameKeyReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 74325A31213D4F5200607F37 /* TCXNameKeyReference.m */; };
 		743A929520517D1B00668D76 /* _Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929420517D1B00668D76 /* _Employee.swift */; };
 		743A92992051919700668D76 /* CodableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A92982051919700668D76 /* CodableType.swift */; };
 		743A929D2051944600668D76 /* JSONSchemaReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A929C2051944600668D76 /* JSONSchemaReader.swift */; };
@@ -45,6 +227,371 @@
 		4CD75BE62139F5A999050D49 /* libPods-MappableObjectGeneratorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MappableObjectGeneratorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		742F0E6820512AE3006A1AEB /* MappableObjectGenerator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MappableObjectGenerator.1; sourceTree = "<group>"; };
 		74325254213AC2D800607F37 /* TrainingCenterDatabasev2.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TrainingCenterDatabasev2.xsd; sourceTree = "<group>"; };
+		743258C9213D4B0C00607F37 /* ActivityExtensionv2.xsd */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ActivityExtensionv2.xsd; sourceTree = "<group>"; };
+		743258CA213D4F3400607F37 /* _TCXTrainingType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTrainingType.h; sourceTree = "<group>"; };
+		743258CB213D4F3400607F37 /* _TCXCoursePointName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCoursePointName.h; sourceTree = "<group>"; };
+		743258CC213D4F3400607F37 /* _TCXCoursePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCoursePoint.h; sourceTree = "<group>"; };
+		743258CD213D4F3400607F37 /* _TCXPercentOfMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXPercentOfMax.h; sourceTree = "<group>"; };
+		743258CE213D4F3400607F37 /* TCXActivityTrackpointExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXActivityTrackpointExtensions.m; sourceTree = "<group>"; };
+		743258CF213D4F3400607F37 /* _TCXActivityTrackpointExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXActivityTrackpointExtensions.h; sourceTree = "<group>"; };
+		743258D0213D4F3500607F37 /* _TCXGender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXGender.m; sourceTree = "<group>"; };
+		743258D1213D4F3500607F37 /* _TCXStepId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXStepId.h; sourceTree = "<group>"; };
+		743258D2213D4F3500607F37 /* _TCXCadenceValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCadenceValue.m; sourceTree = "<group>"; };
+		743258D3213D4F3500607F37 /* _TCXSpeedType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXSpeedType.h; sourceTree = "<group>"; };
+		743258D4213D4F3500607F37 /* _TCXCoursePointType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCoursePointType.m; sourceTree = "<group>"; };
+		743258D5213D4F3500607F37 /* _TCXActivityReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXActivityReference.h; sourceTree = "<group>"; };
+		743258D6213D4F3500607F37 /* _TCXCustomHeartRateZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCustomHeartRateZone.h; sourceTree = "<group>"; };
+		743258D7213D4F3500607F37 /* _TCXCourseLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCourseLap.h; sourceTree = "<group>"; };
+		743258D8213D4F3500607F37 /* _TCXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXDevice.h; sourceTree = "<group>"; };
+		743258D9213D4F3500607F37 /* TCXZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXZone.m; sourceTree = "<group>"; };
+		743258DA213D4F3500607F37 /* TCXCustomSpeedZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCustomSpeedZone.m; sourceTree = "<group>"; };
+		743258DB213D4F3500607F37 /* _TCXNameKeyReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXNameKeyReference.h; sourceTree = "<group>"; };
+		743258DC213D4F3500607F37 /* TCXNextSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXNextSport.m; sourceTree = "<group>"; };
+		743258DD213D4F3500607F37 /* TCXPercentOfMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXPercentOfMax.h; sourceTree = "<group>"; };
+		743258DE213D4F3500607F37 /* _TCXTrainingCenterDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTrainingCenterDatabase.m; sourceTree = "<group>"; };
+		743258DF213D4F3500607F37 /* _TCXSpeedZoneNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXSpeedZoneNumbers.m; sourceTree = "<group>"; };
+		743258E0213D4F3600607F37 /* TCXSpeedInMetersPerSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXSpeedInMetersPerSecond.m; sourceTree = "<group>"; };
+		743258E1213D4F3600607F37 /* TCXStepId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXStepId.h; sourceTree = "<group>"; };
+		743258E2213D4F3600607F37 /* TCXRepetitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXRepetitions.h; sourceTree = "<group>"; };
+		743258E3213D4F3600607F37 /* _TCXActivityTrackpointExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXActivityTrackpointExtensions.m; sourceTree = "<group>"; };
+		743258E4213D4F3600607F37 /* _TCXCaloriesBurned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCaloriesBurned.h; sourceTree = "<group>"; };
+		743258E5213D4F3600607F37 /* TCXPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXPosition.h; sourceTree = "<group>"; };
+		743258E6213D4F3600607F37 /* _TCXTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTime.h; sourceTree = "<group>"; };
+		743258E7213D4F3600607F37 /* _TCXVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXVersion.h; sourceTree = "<group>"; };
+		743258E8213D4F3600607F37 /* TCXCoursePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCoursePoint.m; sourceTree = "<group>"; };
+		743258E9213D4F3600607F37 /* TCXIntensity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXIntensity.m; sourceTree = "<group>"; };
+		743258EA213D4F3600607F37 /* _TCXHeartRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHeartRate.m; sourceTree = "<group>"; };
+		743258EB213D4F3600607F37 /* _AXCadenceSensorType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AXCadenceSensorType.h; sourceTree = "<group>"; };
+		743258EC213D4F3600607F37 /* _TCXBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXBuild.h; sourceTree = "<group>"; };
+		743258ED213D4F3600607F37 /* _TCXDegreesLongitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXDegreesLongitude.m; sourceTree = "<group>"; };
+		743258EE213D4F3700607F37 /* _TCXHistoryFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHistoryFolder.h; sourceTree = "<group>"; };
+		743258EF213D4F3700607F37 /* _TCXHeartRateBelow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHeartRateBelow.h; sourceTree = "<group>"; };
+		743258F0213D4F3700607F37 /* _TCXCourseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCourseList.m; sourceTree = "<group>"; };
+		743258F1213D4F3700607F37 /* _TCXFolders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXFolders.h; sourceTree = "<group>"; };
+		743258F2213D4F3700607F37 /* _TCXHeartRateInBeatsPerMinute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHeartRateInBeatsPerMinute.m; sourceTree = "<group>"; };
+		743258F3213D4F3700607F37 /* _TCXVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXVersion.m; sourceTree = "<group>"; };
+		743258F4213D4F3700607F37 /* _TCXWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXWorkout.h; sourceTree = "<group>"; };
+		743258F5213D4F3700607F37 /* _TCXDegreesLatitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXDegreesLatitude.m; sourceTree = "<group>"; };
+		743258F6213D4F3700607F37 /* _TCXHeartRateZoneNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHeartRateZoneNumbers.h; sourceTree = "<group>"; };
+		743258F7213D4F3700607F37 /* _TCXWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXWorkout.m; sourceTree = "<group>"; };
+		743258F8213D4F3700607F37 /* _TCXWorkoutFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXWorkoutFolder.m; sourceTree = "<group>"; };
+		743258F9213D4F3700607F37 /* TCXCourses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCourses.h; sourceTree = "<group>"; };
+		743258FA213D4F3700607F37 /* TCXIntensity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXIntensity.h; sourceTree = "<group>"; };
+		743258FB213D4F3800607F37 /* TCXActivityReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXActivityReference.m; sourceTree = "<group>"; };
+		743258FC213D4F3800607F37 /* _TCXActivityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXActivityList.h; sourceTree = "<group>"; };
+		743258FD213D4F3800607F37 /* TCXNone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXNone.h; sourceTree = "<group>"; };
+		743258FE213D4F3800607F37 /* TCXQuickWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXQuickWorkout.h; sourceTree = "<group>"; };
+		743258FF213D4F3800607F37 /* TCXSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXSport.h; sourceTree = "<group>"; };
+		74325900213D4F3800607F37 /* TCXToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXToken.h; sourceTree = "<group>"; };
+		74325901213D4F3800607F37 /* _TCXNextSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXNextSport.m; sourceTree = "<group>"; };
+		74325902213D4F3800607F37 /* _TCXTrainingCenterDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTrainingCenterDatabase.h; sourceTree = "<group>"; };
+		74325903213D4F3800607F37 /* _TCXCoursePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCoursePoint.m; sourceTree = "<group>"; };
+		74325904213D4F3800607F37 /* _TCXPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXPlan.h; sourceTree = "<group>"; };
+		74325905213D4F3800607F37 /* TCXHeartRateAbove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHeartRateAbove.m; sourceTree = "<group>"; };
+		74325906213D4F3800607F37 /* AXCadenceValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXCadenceValue.m; sourceTree = "<group>"; };
+		74325907213D4F3800607F37 /* _TCXHeartRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHeartRate.h; sourceTree = "<group>"; };
+		74325908213D4F3900607F37 /* _TCXCustomSpeedZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCustomSpeedZone.h; sourceTree = "<group>"; };
+		74325909213D4F3900607F37 /* _TCXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXExtensions.h; sourceTree = "<group>"; };
+		7432590A213D4F3900607F37 /* _AXToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AXToken.m; sourceTree = "<group>"; };
+		7432590B213D4F3900607F37 /* _TCXTriggerMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTriggerMethod.m; sourceTree = "<group>"; };
+		7432590C213D4F3900607F37 /* AXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXExtensions.m; sourceTree = "<group>"; };
+		7432590D213D4F3900607F37 /* _TCXFirstSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXFirstSport.h; sourceTree = "<group>"; };
+		7432590E213D4F3900607F37 /* TCXAbstractSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXAbstractSource.m; sourceTree = "<group>"; };
+		7432590F213D4F3900607F37 /* TCXHistoryFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHistoryFolder.m; sourceTree = "<group>"; };
+		74325910213D4F3900607F37 /* _TCXSpeedInMetersPerSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXSpeedInMetersPerSecond.m; sourceTree = "<group>"; };
+		74325911213D4F3900607F37 /* _AXCadenceValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AXCadenceValue.m; sourceTree = "<group>"; };
+		74325912213D4F3900607F37 /* TCXSpeedZoneNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXSpeedZoneNumbers.m; sourceTree = "<group>"; };
+		74325913213D4F3900607F37 /* TCXTraining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTraining.h; sourceTree = "<group>"; };
+		74325914213D4F3A00607F37 /* _AXActivityTrackpointExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AXActivityTrackpointExtension.m; sourceTree = "<group>"; };
+		74325915213D4F3A00607F37 /* TCXTriggerMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTriggerMethod.m; sourceTree = "<group>"; };
+		74325916213D4F3A00607F37 /* TCXWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXWorkout.h; sourceTree = "<group>"; };
+		74325917213D4F3A00607F37 /* _TCXActivityLapExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXActivityLapExtensions.h; sourceTree = "<group>"; };
+		74325918213D4F3A00607F37 /* _TCXAbstractSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXAbstractSource.m; sourceTree = "<group>"; };
+		74325919213D4F3A00607F37 /* _TCXUserInitiated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXUserInitiated.h; sourceTree = "<group>"; };
+		7432591A213D4F3A00607F37 /* TCXActivityLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXActivityLap.h; sourceTree = "<group>"; };
+		7432591B213D4F3A00607F37 /* _TCXPredefinedHeartRateZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXPredefinedHeartRateZone.h; sourceTree = "<group>"; };
+		7432591C213D4F3A00607F37 /* _TCXZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXZone.h; sourceTree = "<group>"; };
+		7432591D213D4F3A00607F37 /* TCXActivityTrackpointExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXActivityTrackpointExtensions.h; sourceTree = "<group>"; };
+		7432591E213D4F3A00607F37 /* _TCXNameKeyReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXNameKeyReference.m; sourceTree = "<group>"; };
+		7432591F213D4F3A00607F37 /* _TCXDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXDistance.m; sourceTree = "<group>"; };
+		74325920213D4F3A00607F37 /* _TCXHeartRateBelow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHeartRateBelow.m; sourceTree = "<group>"; };
+		74325921213D4F3B00607F37 /* _TCXWorkouts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXWorkouts.m; sourceTree = "<group>"; };
+		74325922213D4F3B00607F37 /* TCXCourseLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCourseLap.h; sourceTree = "<group>"; };
+		74325923213D4F3B00607F37 /* _TCXHistoryFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHistoryFolder.m; sourceTree = "<group>"; };
+		74325924213D4F3B00607F37 /* TCXDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXDistance.m; sourceTree = "<group>"; };
+		74325925213D4F3B00607F37 /* TCXDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXDuration.h; sourceTree = "<group>"; };
+		74325926213D4F3B00607F37 /* TCXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXExtensions.m; sourceTree = "<group>"; };
+		74325927213D4F3B00607F37 /* TCXHeartRateBelow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHeartRateBelow.m; sourceTree = "<group>"; };
+		74325928213D4F3B00607F37 /* _AXToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AXToken.h; sourceTree = "<group>"; };
+		74325929213D4F3B00607F37 /* TCXLangID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXLangID.h; sourceTree = "<group>"; };
+		7432592A213D4F3B00607F37 /* _TCXSpeedType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXSpeedType.m; sourceTree = "<group>"; };
+		7432592B213D4F3B00607F37 /* _TCXSpeedInMetersPerSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXSpeedInMetersPerSecond.h; sourceTree = "<group>"; };
+		7432592C213D4F3B00607F37 /* _TCXHeartRateZoneNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHeartRateZoneNumbers.m; sourceTree = "<group>"; };
+		7432592D213D4F3C00607F37 /* _TCXToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXToken.m; sourceTree = "<group>"; };
+		7432592E213D4F3C00607F37 /* TCXAbstractStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXAbstractStep.m; sourceTree = "<group>"; };
+		7432592F213D4F3C00607F37 /* TCXPositiveByte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXPositiveByte.m; sourceTree = "<group>"; };
+		74325930213D4F3C00607F37 /* _TCXApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXApplication.h; sourceTree = "<group>"; };
+		74325931213D4F3C00607F37 /* TCXSensorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXSensorState.h; sourceTree = "<group>"; };
+		74325932213D4F3C00607F37 /* TCXBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXBuild.m; sourceTree = "<group>"; };
+		74325933213D4F3C00607F37 /* TCXPartNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXPartNumber.h; sourceTree = "<group>"; };
+		74325934213D4F3C00607F37 /* TCXSpeedZoneNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXSpeedZoneNumbers.h; sourceTree = "<group>"; };
+		74325935213D4F3C00607F37 /* TCXDegreesLongitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXDegreesLongitude.h; sourceTree = "<group>"; };
+		74325936213D4F3C00607F37 /* TCXCourseFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCourseFolder.m; sourceTree = "<group>"; };
+		74325937213D4F3C00607F37 /* TCXBuildType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXBuildType.m; sourceTree = "<group>"; };
+		74325938213D4F3C00607F37 /* TCXHeartRateBelow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHeartRateBelow.h; sourceTree = "<group>"; };
+		74325939213D4F3C00607F37 /* TCXWorkoutList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXWorkoutList.m; sourceTree = "<group>"; };
+		7432593A213D4F3D00607F37 /* AXToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXToken.h; sourceTree = "<group>"; };
+		7432593B213D4F3D00607F37 /* TCXStepId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXStepId.m; sourceTree = "<group>"; };
+		7432593C213D4F3D00607F37 /* TCXHeartRateInBeatsPerMinute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHeartRateInBeatsPerMinute.m; sourceTree = "<group>"; };
+		7432593D213D4F3D00607F37 /* TCXSpeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXSpeed.m; sourceTree = "<group>"; };
+		7432593E213D4F3D00607F37 /* TCXCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCourse.m; sourceTree = "<group>"; };
+		7432593F213D4F3D00607F37 /* _TCXCustomHeartRateZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCustomHeartRateZone.m; sourceTree = "<group>"; };
+		74325940213D4F3D00607F37 /* TCXStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXStep.m; sourceTree = "<group>"; };
+		74325941213D4F3D00607F37 /* _TCXWorkoutFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXWorkoutFolder.h; sourceTree = "<group>"; };
+		74325942213D4F3D00607F37 /* TCXNextSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXNextSport.h; sourceTree = "<group>"; };
+		74325943213D4F3D00607F37 /* _TCXTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTime.m; sourceTree = "<group>"; };
+		74325944213D4F3D00607F37 /* _TCXTraining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTraining.m; sourceTree = "<group>"; };
+		74325945213D4F3D00607F37 /* _TCXDegreesLatitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXDegreesLatitude.h; sourceTree = "<group>"; };
+		74325946213D4F3D00607F37 /* TCXAbstractStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXAbstractStep.h; sourceTree = "<group>"; };
+		74325947213D4F3E00607F37 /* _TCXTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTarget.m; sourceTree = "<group>"; };
+		74325948213D4F3E00607F37 /* TCXWorkouts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXWorkouts.m; sourceTree = "<group>"; };
+		74325949213D4F3E00607F37 /* _TCXPredefinedSpeedZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXPredefinedSpeedZone.m; sourceTree = "<group>"; };
+		7432594A213D4F3E00607F37 /* _TCXSpeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXSpeed.m; sourceTree = "<group>"; };
+		7432594B213D4F3E00607F37 /* TCXPartNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXPartNumber.m; sourceTree = "<group>"; };
+		7432594C213D4F3E00607F37 /* TCXPredefinedSpeedZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXPredefinedSpeedZone.h; sourceTree = "<group>"; };
+		7432594D213D4F3E00607F37 /* _TCXSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXSpeed.h; sourceTree = "<group>"; };
+		7432594E213D4F3E00607F37 /* _TCXRepetitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXRepetitions.h; sourceTree = "<group>"; };
+		7432594F213D4F3E00607F37 /* TCXHeartRateInBeatsPerMinute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHeartRateInBeatsPerMinute.h; sourceTree = "<group>"; };
+		74325950213D4F3E00607F37 /* TCXPredefinedHeartRateZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXPredefinedHeartRateZone.h; sourceTree = "<group>"; };
+		74325951213D4F3E00607F37 /* TCXTrainingCenterDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTrainingCenterDatabase.m; sourceTree = "<group>"; };
+		74325952213D4F3E00607F37 /* AXActivityTrackpointExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXActivityTrackpointExtension.m; sourceTree = "<group>"; };
+		74325953213D4F3E00607F37 /* _TCXActivityReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXActivityReference.m; sourceTree = "<group>"; };
+		74325954213D4F3F00607F37 /* _TCXHeartRateAbove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHeartRateAbove.h; sourceTree = "<group>"; };
+		74325955213D4F3F00607F37 /* TCXActivityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXActivityList.m; sourceTree = "<group>"; };
+		74325956213D4F3F00607F37 /* TCXHeartRateZoneNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHeartRateZoneNumbers.m; sourceTree = "<group>"; };
+		74325957213D4F3F00607F37 /* TCXSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXSpeed.h; sourceTree = "<group>"; };
+		74325958213D4F3F00607F37 /* TCXSpeedInMetersPerSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXSpeedInMetersPerSecond.h; sourceTree = "<group>"; };
+		74325959213D4F3F00607F37 /* TCXTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTrack.m; sourceTree = "<group>"; };
+		7432595A213D4F3F00607F37 /* TCXCaloriesBurned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCaloriesBurned.m; sourceTree = "<group>"; };
+		7432595B213D4F3F00607F37 /* _AXActivityLapExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AXActivityLapExtension.h; sourceTree = "<group>"; };
+		7432595C213D4F3F00607F37 /* _TCXQuickWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXQuickWorkout.m; sourceTree = "<group>"; };
+		7432595D213D4F3F00607F37 /* _TCXDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXDistance.h; sourceTree = "<group>"; };
+		7432595E213D4F3F00607F37 /* _TCXHeartRateValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHeartRateValue.h; sourceTree = "<group>"; };
+		7432595F213D4F3F00607F37 /* TCXActivityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXActivityList.h; sourceTree = "<group>"; };
+		74325960213D4F4000607F37 /* TCXUserInitiated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXUserInitiated.h; sourceTree = "<group>"; };
+		74325961213D4F4000607F37 /* TCXVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXVersion.m; sourceTree = "<group>"; };
+		74325962213D4F4000607F37 /* TCXWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXWeek.h; sourceTree = "<group>"; };
+		74325963213D4F4000607F37 /* TCXAbstractSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXAbstractSource.h; sourceTree = "<group>"; };
+		74325964213D4F4000607F37 /* _TCXQuickWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXQuickWorkout.h; sourceTree = "<group>"; };
+		74325965213D4F4000607F37 /* _TCXCadence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCadence.m; sourceTree = "<group>"; };
+		74325966213D4F4000607F37 /* TCXPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXPosition.m; sourceTree = "<group>"; };
+		74325967213D4F4200607F37 /* _TCXGender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXGender.h; sourceTree = "<group>"; };
+		74325968213D4F4200607F37 /* _TCXDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXDuration.m; sourceTree = "<group>"; };
+		74325969213D4F4200607F37 /* AXCadenceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXCadenceValue.h; sourceTree = "<group>"; };
+		7432596A213D4F4200607F37 /* TCXCoursePointName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCoursePointName.m; sourceTree = "<group>"; };
+		7432596B213D4F4200607F37 /* TCXDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXDistance.h; sourceTree = "<group>"; };
+		7432596C213D4F4300607F37 /* _AXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AXExtensions.h; sourceTree = "<group>"; };
+		7432596D213D4F4300607F37 /* TCXHeartRateZoneNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHeartRateZoneNumbers.h; sourceTree = "<group>"; };
+		7432596E213D4F4300607F37 /* TCXCaloriesBurned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCaloriesBurned.h; sourceTree = "<group>"; };
+		7432596F213D4F4300607F37 /* TCXActivityLapExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXActivityLapExtensions.h; sourceTree = "<group>"; };
+		74325970213D4F4300607F37 /* TCXDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXDevice.m; sourceTree = "<group>"; };
+		74325971213D4F4300607F37 /* _TCXCourses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCourses.m; sourceTree = "<group>"; };
+		74325972213D4F4300607F37 /* _TCXActivityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXActivityList.m; sourceTree = "<group>"; };
+		74325973213D4F4300607F37 /* TCXCustomSpeedZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCustomSpeedZone.h; sourceTree = "<group>"; };
+		74325974213D4F4300607F37 /* TCXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXExtensions.h; sourceTree = "<group>"; };
+		74325975213D4F4300607F37 /* TCXToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXToken.m; sourceTree = "<group>"; };
+		74325976213D4F4300607F37 /* TCXHeartRateValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHeartRateValue.m; sourceTree = "<group>"; };
+		74325977213D4F4300607F37 /* TCXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXDevice.h; sourceTree = "<group>"; };
+		74325978213D4F4300607F37 /* TCXFolders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXFolders.h; sourceTree = "<group>"; };
+		74325979213D4F4400607F37 /* TCXLangID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXLangID.m; sourceTree = "<group>"; };
+		7432597A213D4F4400607F37 /* TCXActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXActivity.m; sourceTree = "<group>"; };
+		7432597B213D4F4400607F37 /* TCXTrainingType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTrainingType.h; sourceTree = "<group>"; };
+		7432597C213D4F4400607F37 /* _TCXIntensity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXIntensity.h; sourceTree = "<group>"; };
+		7432597D213D4F4400607F37 /* _TCXActivityLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXActivityLap.m; sourceTree = "<group>"; };
+		7432597E213D4F4400607F37 /* TCXApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXApplication.m; sourceTree = "<group>"; };
+		7432597F213D4F4400607F37 /* TCXFirstSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXFirstSport.m; sourceTree = "<group>"; };
+		74325980213D4F4400607F37 /* TCXCoursePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCoursePoint.h; sourceTree = "<group>"; };
+		74325981213D4F4400607F37 /* _TCXDegreesLongitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXDegreesLongitude.h; sourceTree = "<group>"; };
+		74325982213D4F4400607F37 /* _TCXWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXWeek.h; sourceTree = "<group>"; };
+		74325983213D4F4400607F37 /* TCXPredefinedHeartRateZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXPredefinedHeartRateZone.m; sourceTree = "<group>"; };
+		74325984213D4F4400607F37 /* TCXWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXWorkout.m; sourceTree = "<group>"; };
+		74325985213D4F4400607F37 /* _TCXCadenceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCadenceValue.h; sourceTree = "<group>"; };
+		74325986213D4F4500607F37 /* _TCXPercentOfMax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXPercentOfMax.m; sourceTree = "<group>"; };
+		74325987213D4F4500607F37 /* _TCXWeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXWeek.m; sourceTree = "<group>"; };
+		74325988213D4F4500607F37 /* _TCXZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXZone.m; sourceTree = "<group>"; };
+		74325989213D4F4500607F37 /* TCXHeartRateAsPercentOfMax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHeartRateAsPercentOfMax.m; sourceTree = "<group>"; };
+		7432598A213D4F4500607F37 /* _TCXBuildType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXBuildType.h; sourceTree = "<group>"; };
+		7432598B213D4F4500607F37 /* _TCXRepetitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXRepetitions.m; sourceTree = "<group>"; };
+		7432598C213D4F4500607F37 /* _TCXHeartRateInBeatsPerMinute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHeartRateInBeatsPerMinute.h; sourceTree = "<group>"; };
+		7432598D213D4F4500607F37 /* TCXHeartRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHeartRate.h; sourceTree = "<group>"; };
+		7432598E213D4F4500607F37 /* _AXCadenceSensorType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AXCadenceSensorType.m; sourceTree = "<group>"; };
+		7432598F213D4F4500607F37 /* _TCXHeartRateAbove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHeartRateAbove.m; sourceTree = "<group>"; };
+		74325990213D4F4500607F37 /* TCXMultiSportFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXMultiSportFolder.m; sourceTree = "<group>"; };
+		74325991213D4F4500607F37 /* _TCXRepeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXRepeat.h; sourceTree = "<group>"; };
+		74325992213D4F4500607F37 /* TCXFirstSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXFirstSport.h; sourceTree = "<group>"; };
+		74325993213D4F4600607F37 /* TCXCadence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCadence.m; sourceTree = "<group>"; };
+		74325994213D4F4600607F37 /* _TCXWorkoutList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXWorkoutList.m; sourceTree = "<group>"; };
+		74325995213D4F4600607F37 /* TCXHistoryFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHistoryFolder.h; sourceTree = "<group>"; };
+		74325996213D4F4600607F37 /* _TCXTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTrack.m; sourceTree = "<group>"; };
+		74325997213D4F4600607F37 /* TCXSpeedType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXSpeedType.h; sourceTree = "<group>"; };
+		74325998213D4F4600607F37 /* TCXRepetitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXRepetitions.m; sourceTree = "<group>"; };
+		74325999213D4F4600607F37 /* _TCXIntensity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXIntensity.m; sourceTree = "<group>"; };
+		7432599A213D4F4600607F37 /* TCXMultiSportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXMultiSportSession.h; sourceTree = "<group>"; };
+		7432599B213D4F4600607F37 /* _TCXCourseFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCourseFolder.h; sourceTree = "<group>"; };
+		7432599C213D4F4600607F37 /* TCXPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXPlan.h; sourceTree = "<group>"; };
+		7432599D213D4F4600607F37 /* TCXUserInitiated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXUserInitiated.m; sourceTree = "<group>"; };
+		7432599E213D4F4600607F37 /* _TCXApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXApplication.m; sourceTree = "<group>"; };
+		7432599F213D4F4700607F37 /* _TCXNone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXNone.m; sourceTree = "<group>"; };
+		743259A0213D4F4700607F37 /* _TCXCoursePointName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCoursePointName.m; sourceTree = "<group>"; };
+		743259A1213D4F4700607F37 /* _TCXToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXToken.h; sourceTree = "<group>"; };
+		743259A2213D4F4700607F37 /* _TCXTraining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTraining.h; sourceTree = "<group>"; };
+		743259A3213D4F4700607F37 /* AXCadenceSensorType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXCadenceSensorType.h; sourceTree = "<group>"; };
+		743259A4213D4F4700607F37 /* TCXHeartRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHeartRate.m; sourceTree = "<group>"; };
+		743259A5213D4F4700607F37 /* TCXRepeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXRepeat.m; sourceTree = "<group>"; };
+		743259A6213D4F4700607F37 /* TCXSpeedType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXSpeedType.m; sourceTree = "<group>"; };
+		743259A7213D4F4700607F37 /* _TCXPositiveByte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXPositiveByte.h; sourceTree = "<group>"; };
+		743259A8213D4F4700607F37 /* _TCXTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTarget.h; sourceTree = "<group>"; };
+		743259A9213D4F4700607F37 /* TCXTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTime.m; sourceTree = "<group>"; };
+		743259AA213D4F4700607F37 /* TCXZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXZone.h; sourceTree = "<group>"; };
+		743259AB213D4F4800607F37 /* _TCXCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCourse.h; sourceTree = "<group>"; };
+		743259AC213D4F4800607F37 /* TCXDegreesLongitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXDegreesLongitude.m; sourceTree = "<group>"; };
+		743259AD213D4F4800607F37 /* _TCXActivityLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXActivityLap.h; sourceTree = "<group>"; };
+		743259AE213D4F4800607F37 /* _TCXLangID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXLangID.h; sourceTree = "<group>"; };
+		743259AF213D4F4800607F37 /* TCXCourseFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCourseFolder.h; sourceTree = "<group>"; };
+		743259B0213D4F4800607F37 /* _TCXSensorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXSensorState.h; sourceTree = "<group>"; };
+		743259B1213D4F4800607F37 /* TCXTrackpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTrackpoint.h; sourceTree = "<group>"; };
+		743259B2213D4F4800607F37 /* _TCXCourseLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCourseLap.m; sourceTree = "<group>"; };
+		743259B3213D4F4800607F37 /* _TCXPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXPlan.m; sourceTree = "<group>"; };
+		743259B4213D4F4800607F37 /* _TCXSensorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXSensorState.m; sourceTree = "<group>"; };
+		743259B5213D4F4800607F37 /* TCXCourseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCourseList.m; sourceTree = "<group>"; };
+		743259B6213D4F4800607F37 /* TCXCoursePointType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCoursePointType.h; sourceTree = "<group>"; };
+		743259B7213D4F4900607F37 /* _TCXBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXBuild.m; sourceTree = "<group>"; };
+		743259B8213D4F4900607F37 /* _TCXCustomSpeedZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCustomSpeedZone.m; sourceTree = "<group>"; };
+		743259B9213D4F4900607F37 /* TCXActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXActivity.h; sourceTree = "<group>"; };
+		743259BA213D4F4900607F37 /* TCXHeartRateAbove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHeartRateAbove.h; sourceTree = "<group>"; };
+		743259BB213D4F4900607F37 /* _TCXCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCourse.m; sourceTree = "<group>"; };
+		743259BC213D4F4900607F37 /* _TCXStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXStep.m; sourceTree = "<group>"; };
+		743259BD213D4F4900607F37 /* TCXPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXPlan.m; sourceTree = "<group>"; };
+		743259BE213D4F4900607F37 /* TCXSensorState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXSensorState.m; sourceTree = "<group>"; };
+		743259BF213D4F4900607F37 /* _TCXPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXPosition.h; sourceTree = "<group>"; };
+		743259C0213D4F4900607F37 /* _TCXTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTrack.h; sourceTree = "<group>"; };
+		743259C1213D4F4900607F37 /* TCXCourses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCourses.m; sourceTree = "<group>"; };
+		743259C2213D4F4900607F37 /* _TCXCourseFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCourseFolder.m; sourceTree = "<group>"; };
+		743259C3213D4F4900607F37 /* TCXNone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXNone.m; sourceTree = "<group>"; };
+		743259C4213D4F4A00607F37 /* TCXSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXSport.m; sourceTree = "<group>"; };
+		743259C5213D4F4A00607F37 /* _TCXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXExtensions.m; sourceTree = "<group>"; };
+		743259C6213D4F4A00607F37 /* TCXMultiSportFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXMultiSportFolder.h; sourceTree = "<group>"; };
+		743259C7213D4F4A00607F37 /* _TCXSpeedZoneNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXSpeedZoneNumbers.h; sourceTree = "<group>"; };
+		743259C8213D4F4A00607F37 /* TCXMultiSportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXMultiSportSession.m; sourceTree = "<group>"; };
+		743259C9213D4F4A00607F37 /* _TCXActivityLapExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXActivityLapExtensions.m; sourceTree = "<group>"; };
+		743259CA213D4F4A00607F37 /* _AXCadenceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AXCadenceValue.h; sourceTree = "<group>"; };
+		743259CB213D4F4A00607F37 /* _TCXPredefinedHeartRateZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXPredefinedHeartRateZone.m; sourceTree = "<group>"; };
+		743259CC213D4F4A00607F37 /* _TCXRepeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXRepeat.m; sourceTree = "<group>"; };
+		743259CD213D4F4A00607F37 /* AXExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXExtensions.h; sourceTree = "<group>"; };
+		743259CE213D4F4A00607F37 /* TCXHeartRateAsPercentOfMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHeartRateAsPercentOfMax.h; sourceTree = "<group>"; };
+		743259CF213D4F4A00607F37 /* _TCXWorkouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXWorkouts.h; sourceTree = "<group>"; };
+		743259D0213D4F4A00607F37 /* TCXDegreesLatitude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXDegreesLatitude.m; sourceTree = "<group>"; };
+		743259D1213D4F4B00607F37 /* TCXQuickWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXQuickWorkout.m; sourceTree = "<group>"; };
+		743259D2213D4F4B00607F37 /* TCXTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTrack.h; sourceTree = "<group>"; };
+		743259D3213D4F4B00607F37 /* TCXFolders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXFolders.m; sourceTree = "<group>"; };
+		743259D4213D4F4B00607F37 /* _TCXMultiSportFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXMultiSportFolder.h; sourceTree = "<group>"; };
+		743259D5213D4F4B00607F37 /* TCXHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXHistory.m; sourceTree = "<group>"; };
+		743259D6213D4F4B00607F37 /* _AXExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AXExtensions.m; sourceTree = "<group>"; };
+		743259D7213D4F4B00607F37 /* TCXCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCourse.h; sourceTree = "<group>"; };
+		743259D8213D4F4B00607F37 /* TCXTrainingCenterDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTrainingCenterDatabase.h; sourceTree = "<group>"; };
+		743259D9213D4F4B00607F37 /* TCXGender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXGender.m; sourceTree = "<group>"; };
+		743259DA213D4F4B00607F37 /* _TCXRestrictedToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXRestrictedToken.h; sourceTree = "<group>"; };
+		743259DB213D4F4B00607F37 /* AXCadenceSensorType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXCadenceSensorType.m; sourceTree = "<group>"; };
+		743259DC213D4F4B00607F37 /* TCXHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHistory.h; sourceTree = "<group>"; };
+		743259DD213D4F4B00607F37 /* _TCXCourseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCourseList.h; sourceTree = "<group>"; };
+		743259DE213D4F4C00607F37 /* TCXTraining.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTraining.m; sourceTree = "<group>"; };
+		743259DF213D4F4C00607F37 /* _TCXHeartRateAsPercentOfMax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHeartRateAsPercentOfMax.m; sourceTree = "<group>"; };
+		743259E0213D4F4C00607F37 /* TCXPercentOfMax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXPercentOfMax.m; sourceTree = "<group>"; };
+		743259E1213D4F4C00607F37 /* TCXTriggerMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTriggerMethod.h; sourceTree = "<group>"; };
+		743259E2213D4F4C00607F37 /* TCXCourseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCourseList.h; sourceTree = "<group>"; };
+		743259E3213D4F4C00607F37 /* _TCXMultiSportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXMultiSportSession.m; sourceTree = "<group>"; };
+		743259E4213D4F4C00607F37 /* _TCXFirstSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXFirstSport.m; sourceTree = "<group>"; };
+		743259E5213D4F4C00607F37 /* TCXBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXBuild.h; sourceTree = "<group>"; };
+		743259E6213D4F4C00607F37 /* TCXWorkouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXWorkouts.h; sourceTree = "<group>"; };
+		743259E7213D4F4C00607F37 /* _TCXCadence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCadence.h; sourceTree = "<group>"; };
+		743259E8213D4F4C00607F37 /* _TCXPartNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXPartNumber.m; sourceTree = "<group>"; };
+		743259E9213D4F4C00607F37 /* TCXPositiveByte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXPositiveByte.h; sourceTree = "<group>"; };
+		743259EA213D4F4D00607F37 /* TCXWorkoutFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXWorkoutFolder.h; sourceTree = "<group>"; };
+		743259EB213D4F4D00607F37 /* _TCXRestrictedToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXRestrictedToken.m; sourceTree = "<group>"; };
+		743259EC213D4F4D00607F37 /* _TCXStepId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXStepId.m; sourceTree = "<group>"; };
+		743259ED213D4F4D00607F37 /* TCXTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTarget.m; sourceTree = "<group>"; };
+		743259EE213D4F4D00607F37 /* TCXVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXVersion.h; sourceTree = "<group>"; };
+		743259EF213D4F4D00607F37 /* _TCXFolders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXFolders.m; sourceTree = "<group>"; };
+		743259F0213D4F4D00607F37 /* _TCXActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXActivity.h; sourceTree = "<group>"; };
+		743259F1213D4F4D00607F37 /* _TCXMultiSportFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXMultiSportFolder.m; sourceTree = "<group>"; };
+		743259F2213D4F4D00607F37 /* TCXActivityReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXActivityReference.h; sourceTree = "<group>"; };
+		743259F3213D4F4D00607F37 /* TCXWorkoutFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXWorkoutFolder.m; sourceTree = "<group>"; };
+		743259F4213D4F4D00607F37 /* _TCXAbstractStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXAbstractStep.h; sourceTree = "<group>"; };
+		743259F5213D4F4D00607F37 /* TCXWorkoutList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXWorkoutList.h; sourceTree = "<group>"; };
+		743259F6213D4F4D00607F37 /* _TCXPartNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXPartNumber.h; sourceTree = "<group>"; };
+		743259F7213D4F4E00607F37 /* TCXTrainingType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTrainingType.m; sourceTree = "<group>"; };
+		743259F8213D4F4E00607F37 /* TCXRepeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXRepeat.h; sourceTree = "<group>"; };
+		743259F9213D4F4E00607F37 /* _TCXDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXDuration.h; sourceTree = "<group>"; };
+		743259FA213D4F4E00607F37 /* _TCXWorkoutList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXWorkoutList.h; sourceTree = "<group>"; };
+		743259FB213D4F4E00607F37 /* TCXTrackpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXTrackpoint.m; sourceTree = "<group>"; };
+		743259FC213D4F4E00607F37 /* _AXActivityLapExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AXActivityLapExtension.m; sourceTree = "<group>"; };
+		743259FD213D4F4E00607F37 /* TCXRestrictedToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXRestrictedToken.h; sourceTree = "<group>"; };
+		743259FE213D4F4E00607F37 /* _TCXPredefinedSpeedZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXPredefinedSpeedZone.h; sourceTree = "<group>"; };
+		743259FF213D4F4E00607F37 /* TCXApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXApplication.h; sourceTree = "<group>"; };
+		74325A00213D4F4E00607F37 /* _TCXCourses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCourses.h; sourceTree = "<group>"; };
+		74325A01213D4F4E00607F37 /* _TCXStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXStep.h; sourceTree = "<group>"; };
+		74325A02213D4F4E00607F37 /* TCXNameKeyReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXNameKeyReference.h; sourceTree = "<group>"; };
+		74325A03213D4F4E00607F37 /* _TCXTrainingType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTrainingType.m; sourceTree = "<group>"; };
+		74325A04213D4F4F00607F37 /* _TCXNextSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXNextSport.h; sourceTree = "<group>"; };
+		74325A05213D4F4F00607F37 /* _TCXCaloriesBurned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXCaloriesBurned.m; sourceTree = "<group>"; };
+		74325A06213D4F4F00607F37 /* _TCXCoursePointType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXCoursePointType.h; sourceTree = "<group>"; };
+		74325A07213D4F4F00607F37 /* _TCXHeartRateAsPercentOfMax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHeartRateAsPercentOfMax.h; sourceTree = "<group>"; };
+		74325A08213D4F4F00607F37 /* _TCXHeartRateValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHeartRateValue.m; sourceTree = "<group>"; };
+		74325A09213D4F4F00607F37 /* _TCXBuildType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXBuildType.m; sourceTree = "<group>"; };
+		74325A0A213D4F4F00607F37 /* _TCXNone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXNone.h; sourceTree = "<group>"; };
+		74325A0B213D4F4F00607F37 /* _TCXSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXSport.h; sourceTree = "<group>"; };
+		74325A0C213D4F4F00607F37 /* _TCXSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXSport.m; sourceTree = "<group>"; };
+		74325A0D213D4F4F00607F37 /* TCXActivityLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXActivityLap.m; sourceTree = "<group>"; };
+		74325A0E213D4F4F00607F37 /* _TCXTriggerMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTriggerMethod.h; sourceTree = "<group>"; };
+		74325A0F213D4F4F00607F37 /* _TCXHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXHistory.h; sourceTree = "<group>"; };
+		74325A10213D4F5000607F37 /* TCXCustomHeartRateZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCustomHeartRateZone.m; sourceTree = "<group>"; };
+		74325A11213D4F5000607F37 /* AXActivityLapExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXActivityLapExtension.h; sourceTree = "<group>"; };
+		74325A12213D4F5000607F37 /* TCXDegreesLatitude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXDegreesLatitude.h; sourceTree = "<group>"; };
+		74325A13213D4F5000607F37 /* _TCXTrackpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXTrackpoint.m; sourceTree = "<group>"; };
+		74325A14213D4F5000607F37 /* _TCXDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXDevice.m; sourceTree = "<group>"; };
+		74325A15213D4F5000607F37 /* _TCXActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXActivity.m; sourceTree = "<group>"; };
+		74325A16213D4F5000607F37 /* _TCXPositiveByte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXPositiveByte.m; sourceTree = "<group>"; };
+		74325A17213D4F5000607F37 /* TCXBuildType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXBuildType.h; sourceTree = "<group>"; };
+		74325A18213D4F5000607F37 /* TCXTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTime.h; sourceTree = "<group>"; };
+		74325A19213D4F5000607F37 /* _TCXMultiSportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXMultiSportSession.h; sourceTree = "<group>"; };
+		74325A1A213D4F5000607F37 /* _AXActivityTrackpointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AXActivityTrackpointExtension.h; sourceTree = "<group>"; };
+		74325A1B213D4F5000607F37 /* _TCXPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXPosition.m; sourceTree = "<group>"; };
+		74325A1C213D4F5000607F37 /* TCXCadenceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCadenceValue.h; sourceTree = "<group>"; };
+		74325A1D213D4F5100607F37 /* TCXTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXTarget.h; sourceTree = "<group>"; };
+		74325A1E213D4F5100607F37 /* _TCXAbstractStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXAbstractStep.m; sourceTree = "<group>"; };
+		74325A1F213D4F5100607F37 /* TCXGender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXGender.h; sourceTree = "<group>"; };
+		74325A20213D4F5100607F37 /* TCXCourseLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCourseLap.m; sourceTree = "<group>"; };
+		74325A21213D4F5100607F37 /* TCXHeartRateValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXHeartRateValue.h; sourceTree = "<group>"; };
+		74325A22213D4F5100607F37 /* TCXCoursePointType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCoursePointType.m; sourceTree = "<group>"; };
+		74325A23213D4F5100607F37 /* AXToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXToken.m; sourceTree = "<group>"; };
+		74325A24213D4F5100607F37 /* TCXCadenceValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXCadenceValue.m; sourceTree = "<group>"; };
+		74325A25213D4F5100607F37 /* TCXStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXStep.h; sourceTree = "<group>"; };
+		74325A26213D4F5100607F37 /* _TCXUserInitiated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXUserInitiated.m; sourceTree = "<group>"; };
+		74325A27213D4F5100607F37 /* TCXRestrictedToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXRestrictedToken.m; sourceTree = "<group>"; };
+		74325A28213D4F5100607F37 /* AXActivityLapExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXActivityLapExtension.m; sourceTree = "<group>"; };
+		74325A29213D4F5200607F37 /* TCXCadence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCadence.h; sourceTree = "<group>"; };
+		74325A2A213D4F5200607F37 /* TCXActivityLapExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXActivityLapExtensions.m; sourceTree = "<group>"; };
+		74325A2B213D4F5200607F37 /* TCXDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXDuration.m; sourceTree = "<group>"; };
+		74325A2C213D4F5200607F37 /* TCXPredefinedSpeedZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXPredefinedSpeedZone.m; sourceTree = "<group>"; };
+		74325A2D213D4F5200607F37 /* TCXWeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXWeek.m; sourceTree = "<group>"; };
+		74325A2E213D4F5200607F37 /* _TCXLangID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXLangID.m; sourceTree = "<group>"; };
+		74325A2F213D4F5200607F37 /* TCXCustomHeartRateZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCustomHeartRateZone.h; sourceTree = "<group>"; };
+		74325A30213D4F5200607F37 /* _TCXHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TCXHistory.m; sourceTree = "<group>"; };
+		74325A31213D4F5200607F37 /* TCXNameKeyReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXNameKeyReference.m; sourceTree = "<group>"; };
+		74325A32213D4F5200607F37 /* _TCXTrackpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXTrackpoint.h; sourceTree = "<group>"; };
+		74325A33213D4F5200607F37 /* _TCXAbstractSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TCXAbstractSource.h; sourceTree = "<group>"; };
+		74325A34213D4F5200607F37 /* TCXCoursePointName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXCoursePointName.h; sourceTree = "<group>"; };
+		74325A35213D4F5300607F37 /* AXActivityTrackpointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXActivityTrackpointExtension.h; sourceTree = "<group>"; };
 		743A929420517D1B00668D76 /* _Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Employee.swift; sourceTree = "<group>"; };
 		743A92982051919700668D76 /* CodableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableType.swift; sourceTree = "<group>"; };
 		743A929C2051944600668D76 /* JSONSchemaReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSchemaReader.swift; sourceTree = "<group>"; };
@@ -149,6 +696,370 @@
 		74325252213AC2A100607F37 /* TCX */ = {
 			isa = PBXGroup;
 			children = (
+				7432595B213D4F3F00607F37 /* _AXActivityLapExtension.h */,
+				743259FC213D4F4E00607F37 /* _AXActivityLapExtension.m */,
+				74325A1A213D4F5000607F37 /* _AXActivityTrackpointExtension.h */,
+				74325914213D4F3A00607F37 /* _AXActivityTrackpointExtension.m */,
+				743258EB213D4F3600607F37 /* _AXCadenceSensorType.h */,
+				7432598E213D4F4500607F37 /* _AXCadenceSensorType.m */,
+				743259CA213D4F4A00607F37 /* _AXCadenceValue.h */,
+				74325911213D4F3900607F37 /* _AXCadenceValue.m */,
+				7432596C213D4F4300607F37 /* _AXExtensions.h */,
+				743259D6213D4F4B00607F37 /* _AXExtensions.m */,
+				74325928213D4F3B00607F37 /* _AXToken.h */,
+				7432590A213D4F3900607F37 /* _AXToken.m */,
+				74325A33213D4F5200607F37 /* _TCXAbstractSource.h */,
+				74325918213D4F3A00607F37 /* _TCXAbstractSource.m */,
+				743259F4213D4F4D00607F37 /* _TCXAbstractStep.h */,
+				74325A1E213D4F5100607F37 /* _TCXAbstractStep.m */,
+				743259F0213D4F4D00607F37 /* _TCXActivity.h */,
+				74325A15213D4F5000607F37 /* _TCXActivity.m */,
+				743259AD213D4F4800607F37 /* _TCXActivityLap.h */,
+				7432597D213D4F4400607F37 /* _TCXActivityLap.m */,
+				74325917213D4F3A00607F37 /* _TCXActivityLapExtensions.h */,
+				743259C9213D4F4A00607F37 /* _TCXActivityLapExtensions.m */,
+				743258FC213D4F3800607F37 /* _TCXActivityList.h */,
+				74325972213D4F4300607F37 /* _TCXActivityList.m */,
+				743258D5213D4F3500607F37 /* _TCXActivityReference.h */,
+				74325953213D4F3E00607F37 /* _TCXActivityReference.m */,
+				743258CF213D4F3400607F37 /* _TCXActivityTrackpointExtensions.h */,
+				743258E3213D4F3600607F37 /* _TCXActivityTrackpointExtensions.m */,
+				74325930213D4F3C00607F37 /* _TCXApplication.h */,
+				7432599E213D4F4600607F37 /* _TCXApplication.m */,
+				743258EC213D4F3600607F37 /* _TCXBuild.h */,
+				743259B7213D4F4900607F37 /* _TCXBuild.m */,
+				7432598A213D4F4500607F37 /* _TCXBuildType.h */,
+				74325A09213D4F4F00607F37 /* _TCXBuildType.m */,
+				743259E7213D4F4C00607F37 /* _TCXCadence.h */,
+				74325965213D4F4000607F37 /* _TCXCadence.m */,
+				74325985213D4F4400607F37 /* _TCXCadenceValue.h */,
+				743258D2213D4F3500607F37 /* _TCXCadenceValue.m */,
+				743258E4213D4F3600607F37 /* _TCXCaloriesBurned.h */,
+				74325A05213D4F4F00607F37 /* _TCXCaloriesBurned.m */,
+				743259AB213D4F4800607F37 /* _TCXCourse.h */,
+				743259BB213D4F4900607F37 /* _TCXCourse.m */,
+				7432599B213D4F4600607F37 /* _TCXCourseFolder.h */,
+				743259C2213D4F4900607F37 /* _TCXCourseFolder.m */,
+				743258D7213D4F3500607F37 /* _TCXCourseLap.h */,
+				743259B2213D4F4800607F37 /* _TCXCourseLap.m */,
+				743259DD213D4F4B00607F37 /* _TCXCourseList.h */,
+				743258F0213D4F3700607F37 /* _TCXCourseList.m */,
+				743258CC213D4F3400607F37 /* _TCXCoursePoint.h */,
+				74325903213D4F3800607F37 /* _TCXCoursePoint.m */,
+				743258CB213D4F3400607F37 /* _TCXCoursePointName.h */,
+				743259A0213D4F4700607F37 /* _TCXCoursePointName.m */,
+				74325A06213D4F4F00607F37 /* _TCXCoursePointType.h */,
+				743258D4213D4F3500607F37 /* _TCXCoursePointType.m */,
+				74325A00213D4F4E00607F37 /* _TCXCourses.h */,
+				74325971213D4F4300607F37 /* _TCXCourses.m */,
+				743258D6213D4F3500607F37 /* _TCXCustomHeartRateZone.h */,
+				7432593F213D4F3D00607F37 /* _TCXCustomHeartRateZone.m */,
+				74325908213D4F3900607F37 /* _TCXCustomSpeedZone.h */,
+				743259B8213D4F4900607F37 /* _TCXCustomSpeedZone.m */,
+				74325945213D4F3D00607F37 /* _TCXDegreesLatitude.h */,
+				743258F5213D4F3700607F37 /* _TCXDegreesLatitude.m */,
+				74325981213D4F4400607F37 /* _TCXDegreesLongitude.h */,
+				743258ED213D4F3600607F37 /* _TCXDegreesLongitude.m */,
+				743258D8213D4F3500607F37 /* _TCXDevice.h */,
+				74325A14213D4F5000607F37 /* _TCXDevice.m */,
+				7432595D213D4F3F00607F37 /* _TCXDistance.h */,
+				7432591F213D4F3A00607F37 /* _TCXDistance.m */,
+				743259F9213D4F4E00607F37 /* _TCXDuration.h */,
+				74325968213D4F4200607F37 /* _TCXDuration.m */,
+				74325909213D4F3900607F37 /* _TCXExtensions.h */,
+				743259C5213D4F4A00607F37 /* _TCXExtensions.m */,
+				7432590D213D4F3900607F37 /* _TCXFirstSport.h */,
+				743259E4213D4F4C00607F37 /* _TCXFirstSport.m */,
+				743258F1213D4F3700607F37 /* _TCXFolders.h */,
+				743259EF213D4F4D00607F37 /* _TCXFolders.m */,
+				74325967213D4F4200607F37 /* _TCXGender.h */,
+				743258D0213D4F3500607F37 /* _TCXGender.m */,
+				74325907213D4F3800607F37 /* _TCXHeartRate.h */,
+				743258EA213D4F3600607F37 /* _TCXHeartRate.m */,
+				74325954213D4F3F00607F37 /* _TCXHeartRateAbove.h */,
+				7432598F213D4F4500607F37 /* _TCXHeartRateAbove.m */,
+				74325A07213D4F4F00607F37 /* _TCXHeartRateAsPercentOfMax.h */,
+				743259DF213D4F4C00607F37 /* _TCXHeartRateAsPercentOfMax.m */,
+				743258EF213D4F3700607F37 /* _TCXHeartRateBelow.h */,
+				74325920213D4F3A00607F37 /* _TCXHeartRateBelow.m */,
+				7432598C213D4F4500607F37 /* _TCXHeartRateInBeatsPerMinute.h */,
+				743258F2213D4F3700607F37 /* _TCXHeartRateInBeatsPerMinute.m */,
+				7432595E213D4F3F00607F37 /* _TCXHeartRateValue.h */,
+				74325A08213D4F4F00607F37 /* _TCXHeartRateValue.m */,
+				743258F6213D4F3700607F37 /* _TCXHeartRateZoneNumbers.h */,
+				7432592C213D4F3B00607F37 /* _TCXHeartRateZoneNumbers.m */,
+				74325A0F213D4F4F00607F37 /* _TCXHistory.h */,
+				74325A30213D4F5200607F37 /* _TCXHistory.m */,
+				743258EE213D4F3700607F37 /* _TCXHistoryFolder.h */,
+				74325923213D4F3B00607F37 /* _TCXHistoryFolder.m */,
+				7432597C213D4F4400607F37 /* _TCXIntensity.h */,
+				74325999213D4F4600607F37 /* _TCXIntensity.m */,
+				743259AE213D4F4800607F37 /* _TCXLangID.h */,
+				74325A2E213D4F5200607F37 /* _TCXLangID.m */,
+				743259D4213D4F4B00607F37 /* _TCXMultiSportFolder.h */,
+				743259F1213D4F4D00607F37 /* _TCXMultiSportFolder.m */,
+				74325A19213D4F5000607F37 /* _TCXMultiSportSession.h */,
+				743259E3213D4F4C00607F37 /* _TCXMultiSportSession.m */,
+				743258DB213D4F3500607F37 /* _TCXNameKeyReference.h */,
+				7432591E213D4F3A00607F37 /* _TCXNameKeyReference.m */,
+				74325A04213D4F4F00607F37 /* _TCXNextSport.h */,
+				74325901213D4F3800607F37 /* _TCXNextSport.m */,
+				74325A0A213D4F4F00607F37 /* _TCXNone.h */,
+				7432599F213D4F4700607F37 /* _TCXNone.m */,
+				743259F6213D4F4D00607F37 /* _TCXPartNumber.h */,
+				743259E8213D4F4C00607F37 /* _TCXPartNumber.m */,
+				743258CD213D4F3400607F37 /* _TCXPercentOfMax.h */,
+				74325986213D4F4500607F37 /* _TCXPercentOfMax.m */,
+				74325904213D4F3800607F37 /* _TCXPlan.h */,
+				743259B3213D4F4800607F37 /* _TCXPlan.m */,
+				743259BF213D4F4900607F37 /* _TCXPosition.h */,
+				74325A1B213D4F5000607F37 /* _TCXPosition.m */,
+				743259A7213D4F4700607F37 /* _TCXPositiveByte.h */,
+				74325A16213D4F5000607F37 /* _TCXPositiveByte.m */,
+				7432591B213D4F3A00607F37 /* _TCXPredefinedHeartRateZone.h */,
+				743259CB213D4F4A00607F37 /* _TCXPredefinedHeartRateZone.m */,
+				743259FE213D4F4E00607F37 /* _TCXPredefinedSpeedZone.h */,
+				74325949213D4F3E00607F37 /* _TCXPredefinedSpeedZone.m */,
+				74325964213D4F4000607F37 /* _TCXQuickWorkout.h */,
+				7432595C213D4F3F00607F37 /* _TCXQuickWorkout.m */,
+				74325991213D4F4500607F37 /* _TCXRepeat.h */,
+				743259CC213D4F4A00607F37 /* _TCXRepeat.m */,
+				7432594E213D4F3E00607F37 /* _TCXRepetitions.h */,
+				7432598B213D4F4500607F37 /* _TCXRepetitions.m */,
+				743259DA213D4F4B00607F37 /* _TCXRestrictedToken.h */,
+				743259EB213D4F4D00607F37 /* _TCXRestrictedToken.m */,
+				743259B0213D4F4800607F37 /* _TCXSensorState.h */,
+				743259B4213D4F4800607F37 /* _TCXSensorState.m */,
+				7432594D213D4F3E00607F37 /* _TCXSpeed.h */,
+				7432594A213D4F3E00607F37 /* _TCXSpeed.m */,
+				7432592B213D4F3B00607F37 /* _TCXSpeedInMetersPerSecond.h */,
+				74325910213D4F3900607F37 /* _TCXSpeedInMetersPerSecond.m */,
+				743258D3213D4F3500607F37 /* _TCXSpeedType.h */,
+				7432592A213D4F3B00607F37 /* _TCXSpeedType.m */,
+				743259C7213D4F4A00607F37 /* _TCXSpeedZoneNumbers.h */,
+				743258DF213D4F3500607F37 /* _TCXSpeedZoneNumbers.m */,
+				74325A0B213D4F4F00607F37 /* _TCXSport.h */,
+				74325A0C213D4F4F00607F37 /* _TCXSport.m */,
+				74325A01213D4F4E00607F37 /* _TCXStep.h */,
+				743259BC213D4F4900607F37 /* _TCXStep.m */,
+				743258D1213D4F3500607F37 /* _TCXStepId.h */,
+				743259EC213D4F4D00607F37 /* _TCXStepId.m */,
+				743259A8213D4F4700607F37 /* _TCXTarget.h */,
+				74325947213D4F3E00607F37 /* _TCXTarget.m */,
+				743258E6213D4F3600607F37 /* _TCXTime.h */,
+				74325943213D4F3D00607F37 /* _TCXTime.m */,
+				743259A1213D4F4700607F37 /* _TCXToken.h */,
+				7432592D213D4F3C00607F37 /* _TCXToken.m */,
+				743259C0213D4F4900607F37 /* _TCXTrack.h */,
+				74325996213D4F4600607F37 /* _TCXTrack.m */,
+				74325A32213D4F5200607F37 /* _TCXTrackpoint.h */,
+				74325A13213D4F5000607F37 /* _TCXTrackpoint.m */,
+				743259A2213D4F4700607F37 /* _TCXTraining.h */,
+				74325944213D4F3D00607F37 /* _TCXTraining.m */,
+				74325902213D4F3800607F37 /* _TCXTrainingCenterDatabase.h */,
+				743258DE213D4F3500607F37 /* _TCXTrainingCenterDatabase.m */,
+				743258CA213D4F3400607F37 /* _TCXTrainingType.h */,
+				74325A03213D4F4E00607F37 /* _TCXTrainingType.m */,
+				74325A0E213D4F4F00607F37 /* _TCXTriggerMethod.h */,
+				7432590B213D4F3900607F37 /* _TCXTriggerMethod.m */,
+				74325919213D4F3A00607F37 /* _TCXUserInitiated.h */,
+				74325A26213D4F5100607F37 /* _TCXUserInitiated.m */,
+				743258E7213D4F3600607F37 /* _TCXVersion.h */,
+				743258F3213D4F3700607F37 /* _TCXVersion.m */,
+				74325982213D4F4400607F37 /* _TCXWeek.h */,
+				74325987213D4F4500607F37 /* _TCXWeek.m */,
+				743258F4213D4F3700607F37 /* _TCXWorkout.h */,
+				743258F7213D4F3700607F37 /* _TCXWorkout.m */,
+				74325941213D4F3D00607F37 /* _TCXWorkoutFolder.h */,
+				743258F8213D4F3700607F37 /* _TCXWorkoutFolder.m */,
+				743259FA213D4F4E00607F37 /* _TCXWorkoutList.h */,
+				74325994213D4F4600607F37 /* _TCXWorkoutList.m */,
+				743259CF213D4F4A00607F37 /* _TCXWorkouts.h */,
+				74325921213D4F3B00607F37 /* _TCXWorkouts.m */,
+				7432591C213D4F3A00607F37 /* _TCXZone.h */,
+				74325988213D4F4500607F37 /* _TCXZone.m */,
+				74325A11213D4F5000607F37 /* AXActivityLapExtension.h */,
+				74325A28213D4F5100607F37 /* AXActivityLapExtension.m */,
+				74325A35213D4F5300607F37 /* AXActivityTrackpointExtension.h */,
+				74325952213D4F3E00607F37 /* AXActivityTrackpointExtension.m */,
+				743259A3213D4F4700607F37 /* AXCadenceSensorType.h */,
+				743259DB213D4F4B00607F37 /* AXCadenceSensorType.m */,
+				74325969213D4F4200607F37 /* AXCadenceValue.h */,
+				74325906213D4F3800607F37 /* AXCadenceValue.m */,
+				743259CD213D4F4A00607F37 /* AXExtensions.h */,
+				7432590C213D4F3900607F37 /* AXExtensions.m */,
+				7432593A213D4F3D00607F37 /* AXToken.h */,
+				74325A23213D4F5100607F37 /* AXToken.m */,
+				74325963213D4F4000607F37 /* TCXAbstractSource.h */,
+				7432590E213D4F3900607F37 /* TCXAbstractSource.m */,
+				74325946213D4F3D00607F37 /* TCXAbstractStep.h */,
+				7432592E213D4F3C00607F37 /* TCXAbstractStep.m */,
+				743259B9213D4F4900607F37 /* TCXActivity.h */,
+				7432597A213D4F4400607F37 /* TCXActivity.m */,
+				7432591A213D4F3A00607F37 /* TCXActivityLap.h */,
+				74325A0D213D4F4F00607F37 /* TCXActivityLap.m */,
+				7432596F213D4F4300607F37 /* TCXActivityLapExtensions.h */,
+				74325A2A213D4F5200607F37 /* TCXActivityLapExtensions.m */,
+				7432595F213D4F3F00607F37 /* TCXActivityList.h */,
+				74325955213D4F3F00607F37 /* TCXActivityList.m */,
+				743259F2213D4F4D00607F37 /* TCXActivityReference.h */,
+				743258FB213D4F3800607F37 /* TCXActivityReference.m */,
+				7432591D213D4F3A00607F37 /* TCXActivityTrackpointExtensions.h */,
+				743258CE213D4F3400607F37 /* TCXActivityTrackpointExtensions.m */,
+				743259FF213D4F4E00607F37 /* TCXApplication.h */,
+				7432597E213D4F4400607F37 /* TCXApplication.m */,
+				743259E5213D4F4C00607F37 /* TCXBuild.h */,
+				74325932213D4F3C00607F37 /* TCXBuild.m */,
+				74325A17213D4F5000607F37 /* TCXBuildType.h */,
+				74325937213D4F3C00607F37 /* TCXBuildType.m */,
+				74325A29213D4F5200607F37 /* TCXCadence.h */,
+				74325993213D4F4600607F37 /* TCXCadence.m */,
+				74325A1C213D4F5000607F37 /* TCXCadenceValue.h */,
+				74325A24213D4F5100607F37 /* TCXCadenceValue.m */,
+				7432596E213D4F4300607F37 /* TCXCaloriesBurned.h */,
+				7432595A213D4F3F00607F37 /* TCXCaloriesBurned.m */,
+				743259D7213D4F4B00607F37 /* TCXCourse.h */,
+				7432593E213D4F3D00607F37 /* TCXCourse.m */,
+				743259AF213D4F4800607F37 /* TCXCourseFolder.h */,
+				74325936213D4F3C00607F37 /* TCXCourseFolder.m */,
+				74325922213D4F3B00607F37 /* TCXCourseLap.h */,
+				74325A20213D4F5100607F37 /* TCXCourseLap.m */,
+				743259E2213D4F4C00607F37 /* TCXCourseList.h */,
+				743259B5213D4F4800607F37 /* TCXCourseList.m */,
+				74325980213D4F4400607F37 /* TCXCoursePoint.h */,
+				743258E8213D4F3600607F37 /* TCXCoursePoint.m */,
+				74325A34213D4F5200607F37 /* TCXCoursePointName.h */,
+				7432596A213D4F4200607F37 /* TCXCoursePointName.m */,
+				743259B6213D4F4800607F37 /* TCXCoursePointType.h */,
+				74325A22213D4F5100607F37 /* TCXCoursePointType.m */,
+				743258F9213D4F3700607F37 /* TCXCourses.h */,
+				743259C1213D4F4900607F37 /* TCXCourses.m */,
+				74325A2F213D4F5200607F37 /* TCXCustomHeartRateZone.h */,
+				74325A10213D4F5000607F37 /* TCXCustomHeartRateZone.m */,
+				74325973213D4F4300607F37 /* TCXCustomSpeedZone.h */,
+				743258DA213D4F3500607F37 /* TCXCustomSpeedZone.m */,
+				74325A12213D4F5000607F37 /* TCXDegreesLatitude.h */,
+				743259D0213D4F4A00607F37 /* TCXDegreesLatitude.m */,
+				74325935213D4F3C00607F37 /* TCXDegreesLongitude.h */,
+				743259AC213D4F4800607F37 /* TCXDegreesLongitude.m */,
+				74325977213D4F4300607F37 /* TCXDevice.h */,
+				74325970213D4F4300607F37 /* TCXDevice.m */,
+				7432596B213D4F4200607F37 /* TCXDistance.h */,
+				74325924213D4F3B00607F37 /* TCXDistance.m */,
+				74325925213D4F3B00607F37 /* TCXDuration.h */,
+				74325A2B213D4F5200607F37 /* TCXDuration.m */,
+				74325974213D4F4300607F37 /* TCXExtensions.h */,
+				74325926213D4F3B00607F37 /* TCXExtensions.m */,
+				74325992213D4F4500607F37 /* TCXFirstSport.h */,
+				7432597F213D4F4400607F37 /* TCXFirstSport.m */,
+				74325978213D4F4300607F37 /* TCXFolders.h */,
+				743259D3213D4F4B00607F37 /* TCXFolders.m */,
+				74325A1F213D4F5100607F37 /* TCXGender.h */,
+				743259D9213D4F4B00607F37 /* TCXGender.m */,
+				7432598D213D4F4500607F37 /* TCXHeartRate.h */,
+				743259A4213D4F4700607F37 /* TCXHeartRate.m */,
+				743259BA213D4F4900607F37 /* TCXHeartRateAbove.h */,
+				74325905213D4F3800607F37 /* TCXHeartRateAbove.m */,
+				743259CE213D4F4A00607F37 /* TCXHeartRateAsPercentOfMax.h */,
+				74325989213D4F4500607F37 /* TCXHeartRateAsPercentOfMax.m */,
+				74325938213D4F3C00607F37 /* TCXHeartRateBelow.h */,
+				74325927213D4F3B00607F37 /* TCXHeartRateBelow.m */,
+				7432594F213D4F3E00607F37 /* TCXHeartRateInBeatsPerMinute.h */,
+				7432593C213D4F3D00607F37 /* TCXHeartRateInBeatsPerMinute.m */,
+				74325A21213D4F5100607F37 /* TCXHeartRateValue.h */,
+				74325976213D4F4300607F37 /* TCXHeartRateValue.m */,
+				7432596D213D4F4300607F37 /* TCXHeartRateZoneNumbers.h */,
+				74325956213D4F3F00607F37 /* TCXHeartRateZoneNumbers.m */,
+				743259DC213D4F4B00607F37 /* TCXHistory.h */,
+				743259D5213D4F4B00607F37 /* TCXHistory.m */,
+				74325995213D4F4600607F37 /* TCXHistoryFolder.h */,
+				7432590F213D4F3900607F37 /* TCXHistoryFolder.m */,
+				743258FA213D4F3700607F37 /* TCXIntensity.h */,
+				743258E9213D4F3600607F37 /* TCXIntensity.m */,
+				74325929213D4F3B00607F37 /* TCXLangID.h */,
+				74325979213D4F4400607F37 /* TCXLangID.m */,
+				743259C6213D4F4A00607F37 /* TCXMultiSportFolder.h */,
+				74325990213D4F4500607F37 /* TCXMultiSportFolder.m */,
+				7432599A213D4F4600607F37 /* TCXMultiSportSession.h */,
+				743259C8213D4F4A00607F37 /* TCXMultiSportSession.m */,
+				74325A02213D4F4E00607F37 /* TCXNameKeyReference.h */,
+				74325A31213D4F5200607F37 /* TCXNameKeyReference.m */,
+				74325942213D4F3D00607F37 /* TCXNextSport.h */,
+				743258DC213D4F3500607F37 /* TCXNextSport.m */,
+				743258FD213D4F3800607F37 /* TCXNone.h */,
+				743259C3213D4F4900607F37 /* TCXNone.m */,
+				74325933213D4F3C00607F37 /* TCXPartNumber.h */,
+				7432594B213D4F3E00607F37 /* TCXPartNumber.m */,
+				743258DD213D4F3500607F37 /* TCXPercentOfMax.h */,
+				743259E0213D4F4C00607F37 /* TCXPercentOfMax.m */,
+				7432599C213D4F4600607F37 /* TCXPlan.h */,
+				743259BD213D4F4900607F37 /* TCXPlan.m */,
+				743258E5213D4F3600607F37 /* TCXPosition.h */,
+				74325966213D4F4000607F37 /* TCXPosition.m */,
+				743259E9213D4F4C00607F37 /* TCXPositiveByte.h */,
+				7432592F213D4F3C00607F37 /* TCXPositiveByte.m */,
+				74325950213D4F3E00607F37 /* TCXPredefinedHeartRateZone.h */,
+				74325983213D4F4400607F37 /* TCXPredefinedHeartRateZone.m */,
+				7432594C213D4F3E00607F37 /* TCXPredefinedSpeedZone.h */,
+				74325A2C213D4F5200607F37 /* TCXPredefinedSpeedZone.m */,
+				743258FE213D4F3800607F37 /* TCXQuickWorkout.h */,
+				743259D1213D4F4B00607F37 /* TCXQuickWorkout.m */,
+				743259F8213D4F4E00607F37 /* TCXRepeat.h */,
+				743259A5213D4F4700607F37 /* TCXRepeat.m */,
+				743258E2213D4F3600607F37 /* TCXRepetitions.h */,
+				74325998213D4F4600607F37 /* TCXRepetitions.m */,
+				743259FD213D4F4E00607F37 /* TCXRestrictedToken.h */,
+				74325A27213D4F5100607F37 /* TCXRestrictedToken.m */,
+				74325931213D4F3C00607F37 /* TCXSensorState.h */,
+				743259BE213D4F4900607F37 /* TCXSensorState.m */,
+				74325957213D4F3F00607F37 /* TCXSpeed.h */,
+				7432593D213D4F3D00607F37 /* TCXSpeed.m */,
+				74325958213D4F3F00607F37 /* TCXSpeedInMetersPerSecond.h */,
+				743258E0213D4F3600607F37 /* TCXSpeedInMetersPerSecond.m */,
+				74325997213D4F4600607F37 /* TCXSpeedType.h */,
+				743259A6213D4F4700607F37 /* TCXSpeedType.m */,
+				74325934213D4F3C00607F37 /* TCXSpeedZoneNumbers.h */,
+				74325912213D4F3900607F37 /* TCXSpeedZoneNumbers.m */,
+				743258FF213D4F3800607F37 /* TCXSport.h */,
+				743259C4213D4F4A00607F37 /* TCXSport.m */,
+				74325A25213D4F5100607F37 /* TCXStep.h */,
+				74325940213D4F3D00607F37 /* TCXStep.m */,
+				743258E1213D4F3600607F37 /* TCXStepId.h */,
+				7432593B213D4F3D00607F37 /* TCXStepId.m */,
+				74325A1D213D4F5100607F37 /* TCXTarget.h */,
+				743259ED213D4F4D00607F37 /* TCXTarget.m */,
+				74325A18213D4F5000607F37 /* TCXTime.h */,
+				743259A9213D4F4700607F37 /* TCXTime.m */,
+				74325900213D4F3800607F37 /* TCXToken.h */,
+				74325975213D4F4300607F37 /* TCXToken.m */,
+				743259D2213D4F4B00607F37 /* TCXTrack.h */,
+				74325959213D4F3F00607F37 /* TCXTrack.m */,
+				743259B1213D4F4800607F37 /* TCXTrackpoint.h */,
+				743259FB213D4F4E00607F37 /* TCXTrackpoint.m */,
+				74325913213D4F3900607F37 /* TCXTraining.h */,
+				743259DE213D4F4C00607F37 /* TCXTraining.m */,
+				743259D8213D4F4B00607F37 /* TCXTrainingCenterDatabase.h */,
+				74325951213D4F3E00607F37 /* TCXTrainingCenterDatabase.m */,
+				7432597B213D4F4400607F37 /* TCXTrainingType.h */,
+				743259F7213D4F4E00607F37 /* TCXTrainingType.m */,
+				743259E1213D4F4C00607F37 /* TCXTriggerMethod.h */,
+				74325915213D4F3A00607F37 /* TCXTriggerMethod.m */,
+				74325960213D4F4000607F37 /* TCXUserInitiated.h */,
+				7432599D213D4F4600607F37 /* TCXUserInitiated.m */,
+				743259EE213D4F4D00607F37 /* TCXVersion.h */,
+				74325961213D4F4000607F37 /* TCXVersion.m */,
+				74325962213D4F4000607F37 /* TCXWeek.h */,
+				74325A2D213D4F5200607F37 /* TCXWeek.m */,
+				74325916213D4F3A00607F37 /* TCXWorkout.h */,
+				74325984213D4F4400607F37 /* TCXWorkout.m */,
+				743259EA213D4F4D00607F37 /* TCXWorkoutFolder.h */,
+				743259F3213D4F4D00607F37 /* TCXWorkoutFolder.m */,
+				743259F5213D4F4D00607F37 /* TCXWorkoutList.h */,
+				74325939213D4F3C00607F37 /* TCXWorkoutList.m */,
+				743259E6213D4F4C00607F37 /* TCXWorkouts.h */,
+				74325948213D4F3E00607F37 /* TCXWorkouts.m */,
+				743259AA213D4F4700607F37 /* TCXZone.h */,
+				743258D9213D4F3500607F37 /* TCXZone.m */,
 			);
 			path = TCX;
 			sourceTree = "<group>";
@@ -156,6 +1067,7 @@
 		74325253213AC2B000607F37 /* XML */ = {
 			isa = PBXGroup;
 			children = (
+				743258C9213D4B0C00607F37 /* ActivityExtensionv2.xsd */,
 				74325254213AC2D800607F37 /* TrainingCenterDatabasev2.xsd */,
 			);
 			path = XML;
@@ -468,13 +1380,195 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74325AEA213D4F5300607F37 /* _TCXHistory.m in Sources */,
+				74325A6B213D4F5300607F37 /* TCXWorkoutList.m in Sources */,
+				74325AAA213D4F5300607F37 /* _TCXSensorState.m in Sources */,
+				74325A45213D4F5300607F37 /* _TCXCourseList.m in Sources */,
+				74325AC2213D4F5300607F37 /* TCXTraining.m in Sources */,
+				74325ACA213D4F5300607F37 /* TCXTarget.m in Sources */,
+				74325AC3213D4F5300607F37 /* _TCXHeartRateAsPercentOfMax.m in Sources */,
+				74325AD8213D4F5300607F37 /* _TCXTrackpoint.m in Sources */,
 				74FB413A203EC38C008E1959 /* MappableObjectGeneratorJSONTests.swift in Sources */,
+				74325ADA213D4F5300607F37 /* _TCXActivity.m in Sources */,
+				74325A5C213D4F5300607F37 /* _TCXDistance.m in Sources */,
+				74325A8C213D4F5300607F37 /* TCXActivity.m in Sources */,
+				74325A65213D4F5300607F37 /* _TCXToken.m in Sources */,
+				74325A89213D4F5300607F37 /* TCXToken.m in Sources */,
+				74325A86213D4F5300607F37 /* TCXDevice.m in Sources */,
+				74325A7B213D4F5300607F37 /* _TCXActivityReference.m in Sources */,
+				74325AB5213D4F5300607F37 /* TCXSport.m in Sources */,
+				74325A6E213D4F5300607F37 /* TCXSpeed.m in Sources */,
+				74325A74213D4F5300607F37 /* _TCXTarget.m in Sources */,
+				74325ABC213D4F5300607F37 /* TCXQuickWorkout.m in Sources */,
+				74325AB0213D4F5300607F37 /* TCXPlan.m in Sources */,
+				74325A75213D4F5300607F37 /* TCXWorkouts.m in Sources */,
 				743A929520517D1B00668D76 /* _Employee.swift in Sources */,
+				74325A6C213D4F5300607F37 /* TCXStepId.m in Sources */,
+				74325A9D213D4F5300607F37 /* TCXRepetitions.m in Sources */,
+				74325AC9213D4F5300607F37 /* _TCXStepId.m in Sources */,
+				74325AD5213D4F5300607F37 /* _TCXSport.m in Sources */,
+				74325AA1213D4F5300607F37 /* _TCXNone.m in Sources */,
+				74325A8E213D4F5300607F37 /* TCXApplication.m in Sources */,
+				74325A4A213D4F5300607F37 /* _TCXWorkoutFolder.m in Sources */,
+				74325AC8213D4F5300607F37 /* _TCXRestrictedToken.m in Sources */,
+				74325AAF213D4F5300607F37 /* _TCXStep.m in Sources */,
+				74325AC6213D4F5300607F37 /* _TCXFirstSport.m in Sources */,
+				74325ACF213D4F5300607F37 /* TCXTrackpoint.m in Sources */,
+				74325A5E213D4F5300607F37 /* _TCXWorkouts.m in Sources */,
+				74325A62213D4F5300607F37 /* TCXHeartRateBelow.m in Sources */,
+				74325A76213D4F5300607F37 /* _TCXPredefinedSpeedZone.m in Sources */,
+				74325AE3213D4F5300607F37 /* TCXRestrictedToken.m in Sources */,
+				74325AC1213D4F5300607F37 /* AXCadenceSensorType.m in Sources */,
+				74325AB6213D4F5300607F37 /* _TCXExtensions.m in Sources */,
+				74325A80213D4F5300607F37 /* _TCXQuickWorkout.m in Sources */,
+				74325AA9213D4F5300607F37 /* _TCXPlan.m in Sources */,
+				74325A56213D4F5300607F37 /* _AXCadenceValue.m in Sources */,
+				74325AC0213D4F5300607F37 /* TCXGender.m in Sources */,
+				74325AD0213D4F5300607F37 /* _AXActivityLapExtension.m in Sources */,
+				74325A91213D4F5300607F37 /* TCXWorkout.m in Sources */,
+				74325A37213D4F5300607F37 /* _TCXGender.m in Sources */,
+				74325A3F213D4F5300607F37 /* TCXSpeedInMetersPerSecond.m in Sources */,
+				74325AE2213D4F5300607F37 /* _TCXUserInitiated.m in Sources */,
+				74325AE0213D4F5300607F37 /* AXToken.m in Sources */,
+				74325A5F213D4F5300607F37 /* _TCXHistoryFolder.m in Sources */,
+				74325AB3213D4F5300607F37 /* _TCXCourseFolder.m in Sources */,
+				74325A79213D4F5300607F37 /* TCXTrainingCenterDatabase.m in Sources */,
+				74325ABF213D4F5300607F37 /* _AXExtensions.m in Sources */,
+				74325A52213D4F5300607F37 /* AXExtensions.m in Sources */,
+				74325A48213D4F5300607F37 /* _TCXDegreesLatitude.m in Sources */,
+				74325A7D213D4F5300607F37 /* TCXHeartRateZoneNumbers.m in Sources */,
 				A83DFAD756C8667F51537956 /* _Image.swift in Sources */,
+				74325A3D213D4F5300607F37 /* _TCXTrainingCenterDatabase.m in Sources */,
+				74325A90213D4F5300607F37 /* TCXPredefinedHeartRateZone.m in Sources */,
+				74325A7E213D4F5300607F37 /* TCXTrack.m in Sources */,
+				74325A73213D4F5300607F37 /* _TCXTraining.m in Sources */,
+				74325A9F213D4F5300607F37 /* TCXUserInitiated.m in Sources */,
+				74325A61213D4F5300607F37 /* TCXExtensions.m in Sources */,
+				74325ADB213D4F5300607F37 /* _TCXPositiveByte.m in Sources */,
+				74325AAD213D4F5300607F37 /* _TCXCustomSpeedZone.m in Sources */,
+				74325A8D213D4F5300607F37 /* _TCXActivityLap.m in Sources */,
+				74325A93213D4F5300607F37 /* _TCXWeek.m in Sources */,
+				74325A5B213D4F5300607F37 /* _TCXNameKeyReference.m in Sources */,
 				743A92992051919700668D76 /* CodableType.swift in Sources */,
+				74325AC5213D4F5300607F37 /* _TCXMultiSportSession.m in Sources */,
+				74325A88213D4F5300607F37 /* _TCXActivityList.m in Sources */,
+				74325A4E213D4F5300607F37 /* TCXHeartRateAbove.m in Sources */,
+				74325AB8213D4F5300607F37 /* _TCXActivityLapExtensions.m in Sources */,
+				74325A95213D4F5300607F37 /* TCXHeartRateAsPercentOfMax.m in Sources */,
+				74325A7A213D4F5300607F37 /* AXActivityTrackpointExtension.m in Sources */,
+				74325AA7213D4F5300607F37 /* TCXDegreesLongitude.m in Sources */,
+				74325AE7213D4F5300607F37 /* TCXPredefinedSpeedZone.m in Sources */,
+				74325AA2213D4F5300607F37 /* _TCXCoursePointName.m in Sources */,
+				74325AE6213D4F5300607F37 /* TCXDuration.m in Sources */,
+				74325A82213D4F5300607F37 /* _TCXCadence.m in Sources */,
+				74325A63213D4F5300607F37 /* _TCXSpeedType.m in Sources */,
+				74325AAB213D4F5300607F37 /* TCXCourseList.m in Sources */,
+				74325A5D213D4F5300607F37 /* _TCXHeartRateBelow.m in Sources */,
+				74325ADC213D4F5300607F37 /* _TCXPosition.m in Sources */,
+				74325A4B213D4F5300607F37 /* TCXActivityReference.m in Sources */,
+				74325A50213D4F5300607F37 /* _AXToken.m in Sources */,
+				74325AA0213D4F5300607F37 /* _TCXApplication.m in Sources */,
+				74325A42213D4F5300607F37 /* TCXIntensity.m in Sources */,
+				74325A87213D4F5300607F37 /* _TCXCourses.m in Sources */,
+				74325A57213D4F5300607F37 /* TCXSpeedZoneNumbers.m in Sources */,
 				A83DF70C20262AEE06145FB9 /* _Person.swift in Sources */,
+				74325A72213D4F5300607F37 /* _TCXTime.m in Sources */,
+				74325AA6213D4F5300607F37 /* TCXTime.m in Sources */,
+				74325A36213D4F5300607F37 /* TCXActivityTrackpointExtensions.m in Sources */,
+				74325ABE213D4F5300607F37 /* TCXHistory.m in Sources */,
+				74325ADD213D4F5300607F37 /* _TCXAbstractStep.m in Sources */,
+				74325AB1213D4F5300607F37 /* TCXSensorState.m in Sources */,
+				74325AB4213D4F5300607F37 /* TCXNone.m in Sources */,
+				74325A6F213D4F5300607F37 /* TCXCourse.m in Sources */,
+				74325A97213D4F5300607F37 /* _AXCadenceSensorType.m in Sources */,
+				74325A3E213D4F5300607F37 /* _TCXSpeedZoneNumbers.m in Sources */,
+				74325A43213D4F5300607F37 /* _TCXHeartRate.m in Sources */,
+				74325ACE213D4F5300607F37 /* TCXTrainingType.m in Sources */,
+				74325A8B213D4F5300607F37 /* TCXLangID.m in Sources */,
+				74325AA8213D4F5300607F37 /* _TCXCourseLap.m in Sources */,
+				74325A8A213D4F5300607F37 /* TCXHeartRateValue.m in Sources */,
+				74325AC7213D4F5300607F37 /* _TCXPartNumber.m in Sources */,
+				74325AE5213D4F5300607F37 /* TCXActivityLapExtensions.m in Sources */,
+				74325A49213D4F5300607F37 /* _TCXWorkout.m in Sources */,
+				74325A59213D4F5300607F37 /* TCXTriggerMethod.m in Sources */,
+				74325A58213D4F5300607F37 /* _AXActivityTrackpointExtension.m in Sources */,
+				74325ADF213D4F5300607F37 /* TCXCoursePointType.m in Sources */,
+				74325AB9213D4F5300607F37 /* _TCXPredefinedHeartRateZone.m in Sources */,
+				74325AA4213D4F5300607F37 /* TCXRepeat.m in Sources */,
+				74325A53213D4F5300607F37 /* TCXAbstractSource.m in Sources */,
+				74325A64213D4F5300607F37 /* _TCXHeartRateZoneNumbers.m in Sources */,
+				74325ACC213D4F5300607F37 /* _TCXMultiSportFolder.m in Sources */,
+				74325A9C213D4F5300607F37 /* _TCXTrack.m in Sources */,
+				74325A96213D4F5300607F37 /* _TCXRepetitions.m in Sources */,
+				74325A9B213D4F5300607F37 /* _TCXWorkoutList.m in Sources */,
+				74325AD6213D4F5300607F37 /* TCXActivityLap.m in Sources */,
+				74325A7F213D4F5300607F37 /* TCXCaloriesBurned.m in Sources */,
+				74325A77213D4F5300607F37 /* _TCXSpeed.m in Sources */,
+				74325A66213D4F5300607F37 /* TCXAbstractStep.m in Sources */,
+				74325AD4213D4F5300607F37 /* _TCXBuildType.m in Sources */,
+				74325A9A213D4F5300607F37 /* TCXCadence.m in Sources */,
+				74325A85213D4F5300607F37 /* TCXCoursePointName.m in Sources */,
+				74325AA3213D4F5300607F37 /* TCXHeartRate.m in Sources */,
+				74325A3B213D4F5300607F37 /* TCXCustomSpeedZone.m in Sources */,
+				74325A71213D4F5300607F37 /* TCXStep.m in Sources */,
+				74325A3A213D4F5300607F37 /* TCXZone.m in Sources */,
+				74325A60213D4F5300607F37 /* TCXDistance.m in Sources */,
 				743A929F2052776E00668D76 /* ObjectValidator.swift in Sources */,
+				74325A9E213D4F5300607F37 /* _TCXIntensity.m in Sources */,
+				74325AE9213D4F5300607F37 /* _TCXLangID.m in Sources */,
+				74325AD2213D4F5300607F37 /* _TCXCaloriesBurned.m in Sources */,
+				74325A92213D4F5300607F37 /* _TCXPercentOfMax.m in Sources */,
+				74325A54213D4F5300607F37 /* TCXHistoryFolder.m in Sources */,
+				74325A41213D4F5300607F37 /* TCXCoursePoint.m in Sources */,
+				74325AE4213D4F5300607F37 /* AXActivityLapExtension.m in Sources */,
+				74325AD3213D4F5300607F37 /* _TCXHeartRateValue.m in Sources */,
+				74325A98213D4F5300607F37 /* _TCXHeartRateAbove.m in Sources */,
+				74325ABD213D4F5300607F37 /* TCXFolders.m in Sources */,
+				74325A99213D4F5300607F37 /* TCXMultiSportFolder.m in Sources */,
+				74325A6A213D4F5300607F37 /* TCXBuildType.m in Sources */,
+				74325AB2213D4F5300607F37 /* TCXCourses.m in Sources */,
+				74325AD7213D4F5300607F37 /* TCXCustomHeartRateZone.m in Sources */,
+				74325AEB213D4F5300607F37 /* TCXNameKeyReference.m in Sources */,
+				74325AC4213D4F5300607F37 /* TCXPercentOfMax.m in Sources */,
+				74325ABB213D4F5300607F37 /* TCXDegreesLatitude.m in Sources */,
+				74325A40213D4F5300607F37 /* _TCXActivityTrackpointExtensions.m in Sources */,
+				74325AA5213D4F5300607F37 /* TCXSpeedType.m in Sources */,
+				74325A6D213D4F5300607F37 /* TCXHeartRateInBeatsPerMinute.m in Sources */,
+				74325AAE213D4F5300607F37 /* _TCXCourse.m in Sources */,
+				74325A47213D4F5300607F37 /* _TCXVersion.m in Sources */,
+				74325A84213D4F5300607F37 /* _TCXDuration.m in Sources */,
+				74325A4D213D4F5300607F37 /* _TCXCoursePoint.m in Sources */,
+				74325A4C213D4F5300607F37 /* _TCXNextSport.m in Sources */,
+				74325AE1213D4F5300607F37 /* TCXCadenceValue.m in Sources */,
+				74325ACD213D4F5300607F37 /* TCXWorkoutFolder.m in Sources */,
+				74325A55213D4F5300607F37 /* _TCXSpeedInMetersPerSecond.m in Sources */,
+				74325AD9213D4F5300607F37 /* _TCXDevice.m in Sources */,
+				74325ABA213D4F5300607F37 /* _TCXRepeat.m in Sources */,
+				74325A81213D4F5300607F37 /* TCXVersion.m in Sources */,
+				74325A51213D4F5300607F37 /* _TCXTriggerMethod.m in Sources */,
+				74325A39213D4F5300607F37 /* _TCXCoursePointType.m in Sources */,
+				74325A3C213D4F5300607F37 /* TCXNextSport.m in Sources */,
+				74325A83213D4F5300607F37 /* TCXPosition.m in Sources */,
+				74325A67213D4F5300607F37 /* TCXPositiveByte.m in Sources */,
+				74325A44213D4F5300607F37 /* _TCXDegreesLongitude.m in Sources */,
 				743A929D2051944600668D76 /* JSONSchemaReader.swift in Sources */,
+				74325A38213D4F5300607F37 /* _TCXCadenceValue.m in Sources */,
+				74325A69213D4F5300607F37 /* TCXCourseFolder.m in Sources */,
+				74325A46213D4F5300607F37 /* _TCXHeartRateInBeatsPerMinute.m in Sources */,
+				74325AB7213D4F5300607F37 /* TCXMultiSportSession.m in Sources */,
+				74325AD1213D4F5300607F37 /* _TCXTrainingType.m in Sources */,
+				74325A5A213D4F5300607F37 /* _TCXAbstractSource.m in Sources */,
+				74325ADE213D4F5300607F37 /* TCXCourseLap.m in Sources */,
+				74325A70213D4F5300607F37 /* _TCXCustomHeartRateZone.m in Sources */,
+				74325A7C213D4F5300607F37 /* TCXActivityList.m in Sources */,
+				74325A78213D4F5300607F37 /* TCXPartNumber.m in Sources */,
+				74325A68213D4F5300607F37 /* TCXBuild.m in Sources */,
+				74325AAC213D4F5300607F37 /* _TCXBuild.m in Sources */,
+				74325AE8213D4F5300607F37 /* TCXWeek.m in Sources */,
+				74325A94213D4F5300607F37 /* _TCXZone.m in Sources */,
+				74325A8F213D4F5300607F37 /* TCXFirstSport.m in Sources */,
+				74325ACB213D4F5300607F37 /* _TCXFolders.m in Sources */,
+				74325A4F213D4F5300607F37 /* AXCadenceValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

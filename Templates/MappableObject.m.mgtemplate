@@ -14,6 +14,7 @@
 #import <BMCommons/BMFieldMapping.h>
 #import <BMCommons/BMLogging.h>
 #import <BMCommons/NSArray+BMCommons.h>
+#import <BMCommons/NSDictionary+BMCommons.h>
 
 #import "_{{ mapping.unqualifiedObjectClassName }}.h"
 {% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.fieldObjectClassIsCustom %}
@@ -41,7 +42,12 @@ static BMTwoWayDictionary *valueMapping = nil;
 	{% if mapping.unqualifiedParentObjectClassName != nil %}
     [mappings addObjectsFromArray:[super fieldMappingFormatArray]];
     {% /if %}
-	{% for fieldMapping in mapping.fieldMappings %}{% if fieldMapping.isDate %}[mappings bmSafeAddObject:[NSString stringWithFormat:@"{{ fieldMapping.fieldMappingFormatString }}:%@", [self dateFormatForField:@"{{ fieldMapping.fieldName }}"]]];{% else %}[mappings bmSafeAddObject:@"{{ fieldMapping.fieldMappingFormatString }}"];{% /if %}
+	{% for fieldMapping in mapping.fieldMappings %}
+    {% if fieldMapping.isDate %}
+    [mappings bmSafeAddObject:[NSString stringWithFormat:@"{{ fieldMapping.fieldMappingFormatString }}:%@", [self dateFormatForField:@"{{ fieldMapping.fieldName }}"]]];
+    {% else %}
+    [mappings bmSafeAddObject:@"{{ fieldMapping.fieldMappingFormatString }}"];
+    {% /if %}
     {% /for %}
 	return mappings;
 }
@@ -63,7 +69,7 @@ static BMTwoWayDictionary *valueMapping = nil;
 }
 
 + (NSString *)namespaceURI {
-	return {% if mapping.unqualifiedObjectClassNamespaceURI == nil %}nil{% else %}@"{{ mapping.unqualifiedObjectClassNamespaceURI }}"{% /if %};
+	return {% if mapping.namespaceURI == nil %}nil{% else %}@"{{ mapping.namespaceURI }}"{% /if %};
 }
 
 + (NSString *)dateFormatForField:(NSString *)fieldName {
@@ -84,20 +90,16 @@ static BMTwoWayDictionary *valueMapping = nil;
 
 - (NSString *)description {
 	NSMutableString *s = [NSMutableString string];
-	{% if mapping.unqualifiedParentObjectClassName != nil %}
-	[s appendString:[super description]];
-	{% else %}
-	[s appendString:NSStringFromClass([self class])];
-	[s appendString:@"\n"];
-	{% /if %}
-	
-	[s appendString:@"{\n"];
-	
-	{% for fieldMapping in mapping.fieldMappings %}
-    [s appendFormat:@"{{ fieldMapping.fieldName }}=%@\n", [self.{{ fieldMapping.fieldName }} description]];
+	[s appendString:@"{"];
+    [s appendFormat:@"class: \"%@\"", NSStringFromClass([self class])];
+	{% for fieldMapping in mapping.allFieldMappings %}
+    {% if fieldMapping.isJSONStringField %}
+    [s appendFormat:@", %@: \"%@\"", @"{{ fieldMapping.fieldName }}", self.{{ fieldMapping.fieldName }}];
+    {% else %}
+    [s appendFormat:@", %@: %@", @"{{ fieldMapping.fieldName }}", self.{{ fieldMapping.fieldName }}];
+    {% /if %}
 	{% /for %}
-	
-	[s appendString:@"}\n"];
+	[s appendString:@"}"];
 	return s;
 }
 
@@ -131,7 +133,6 @@ static BMTwoWayDictionary *valueMapping = nil;
         return NO;
     }
     _{{ mapping.unqualifiedObjectClassName }} *otherValue = (_{{ mapping.unqualifiedObjectClassName }} *)other;
-    
     return (self.value == otherValue.value || [self.value isEqual:otherValue.value]);
 }
 
